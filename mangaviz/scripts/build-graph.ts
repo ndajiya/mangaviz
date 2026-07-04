@@ -1,0 +1,81 @@
+import fs from 'fs';
+import path from 'path';
+
+const CACHE_DIR = path.resolve(process.cwd(), 'cache', 'raw');
+const OUTPUT_DIR = path.resolve(process.cwd(), 'public', 'data');
+
+interface RC { responseData: Record<string,any>; }
+
+function slugify(t: string) { return t.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
+
+function loadSeriesDetails(): Map<number, any> {
+  const m = new Map();
+  const dd = path.join(CACHE_DIR, 'series-detail');
+  if (!fs.existsSync(dd)) return m;
+  for (const f of fs.readdirSync(dd)) {
+    const match = f.match(/^series-(\d+)\.json$/);
+    if (!match) continue;
+    const id = parseInt(match[1], 10);
+    try {
+      const c = JSON.parse(fs.readFileSync(path.join(dd, f), 'utf-8')) as RC;
+      const d = c.responseData;
+      const s: any = { id, title: d.title||`Series ${id}`, type: d.type, year: d.year, rating: d.bayesian_rating, ratingVotes: d.rating_votes, image: d.image?.url?.thumb, url: d.url, status: d.status, licensed: d.licensed, completed: d.completed, description: d.description, genres: d.genres, categories: d.categories, authors: d.authors, artists: d.artists, publishers: d.publishers, publications: d.publications, recommendations: [], relatedSeries: [] };
+      const rf = path.join(dd, `series-${id}-recs.json`);
+      if (fs.existsSync(rf)) { try { const rc = JSON.parse(fs.readFileSync(rf,'utf-8')) as RC; s.recommendations = rc.responseData.recommendations; } catch {} }
+      const xf = path.join(dd, `series-${id}-related.json`);
+      if (fs.existsSync(xf)) { try { const rc = JSON.parse(fs.readFileSync(xf,'utf-8')) as RC; s.relatedSeries = rc.responseData.related_series; } catch {} }
+      m.set(id, s);
+    } catch {}
+  }
+  return m;
+}
+
+function main() {
+  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+  const seriesMap = loadSeriesDetails();
+  console.log(`Loaded ${seriesMap.size} series`);
+
+  const nodeMap = new Map<string,any>();
+  const edgeSet = new Set<string>(); const edges: any[] = [];
+
+  function addNode(id: string, label: string, type: string, weight=1) {
+    if (!nodeMap.has(id)) nodeMap.set(id, {id,label,type,weight,metadata:{}});
+    return nodeMap.get(id)!;
+  }
+  function addEdge(s: string, t: string, type: string, w=1) {
+    const eid = `${s}--${t}--${type}`;
+    if (edgeSet.has(eid)) return; edgeSet.add(eid); edges.push({id:eid,source:s,target:t,type,weight:w,metadata:{}});
+  }
+
+  for (const series of seriesMap.values()) {
+    const sid = `series:${series.id}`;
+    const w = series.rating ? Math.max(1, series.rating * (series.ratingVotes||1) * 0.01) : 1;
+    const n = addNode(sid, series.title, 'series', w);
+    n.seriesMetadata = { seriesId: series.id, type: series.type, year: series.year, rating: series.rating, ratingVotes: series.ratingVotes, image: series.image, url: series.url, status: series.status, licensed: series.licensed, completed: series.completed, description: series.description, associated: { authors: series.authors, artists: series.artists, publishers: series.publishers, publications: series.publications, genres: series.genres?.map((g:any)=>({name:g.genre_name,slug:g.genre_slug})), categories: series.categories?.map((c:any)=>({name:c.category,slug:c.category_slug})) }, recommendations: series.recommendations?.map((r:any)=>({title:r.title,id:r.series_id,weight:r.count})), relatedSeries: series.relatedSeries?.map((r:any)=>({title:r.title,id:r.series_id,relation:r.relation_type})) };
+
+    if (series.genres) for (const g of series.genres) { const gid = `genre:${g.genre_slug||slugify(g.genre_name)}`; addNode(gid, g.genre_name, 'genre'); addEdge(sid, gid, 'has_genre'); }
+    if (series.categories) for (const c of series.categories) { const cid = `category:${c.category_slug||slugify(c.category)}`; addNode(cid, c.category, 'category'); addEdge(sid, cid, 'has_category'); }
+    if (series.authors) for (const a of series.authors) { const aid = `author:${a.id||slugify(a.name)}`; addNode(aid, a.name, 'author'); addEdge(sid, aid, 'written_by'); }
+    if (series.artists) for (const a of series.artists) { const aid = `artist:${a.id||slugify(a.name)}`; addNode(aid, a.name, 'artist'); addEdge(sid, aid, 'illustrated_by'); }
+    if (series.publishers) for (const p of series.publishers) { const pid = `publisher:${p.id||slugify(p.name)}`; addNode(pid, p.name, 'publisher'); addEdge(sid, pid, 'published_by'); }
+    if (series.publications) for (const p of series.publications) { const pid = `publication:${p.id||slugify(p.name)}`; addNode(pid, p.name, 'publication'); addEdge(sid, pid, 'serialized_in'); }
+    if (series.recommendations) for (const r of series.recommendations) { if (r.series_id && r.series_id !== series.id) { const tw = r.count||1; addNode(`series:${r.series_id}`, r.title, 'series', tw); addEdge(sid, `series:${r.series_id}`, 'recommended_with', tw); } }
+    if (series.relatedSeries) for (const r of series.relatedSeries) { if (r.series_id && r.series_id !== series.id) { addNode(`series:${r.series_id}`, r.title, 'series'); addEdge(sid, `series:${r.series_id}`, 'related_to'); } }
+  }
+
+  const byType: Record<string,any[]> = {};
+  for (const n of nodeMap.values()) { if (!byType[n.type]) byType[n.type]=[]; byType[n.type].push(n); }
+  const byEdgeType: Record<string,any[]> = {};
+  for (const e of edges) { if (!byEdgeType[e.type]) byEdgeType[e.type]=[]; byEdgeType[e.type].push(e); }
+
+  for (const [t,ns] of Object.entries(byType)) fs.writeFileSync(path.join(OUTPUT_DIR, `nodes.${t}.json`), JSON.stringify(ns));
+  for (const [t,es] of Object.entries(byEdgeType)) fs.writeFileSync(path.join(OUTPUT_DIR, `edges.${t}.json`), JSON.stringify(es));
+
+  const si = (byType.series||[]).map((n:any)=>({id:n.id,label:n.label,type:'series',seriesId:n.seriesMetadata?.seriesId}));
+  fs.writeFileSync(path.join(OUTPUT_DIR,'search-index.json'), JSON.stringify(si));
+  const manifest = { version:'1.0.0', buildDate: new Date().toISOString(), seriesCount: byType.series?.length||0, totalNodes: nodeMap.size, totalEdges: edges.length, shards: { nodes: Object.keys(byType).map(t=>`nodes.${t}.json`), edges: Object.keys(byEdgeType).map(t=>`edges.${t}.json`), positions: ['positions.json'], clusters: ['clusters.json'] }, searchIndex: 'search-index.json' };
+  fs.writeFileSync(path.join(OUTPUT_DIR,'manifest.json'), JSON.stringify(manifest,null,2));
+  console.log(`Graph built: ${nodeMap.size} nodes, ${edges.length} edges`);
+}
+
+main();

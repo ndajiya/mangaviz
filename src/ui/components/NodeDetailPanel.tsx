@@ -1,0 +1,40 @@
+import React from 'react';
+import type { GraphNode } from '../../graph/graphTypes';
+interface Props { node: GraphNode|null; onClose: ()=>void; onNodeClick?: (id:string)=>void; }
+const NodeDetailPanel: React.FC<Props> = ({ node, onClose, onNodeClick }) => {
+  if (!node) return <div className="node-detail-panel empty"><div className="empty-state"><svg viewBox="0 0 24 24" width="48" height="48"><path fill="currentColor" opacity="0.3" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><p>Click a node for details</p></div></div>;
+  const sm = node.seriesMetadata;
+  return (
+    <div className="node-detail-panel">
+      <div className="detail-header"><h3 className="detail-title">{node.label}</h3><button className="close-btn" onClick={onClose}>&times;</button></div>
+      <div className="detail-type-badge">{node.type[0].toUpperCase()+node.type.slice(1)}</div>
+      <div className="detail-content">
+        {sm ? <>
+          {sm.image && <div className="detail-image"><img src={sm.image} alt={node.label} onError={e=>(e.target as HTMLImageElement).style.display='none'} /></div>}
+          <div className="detail-meta">
+            {sm.type && <div className="meta-row"><span className="meta-label">Type:</span><span>{sm.type}</span></div>}
+            {sm.year && <div className="meta-row"><span className="meta-label">Year:</span><span>{sm.year}</span></div>}
+            {sm.rating && <div className="meta-row"><span className="meta-label">Rating:</span><span className="rating">★ {sm.rating.toFixed(2)}{sm.ratingVotes?` (${sm.ratingVotes})`:''}</span></div>}
+            {sm.status && <div className="meta-row"><span className="meta-label">Status:</span><span>{sm.status}</span></div>}
+            {sm.licensed!==undefined && <div className="meta-row"><span className="meta-label">Licensed:</span><span>{sm.licensed?'Yes':'No'}</span></div>}
+          </div>
+          {sm.description && <div className="detail-description"><h4>Description</h4><p>{sm.description.slice(0,300)}</p></div>}
+          {sm.associated?.genres?.length ? <div className="detail-list"><h4>Genres</h4><div className="tag-list">{sm.associated.genres.map(g=><span key={g.name} className="tag genre-tag">{g.name}</span>)}</div></div> : null}
+          {sm.associated?.categories?.length ? <div className="detail-list"><h4>Categories</h4><div className="tag-list">{sm.associated.categories.map(c=><span key={c.name} className="tag category-tag">{c.name}</span>)}</div></div> : null}
+          {sm.associated?.authors?.length ? <div className="detail-list"><h4>Authors</h4><ul>{sm.associated.authors.map(a=><li key={a.name} className="detail-link-item"><span className="link-like" onClick={()=>onNodeClick?.(`author:${a.id||a.name}`)}>{a.name}</span></li>)}</ul></div> : null}
+          {sm.associated?.artists?.length ? <div className="detail-list"><h4>Artists</h4><ul>{sm.associated.artists.map(a=><li key={a.name} className="detail-link-item"><span className="link-like" onClick={()=>onNodeClick?.(`artist:${a.id||a.name}`)}>{a.name}</span></li>)}</ul></div> : null}
+          {sm.associated?.publishers?.length ? <div className="detail-list"><h4>Publishers</h4><ul>{sm.associated.publishers.map(p=><li key={p.name} className="detail-link-item"><span className="link-like" onClick={()=>onNodeClick?.(`publisher:${p.id||p.name}`)}>{p.name}</span></li>)}</ul></div> : null}
+          {sm.recommendations?.length ? <div className="detail-list"><h4>Recommendations</h4><ul>{sm.recommendations.slice(0,10).map(r=><li key={r.id||r.title} className="detail-link-item"><span className="link-like" onClick={()=>onNodeClick?.(`series:${r.id}`)}>{r.title}</span>{r.weight?<span className="rec-weight">×{r.weight}</span>:null}</li>)}</ul></div> : null}
+          {sm.relatedSeries?.length ? <div className="detail-list"><h4>Related</h4><ul>{sm.relatedSeries.slice(0,10).map(r=><li key={r.id||r.title} className="detail-link-item"><span className="link-like" onClick={()=>onNodeClick?.(`series:${r.id}`)}>{r.title}</span>{r.relation?<span className="relation-type">({r.relation})</span>:null}</li>)}</ul></div> : null}
+          {sm.url && <div className="detail-external-link"><a href={sm.url} target="_blank" rel="noopener noreferrer">View on MangaUpdates →</a></div>}
+        </> : <>
+          <div className="detail-meta">
+            <div className="meta-row"><span className="meta-label">Weight:</span><span>{node.weight.toFixed(1)}</span></div>
+            {node.cluster!==undefined && <div className="meta-row"><span className="meta-label">Cluster:</span><span>{node.cluster}</span></div>}
+          </div>
+        </>}
+      </div>
+    </div>
+  );
+};
+export default NodeDetailPanel;

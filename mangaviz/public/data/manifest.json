@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0",
+  "buildDate": "2026-07-04T14:46:29.352Z",
+  "seriesCount": 16,
+  "totalNodes": 127,
+  "totalEdges": 253,
+  "shards": {
+    "nodes": [
+      "nodes.artist.json",
+      "nodes.author.json",
+      "nodes.category.json",
+      "nodes.genre.json",
+      "nodes.publication.json",
+      "nodes.publisher.json",
+      "nodes.series.json"
+    ],
+    "edges": [
+      "edges.has_category.json",
+      "edges.has_genre.json",
+      "edges.illustrated_by.json",
+      "edges.published_by.json",
+      "edges.recommended_with.json",
+      "edges.serialized_in.json",
+      "edges.written_by.json"
+    ],
+    "positions": [
+      "positions.json"
+    ],
+    "clusters": [
+      "clusters.json"
+    ]
+  },
+  "searchIndex": "search-index.json"
+}

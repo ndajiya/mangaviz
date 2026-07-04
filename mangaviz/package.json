@@ -1,0 +1,43 @@
+{
+  "name": "mangaviz",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "collect": "tsx scripts/collect-series.ts",
+    "collect:lite": "MAX_SERIES=200 tsx scripts/collect-series.ts",
+    "build:graph": "tsx scripts/build-graph.ts",
+    "layout": "tsx scripts/precompute-layout.ts",
+    "data:compress": "tsx scripts/compress-json.ts",
+    "data:manifest": "tsx scripts/generate-manifest.ts",
+    "data:demo": "tsx scripts/generate-demo-data.ts",
+    "atlas:lite": "npm run data:demo && npm run layout && npm run data:manifest",
+    "atlas:full": "npm run collect && npm run build:graph && npm run layout && npm run data:compress && npm run data:manifest"
+  },
+  "dependencies": {
+    "cytoscape": "^3.34.0",
+    "dompurify": "^3.4.11",
+    "react": "^19.2.7",
+    "react-cytoscapejs": "^2.0.0",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.18.1"
+  },
+  "devDependencies": {
+    "@rolldown/binding-win32-x64-msvc": "^1.1.4",
+    "@types/cytoscape": "^3.21.9",
+    "@types/dompurify": "^3.0.5",
+    "@types/node": "^24.13.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "oxlint": "^1.71.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1"
+  }
+}

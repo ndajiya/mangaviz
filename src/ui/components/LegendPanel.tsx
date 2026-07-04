@@ -1,0 +1,14 @@
+import React from 'react';
+const LegendPanel: React.FC = () => (
+  <div className="legend-panel">
+    <h3>Legend</h3>
+    <div className="legend-items">
+      {[{c:'series',l:'Series'},{c:'genre',l:'Genre'},{c:'category',l:'Category'},{c:'author',l:'Author'},{c:'artist',l:'Artist'},{c:'publisher',l:'Publisher'},{c:'publication',l:'Publication'}].map(({c,l}) => <div key={c} className="legend-item"><span className={`legend-color ${c}`}></span><span>{l}</span></div>)}
+    </div>
+    <div className="legend-edge-types">
+      <h4>Edges</h4>
+      {[{c:'genre-edge',l:'Genre'},{c:'category-edge',l:'Category'},{c:'person-edge',l:'Author/Artist'},{c:'publisher-edge',l:'Publisher'},{c:'rec-edge',l:'Recommendation'},{c:'relate-edge',l:'Related'}].map(({c,l}) => <div key={c} className="legend-item"><span className={`edge-sample ${c}`}></span><span>{l}</span></div>)}
+    </div>
+  </div>
+);
+export default LegendPanel;
