@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -27,17 +30,20 @@
     "react-router-dom": "^7.18.1"
   },
   "devDependencies": {
-    "@rolldown/binding-win32-x64-msvc": "^1.1.4",
     "@types/cytoscape": "^3.21.9",
     "@types/dompurify": "^3.0.5",
     "@types/node": "^24.13.2",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.3",
+    "@vitejs/plugin-react": "^4.3.1",
     "oxlint": "^1.71.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.23.0",
     "typescript": "~6.0.2",
-    "vite": "^8.1.1"
+    "vite": "^5.4.10"
+  },
+  "optionalDependencies": {
+    "@rolldown/binding-linux-x64-gnu": "^1.1.4",
+    "@rolldown/binding-win32-x64-msvc": "^1.1.4"
   }
 }
