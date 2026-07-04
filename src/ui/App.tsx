@@ -95,7 +95,7 @@ const App: React.FC = () => {
               <div className="welcome-content">
                 <h2>Welcome to MangaViz</h2><p>Explore the manga universe through interactive network graphs.</p>
                 <div className="welcome-modes"><div className="welcome-mode"><h3>🗺️ Atlas Mode</h3><p>Pre-built manga universe graph.</p><p className="hint">Load atlas to begin.</p></div><div className="welcome-mode"><h3>🔍 Live Explorer</h3><p>Search MangaUpdates in real-time.</p><p className="hint">Toggle to Live and search.</p></div></div>
-                <p className="welcome-credit">Data from <a href="https://www.mangaupdates.com" target="_blank" rel="noopener noreferrer">MangaUpdates</a> · Inspired by <a href="https://redditviz.com" target="_blank" rel="noopener noreferrer">RedditViz</a></p>
+                <p className="welcome-credit">Data from <a href="https://www.mangaupdates.com" target="_blank" rel="noopener noreferrer">MangaUpdates</a> · Inspired by <a href="https://rhiever.github.io/redditviz/" target="_blank" rel="noopener noreferrer">RedditViz</a></p>
               </div>
             </div>
           )}
