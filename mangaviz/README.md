@@ -251,7 +251,7 @@ To add a new relationship type:
 ## 🙏 Credits
 
 - **Data**: [MangaUpdates](https://www.mangaupdates.com) – the most comprehensive manga database
-- **Inspiration**: [RedditViz](https://redditviz.com) – the original subreddit network explorer
+- **Inspiration**: [RedditViz](https://rhiever.github.io/redditviz/) – the original subreddit network explorer
 - **Icons**: SVG icons from Material Design
 
 ---
