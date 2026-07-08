@@ -16,7 +16,15 @@ Status: OPEN
 5. The current instrumentation does not yet reveal the full per-route attempt sequence, so request-level evidence is still missing.
 
 ## Evidence Log
-- Pending instrumentation and reproduction.
+- Local reproduction succeeded through the configured proxy for `Naruto` and `Giant Killing`; search and all detail requests returned `200`, and IndexedDB cache writes completed.
+- Runtime trace file: `.dbg/trae-debug-log-live-request-failure.ndjson`
+- User-reported deployed failure on `https://mangaviz.vercel.app/` shows `Live Request Failed` with `MangaUpdates live request failed. configured proxy: API 405`.
+- User confirmed the failing deployed request is `POST /api/mangaupdates/series/search`, not a detail request and not a static asset.
+- This combination falsifies the direct-API/CORS hypothesis for the current regression and strongly supports a Vercel routing mismatch where the SPA fallback is still intercepting `/api/...` POST requests in production.
+
+## Applied Fix
+- Updated `mangaviz/vercel.json` to use a rewrite that excludes `/api/` paths from the SPA fallback.
+- Rationale: if API routes are not rewritten to `index.html`, Vercel can route `/api/mangaupdates/series/search` to the serverless function instead of returning `405` for a POST against a static page.
 
 ## Notes
 - No business-logic changes applied in this session before collecting runtime evidence.
