@@ -226,7 +226,7 @@ const App: React.FC = () => {
                     MangaUpdates
                   </a>{" "}
                   · Inspired by{" "}
-                  <a href="https://redditviz.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://rhiever.github.io/redditviz/" target="_blank" rel="noopener noreferrer">
                     RedditViz
                   </a>
                 </p>
