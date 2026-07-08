@@ -20,6 +20,7 @@ export type AtlasRefreshResponse = {
 
 export type AtlasSessionResponse = {
   authenticated: boolean;
+  email?: string;
   message?: string;
 };
 
@@ -40,14 +41,14 @@ const atlasAdmin = {
     return readJson<AtlasSessionResponse>(response, "Unable to inspect Atlas admin session.");
   },
 
-  async login(password: string): Promise<AtlasSessionResponse> {
+  async login(accessToken: string): Promise<AtlasSessionResponse> {
     const response = await fetch("/api/admin/session", {
       method: "POST",
       credentials: "same-origin",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify({ password }),
+      body: JSON.stringify({ accessToken }),
     });
     return readJson<AtlasSessionResponse>(response, "Atlas admin login failed.");
   },

@@ -5,12 +5,13 @@ import {
   clearFailedLogins,
   clearSessionCookie,
   createSessionCookie,
+  ensureAtlasAdmin,
   ensureAdminConfig,
   getAdminSession,
   getLoginRateLimit,
   json,
   recordFailedLogin,
-  validateAdminPassword,
+  verifySupabaseAccessToken,
 } from './_session.js';
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -19,7 +20,10 @@ export async function GET(request) {
   const config = ensureAdminConfig();
   if (!config.ok) return config.response;
   const session = getAdminSession(request);
-  return json(200, { authenticated: session.ok });
+  return json(200, {
+    authenticated: session.ok,
+    email: session.ok ? session.payload.email || '' : '',
+  });
 }
 
 export async function POST(request) {
@@ -47,8 +51,16 @@ export async function POST(request) {
     return json(400, { error: 'invalid_json', message: 'Request body must be valid JSON.' });
   }
 
-  const password = typeof body?.password === 'string' ? body.password : '';
-  if (!validateAdminPassword(password)) {
+  const accessToken = typeof body?.accessToken === 'string' ? body.accessToken : '';
+  if (!accessToken) {
+    return json(400, {
+      error: 'missing_access_token',
+      message: 'Supabase access token is required to start an Atlas admin session.',
+    });
+  }
+
+  const verified = await verifySupabaseAccessToken(accessToken);
+  if (!verified.ok) {
     const failure = recordFailedLogin(request);
     await sleep(500);
     return json(
@@ -56,18 +68,37 @@ export async function POST(request) {
       {
         error: 'unauthorized',
         message: failure.retryAfterSeconds
-          ? 'Admin password is invalid. Too many failed attempts will temporarily lock this endpoint.'
-          : 'Admin password is invalid.',
+          ? 'Supabase sign-in could not be verified. Too many failed attempts will temporarily lock this endpoint.'
+          : 'Supabase sign-in could not be verified.',
       },
       failure.retryAfterSeconds ? { 'retry-after': String(failure.retryAfterSeconds) } : undefined,
     );
+  }
+
+  const adminCheck = await ensureAtlasAdmin(verified.user.id);
+  if (!adminCheck.ok) {
+    if (adminCheck.reason === 'not_admin') {
+      return json(403, {
+        error: 'forbidden',
+        message: 'This Supabase user is not authorized for Atlas admin access.',
+      });
+    }
+    return json(500, {
+      error: 'admin_lookup_failed',
+      message: 'Unable to confirm Atlas admin access against Supabase.',
+      details: adminCheck.details,
+    });
   }
   clearFailedLogins(request);
 
   return json(
     200,
-    { authenticated: true, message: 'Atlas admin session started.' },
-    { 'set-cookie': createSessionCookie(request.url) },
+    {
+      authenticated: true,
+      email: verified.user.email || '',
+      message: 'Atlas admin session started through Supabase Auth.',
+    },
+    { 'set-cookie': createSessionCookie(request.url, { sub: verified.user.id, email: verified.user.email }) },
   );
 }
 

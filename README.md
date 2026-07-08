@@ -138,19 +138,24 @@ This keeps Atlas generation out of Vercel build/runtime limits while preserving 
 - The app can trigger Atlas refresh through `POST /api/admin/atlas-refresh`
 - This dispatches a GitHub `repository_dispatch` event named `atlas_refresh_requested`
 - Enable the UI by setting `VITE_ATLAS_ADMIN_ENABLED=true`
-- Admin sign-in now uses `POST /api/admin/session` and a signed `HttpOnly` cookie
-- The browser no longer sends the GitHub trigger token or the admin secret on refresh requests
+- Admin sign-in now uses Supabase Auth plus `POST /api/admin/session` to set a signed `HttpOnly` cookie
+- The browser no longer sends the GitHub trigger token or the Supabase secret on refresh requests
 - State-changing admin requests require same-origin browser headers and repeated failed logins are temporarily rate-limited
+- Allow admin access by inserting the Supabase user ID into `public.admin_users`
+- A starter SQL migration lives at `mangaviz/supabase/migrations/atlas_admin_users.sql`
 
 Required Vercel environment variables:
 
 ```bash
-ATLAS_ADMIN_PASSWORD=your-long-admin-password
 ATLAS_SESSION_SECRET=long-random-session-signing-secret
 GITHUB_ATLAS_TRIGGER_TOKEN=github-token-with-repo-access
 GITHUB_OWNER=your-github-org-or-user
 GITHUB_REPO=your-repository-name
 GITHUB_ATLAS_REF=main
+SUPABASE_URL=https://your-project-id.supabase.co
+SUPABASE_SECRET_KEY=your-supabase-secret-key
+VITE_SUPABASE_URL=https://your-project-id.supabase.co
+VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
 VITE_ATLAS_ADMIN_ENABLED=true
 ```
 

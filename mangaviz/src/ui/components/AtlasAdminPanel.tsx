@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import atlasAdmin, { type AtlasRefreshMode } from "../../api/atlasAdmin";
+import { getSupabaseClient, hasSupabaseClientConfig } from "../../lib/supabase";
 
 const clamp = (value: number, fallback: number, min: number, max: number) => {
   if (!Number.isFinite(value)) return fallback;
@@ -8,6 +9,7 @@ const clamp = (value: number, fallback: number, min: number, max: number) => {
 
 const AtlasAdminPanel: React.FC = () => {
   const [open, setOpen] = useState(false);
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [mode, setMode] = useState<AtlasRefreshMode>("pr");
   const [ref, setRef] = useState("main");
@@ -16,6 +18,7 @@ const AtlasAdminPanel: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [authLoading, setAuthLoading] = useState(false);
   const [authenticated, setAuthenticated] = useState(false);
+  const [authenticatedEmail, setAuthenticatedEmail] = useState("");
   const [status, setStatus] = useState<{ tone: "idle" | "success" | "error"; message: string }>({ tone: "idle", message: "" });
 
   const helpText = useMemo(
@@ -29,22 +32,45 @@ const AtlasAdminPanel: React.FC = () => {
     if (!open) return;
     let active = true;
     setAuthLoading(true);
-    atlasAdmin
-      .getSession()
-      .then((response) => {
+    const syncSession = async () => {
+      try {
+        const response = await atlasAdmin.getSession();
         if (!active) return;
-        setAuthenticated(response.authenticated);
-      })
-      .catch((error) => {
+        if (response.authenticated) {
+          setAuthenticated(true);
+          setAuthenticatedEmail(response.email || "");
+          return;
+        }
+        if (!hasSupabaseClientConfig) {
+          setAuthenticated(false);
+          setAuthenticatedEmail("");
+          return;
+        }
+        const supabase = getSupabaseClient();
+        const { data, error } = await supabase.auth.getSession();
+        if (!active) return;
+        if (error) throw error;
+        const accessToken = data.session?.access_token;
+        if (!accessToken) {
+          setAuthenticated(false);
+          setAuthenticatedEmail("");
+          return;
+        }
+        const loginResponse = await atlasAdmin.login(accessToken);
+        if (!active) return;
+        setAuthenticated(loginResponse.authenticated);
+        setAuthenticatedEmail(loginResponse.email || data.session?.user?.email || "");
+      } catch (error) {
         if (!active) return;
         setStatus({
           tone: "error",
           message: error instanceof Error ? error.message : "Unable to inspect Atlas admin session.",
         });
-      })
-      .finally(() => {
+      } finally {
         if (active) setAuthLoading(false);
-      });
+      }
+    };
+    void syncSession();
     return () => {
       active = false;
     };
@@ -55,11 +81,28 @@ const AtlasAdminPanel: React.FC = () => {
     setIsSubmitting(true);
     setStatus({ tone: "idle", message: "" });
     try {
-      const response = await atlasAdmin.login(password);
+      const supabase = getSupabaseClient();
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: email.trim(),
+        password,
+      });
+      if (error) throw error;
+      const accessToken = data.session?.access_token;
+      if (!accessToken) {
+        throw new Error("Supabase sign-in succeeded, but no access token was returned.");
+      }
+      const response = await atlasAdmin.login(accessToken);
       setAuthenticated(response.authenticated);
+      setAuthenticatedEmail(response.email || data.session?.user?.email || email.trim());
+      setEmail("");
       setPassword("");
-      setStatus({ tone: "success", message: response.message || "Atlas admin session started." });
+      setStatus({ tone: "success", message: response.message || "Atlas admin session started through Supabase Auth." });
     } catch (error) {
+      try {
+        if (hasSupabaseClientConfig) {
+          await getSupabaseClient().auth.signOut();
+        }
+      } catch {}
       setStatus({
         tone: "error",
         message: error instanceof Error ? error.message : "Atlas admin login failed.",
@@ -73,8 +116,13 @@ const AtlasAdminPanel: React.FC = () => {
     setIsSubmitting(true);
     setStatus({ tone: "idle", message: "" });
     try {
-      const response = await atlasAdmin.logout();
+      const tasks: Promise<unknown>[] = [atlasAdmin.logout()];
+      if (hasSupabaseClientConfig) {
+        tasks.push(getSupabaseClient().auth.signOut());
+      }
+      const [response] = await Promise.all(tasks);
       setAuthenticated(false);
+      setAuthenticatedEmail("");
       setStatus({ tone: "success", message: response.message || "Atlas admin session cleared." });
     } catch (error) {
       setStatus({
@@ -118,7 +166,7 @@ const AtlasAdminPanel: React.FC = () => {
           <div className="atlas-admin-header">
             <div>
               <h3>Atlas Refresh</h3>
-              <p>Protected admin trigger for phases 2 and 3.</p>
+              <p>Protected admin trigger for phases 2 and 3 via Supabase Auth.</p>
             </div>
             <button type="button" className="close-btn" aria-label="Close Atlas admin panel" onClick={() => setOpen(false)}>
               &times;
@@ -129,7 +177,9 @@ const AtlasAdminPanel: React.FC = () => {
           ) : authenticated ? (
             <>
               <div className="atlas-admin-session-row">
-                <p className="atlas-admin-hint">Signed in with a secure server-side session.</p>
+                <p className="atlas-admin-hint">
+                  Signed in as {authenticatedEmail || "an approved admin"} with Supabase Auth and a secure server-side session.
+                </p>
                 <button type="button" className="atlas-admin-secondary" onClick={logout} disabled={isSubmitting}>
                   Sign out
                 </button>
@@ -164,18 +214,33 @@ const AtlasAdminPanel: React.FC = () => {
             </>
           ) : (
             <form onSubmit={login} className="atlas-admin-form">
+              {!hasSupabaseClientConfig && (
+                <p className="atlas-admin-status atlas-admin-status--error">
+                  Supabase client env is missing. Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` in the Mangaviz app env.
+                </p>
+              )}
               <label className="atlas-admin-field">
-                <span>Admin password</span>
+                <span>Email</span>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  placeholder="admin@example.com"
+                  required
+                />
+              </label>
+              <label className="atlas-admin-field">
+                <span>Supabase password</span>
                 <input
                   type="password"
                   value={password}
                   onChange={(event) => setPassword(event.target.value)}
-                  placeholder="Server-side ATLAS_ADMIN_PASSWORD"
+                  placeholder="Supabase Auth password"
                   required
                 />
               </label>
-              <p className="atlas-admin-hint">Signs in by setting an `HttpOnly` same-site admin session cookie.</p>
-              <button type="submit" className="atlas-admin-submit" disabled={isSubmitting}>
+              <p className="atlas-admin-hint">Signs in with Supabase, then sets an `HttpOnly` same-site Atlas admin session cookie.</p>
+              <button type="submit" className="atlas-admin-submit" disabled={isSubmitting || !hasSupabaseClientConfig}>
                 {isSubmitting ? "Signing in..." : "Sign in"}
               </button>
             </form>

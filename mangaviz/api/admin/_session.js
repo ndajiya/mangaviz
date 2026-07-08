@@ -30,7 +30,8 @@ const safeEqual = (received, expected) => {
 };
 
 const getSessionSecret = () => process.env.ATLAS_SESSION_SECRET || '';
-const getAdminPassword = () => process.env.ATLAS_ADMIN_PASSWORD || process.env.ATLAS_ADMIN_TOKEN || '';
+const getSupabaseUrl = () => process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || '';
+const getSupabaseSecret = () => process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY || '';
 
 const sign = (payload) => {
   const secret = getSessionSecret();
@@ -76,18 +77,19 @@ const pruneLoginAttempts = (now) => {
 };
 
 export const ensureAdminConfig = () => {
-  const password = getAdminPassword();
   const sessionSecret = getSessionSecret();
-  if (!password || !sessionSecret) {
+  const supabaseUrl = getSupabaseUrl();
+  const supabaseSecret = getSupabaseSecret();
+  if (!sessionSecret || !supabaseUrl || !supabaseSecret) {
     return {
       ok: false,
       response: json(500, {
         error: 'atlas_admin_misconfigured',
-        message: 'Atlas admin auth requires ATLAS_ADMIN_PASSWORD and ATLAS_SESSION_SECRET.',
+        message: 'Atlas admin auth requires ATLAS_SESSION_SECRET, SUPABASE_URL, and a Supabase secret server key.',
       }),
     };
   }
-  return { ok: true, password, sessionSecret };
+  return { ok: true, sessionSecret, supabaseUrl, supabaseSecret };
 };
 
 export const assertSameOrigin = (request) => {
@@ -101,8 +103,6 @@ export const assertSameOrigin = (request) => {
     return false;
   }
 };
-
-export const validateAdminPassword = (candidate) => safeEqual(candidate || '', getAdminPassword());
 
 export const getLoginRateLimit = (request) => {
   const now = Date.now();
@@ -140,9 +140,65 @@ export const clearFailedLogins = (request) => {
   loginAttemptStore.delete(getClientKey(request));
 };
 
-export const createSessionCookie = (requestUrl) => {
+const getSupabaseHeaders = (token) => ({
+  apikey: getSupabaseSecret(),
+  authorization: `Bearer ${token}`,
+});
+
+export const verifySupabaseAccessToken = async (accessToken) => {
+  const config = ensureAdminConfig();
+  if (!config.ok) return { ok: false, reason: 'misconfigured' };
+  if (!accessToken) return { ok: false, reason: 'missing_token' };
+
+  const response = await fetch(`${config.supabaseUrl}/auth/v1/user`, {
+    method: 'GET',
+    headers: getSupabaseHeaders(accessToken),
+  });
+
+  if (!response.ok) {
+    return { ok: false, reason: 'invalid_token' };
+  }
+
+  const user = await response.json();
+  if (!user?.id) return { ok: false, reason: 'invalid_user' };
+  return { ok: true, user };
+};
+
+export const ensureAtlasAdmin = async (userId) => {
+  const config = ensureAdminConfig();
+  if (!config.ok) return { ok: false, reason: 'misconfigured' };
+
+  const params = new URLSearchParams({
+    select: 'user_id',
+    user_id: `eq.${userId}`,
+    limit: '1',
+  });
+  const response = await fetch(`${config.supabaseUrl}/rest/v1/admin_users?${params.toString()}`, {
+    method: 'GET',
+    headers: getSupabaseHeaders(config.supabaseSecret),
+  });
+
+  if (!response.ok) {
+    const details = await response.text().catch(() => '');
+    return { ok: false, reason: 'admin_lookup_failed', details };
+  }
+
+  const rows = await response.json().catch(() => []);
+  if (!Array.isArray(rows) || rows.length === 0) {
+    return { ok: false, reason: 'not_admin' };
+  }
+  return { ok: true };
+};
+
+export const createSessionCookie = (requestUrl, identity) => {
   const now = Math.floor(Date.now() / 1000);
-  const payload = JSON.stringify({ role: 'atlas_admin', iat: now, exp: now + SESSION_TTL_SECONDS });
+  const payload = JSON.stringify({
+    role: 'atlas_admin',
+    sub: identity?.sub || '',
+    email: identity?.email || '',
+    iat: now,
+    exp: now + SESSION_TTL_SECONDS,
+  });
   const encodedPayload = base64url(payload);
   const signature = sign(encodedPayload);
   return serializeCookie(requestUrl, `${encodedPayload}.${signature}`, SESSION_TTL_SECONDS);
@@ -163,7 +219,13 @@ export const getAdminSession = (request) => {
   try {
     const payload = JSON.parse(fromBase64url(encodedPayload));
     const now = Math.floor(Date.now() / 1000);
-    if (payload.role !== 'atlas_admin' || typeof payload.exp !== 'number' || payload.exp <= now) {
+    if (
+      payload.role !== 'atlas_admin'
+      || typeof payload.exp !== 'number'
+      || payload.exp <= now
+      || typeof payload.sub !== 'string'
+      || payload.sub.length === 0
+    ) {
       return { ok: false, reason: 'expired' };
     }
     return { ok: true, payload };
