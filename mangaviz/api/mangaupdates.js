@@ -18,7 +18,9 @@ const buildForwardHeaders = (requestHeaders) => {
   headers.delete('host');
   headers.delete('connection');
   headers.delete('content-length');
+  headers.delete('accept-encoding');
   headers.set('accept', headers.get('accept') || 'application/json');
+  headers.set('accept-encoding', 'identity');
   headers.set('content-type', headers.get('content-type') || 'application/json');
   headers.set('user-agent', headers.get('user-agent') || 'Mozilla/5.0');
   headers.set('origin', 'https://www.mangaupdates.com');
@@ -39,10 +41,13 @@ const proxy = async (request) => {
       body: body && body.length > 0 ? body : undefined,
     });
 
+    const responseBody = await upstreamResponse.arrayBuffer();
     const responseHeaders = new Headers(upstreamResponse.headers);
     responseHeaders.delete('transfer-encoding');
+    responseHeaders.delete('content-encoding');
+    responseHeaders.delete('content-length');
 
-    return new Response(upstreamResponse.body, {
+    return new Response(responseBody, {
       status: upstreamResponse.status,
       headers: responseHeaders,
     });
