@@ -102,6 +102,7 @@ const App: React.FC = () => {
     }
     setLiveLoading(true);
     setLiveError(null);
+    setLiveData(null);
     try {
       const searchResults = await api.searchSeries({ search: term, perPage: 5 });
       if (!searchResults.results?.length) {
@@ -119,17 +120,20 @@ const App: React.FC = () => {
           console.warn("Live detail fetch failed for", id, err);
         }
       }
+      if (!details.length) {
+        throw new Error("MangaUpdates search succeeded, but every detail request failed.");
+      }
       const freshGraph = buildGraphFromSeriesDetails(details);
+      if (!freshGraph.nodes.length) {
+        throw new Error("MangaUpdates returned no graphable detail data.");
+      }
       await cacheSet(LIVE_GRAPH_CACHE_KEY, freshGraph, 1000 * 60 * 60 * 24 * 7);
       setLiveData(freshGraph);
-      if (!details.length) {
-        setLiveError("Live search completed, but no detail data was returned.");
-      }
     } catch (e) {
       const cachedGraph = await cacheGet<GraphData>(LIVE_GRAPH_CACHE_KEY, 1000 * 60 * 60 * 24 * 7);
       if (cachedGraph) {
         setLiveData(cachedGraph);
-        setLiveError("Live refresh failed; showing the cached knowledge graph.");
+        setLiveError("Live refresh failed after trying all MangaUpdates routes; showing the cached knowledge graph.");
       } else {
         setLiveError("Live search failed: " + (e instanceof Error ? e.message : "Unknown error"));
       }
