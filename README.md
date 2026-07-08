@@ -1,5 +1,10 @@
 # 🗺️ MangaViz – Manga Universe Graph Explorer
 
+> **Repository note**
+> The deployable Vite app lives in `mangaviz/`.
+> Run all `npm` commands from `mangaviz/`, and set your hosting platform root directory to `mangaviz/`.
+> The duplicate root-level `src/` tree is not the canonical deployment target.
+
 A **RedditViz-inspired** interactive network map of manga, manhwa, manhua, novels, authors, artists, genres, categories, publishers, and more — powered by [MangaUpdates](https://www.mangaupdates.com).
 
 **Live Demo**: Deploy to any free static host (Cloudflare Pages, Netlify, Vercel, or local).

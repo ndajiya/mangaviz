@@ -1,7 +1,7 @@
 import type { Stylesheet } from 'cytoscape';
 export const NC: Record<string,string> = { series:'#FF6B6B', genre:'#4ECDC4', category:'#45B7D1', author:'#96CEB4', artist:'#FFEAA7', publisher:'#DDA0DD', publication:'#F0E68C' };
 export function getGraphStyles(): Stylesheet[] { return [
-  { selector:'node', style:{'background-color':'#666',label:'data(label)','text-valign':'bottom','text-halign':'center',color:'#fff','font-size':'10px','text-outline-width':2,'text-outline-color':'#1a1a2e',width:'mapData(weight,0,100,8,60)',height:'mapData(weight,0,100,8,60)','border-width':1,'border-color':'#fff','border-opacity':0.3,'min-zoomed-font-size':6,'text-wrap':'wrap','text-max-width':'120px'} },
+  { selector:'node', style:{'background-color':'#666',label:'data(label)','text-valign':'bottom','text-halign':'center',color:'#fff','font-size':'11px','text-outline-width':2,'text-outline-color':'#1a1a2e',width:'mapData(weight,0,100,8,60)',height:'mapData(weight,0,100,8,60)','border-width':1,'border-color':'#fff','border-opacity':0.3,'min-zoomed-font-size':8,'text-wrap':'wrap','text-max-width':'140px'} },
   { selector:'node[type = "series"]', style:{'background-color':NC.series,'border-color':'#ff4444','border-width':2,'font-size':'12px'} },
   { selector:'node[type = "genre"]', style:{'background-color':NC.genre} }, { selector:'node[type = "category"]', style:{'background-color':NC.category} },
   { selector:'node[type = "author"]', style:{'background-color':NC.author,shape:'diamond'} }, { selector:'node[type = "artist"]', style:{'background-color':NC.artist,shape:'diamond'} },

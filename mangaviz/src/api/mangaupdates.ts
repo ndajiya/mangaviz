@@ -1,6 +1,17 @@
 const DEFAULT_BASE = import.meta.env.VITE_MANGAUPDATES_PROXY_URL?.replace(/\/$/, '') || '/api/mangaupdates';
 const LOCAL_PROXY_BASE = import.meta.env.VITE_LOCAL_MANGAUPDATES_PROXY_URL?.replace(/\/$/, '') || 'http://127.0.0.1:8787/api/mangaupdates';
 const DIRECT_BASE = 'https://api.mangaupdates.com/v1';
+// #region debug-point C:live-request-paths
+const DEBUG_SERVER_URL = 'http://127.0.0.1:7778/event';
+const DEBUG_SESSION_ID = 'live-request-failure';
+const reportDebug = (hypothesisId: string, msg: string, data: Record<string, unknown>) => {
+  void fetch(DEBUG_SERVER_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ sessionId: DEBUG_SESSION_ID, runId: 'pre-fix', hypothesisId, location: 'src/api/mangaupdates.ts', msg: `[DEBUG] ${msg}`, data, ts: Date.now() }),
+  }).catch(() => {});
+};
+// #endregion
 
 const resolveUrl = (base: string, ep: string) => {
   const path = ep.startsWith('/') ? ep : `/${ep}`;
@@ -12,7 +23,7 @@ const isLocalHost = () =>
   ['localhost', '127.0.0.1', '0.0.0.0'].includes(window.location.hostname);
 
 const getCandidateBases = () => {
-  const bases = [DEFAULT_BASE, ...(isLocalHost() ? [LOCAL_PROXY_BASE] : []), DIRECT_BASE];
+  const bases = isLocalHost() ? [DEFAULT_BASE, LOCAL_PROXY_BASE, DIRECT_BASE] : [DEFAULT_BASE];
   return bases.filter((base, index) => !!base && bases.indexOf(base) === index);
 };
 
@@ -31,20 +42,28 @@ class API {
     this.last = Date.now();
     const request = { method: o.method||'GET', headers: {'Content-Type':'application/json',Accept:'application/json'}, body: o.body ? JSON.stringify(o.body) : undefined };
     const failures: string[] = [];
-    for (const base of getCandidateBases()) {
+    const candidateBases = getCandidateBases();
+    reportDebug('C', 'live request started', { ep, method: request.method, candidateBases: candidateBases.map(describeBase), isLocalHost: isLocalHost() });
+    for (const base of candidateBases) {
+      const url = resolveUrl(base, ep);
       try {
-        const res = await fetch(resolveUrl(base, ep), request);
+        reportDebug('C', 'live request attempt', { ep, method: request.method, base: describeBase(base), url });
+        const res = await fetch(url, request);
         if (!res.ok) {
           let detail = '';
           try { detail = trimDetail(await res.text()); } catch {}
+          reportDebug('C', 'live request non-ok response', { ep, method: request.method, base: describeBase(base), url, status: res.status, detail });
           failures.push(`${describeBase(base)}: API ${res.status}${detail ? `: ${detail}` : ''}`);
           continue;
         }
+        reportDebug('C', 'live request succeeded', { ep, method: request.method, base: describeBase(base), url, status: res.status });
         return res.json() as Promise<T>;
       } catch (err) {
+        reportDebug('C', 'live request threw', { ep, method: request.method, base: describeBase(base), url, error: err instanceof Error ? err.message : 'Network error' });
         failures.push(`${describeBase(base)}: ${err instanceof Error ? err.message : 'Network error'}`);
       }
     }
+    reportDebug('C', 'live request exhausted all bases', { ep, method: request.method, failures });
     throw new Error(`MangaUpdates live request failed. ${failures.join(' | ')}`);
   }
   searchSeries(o: {search?:string;page?:number;perPage?:number} = {}) { return this.fetch<{total_hits:number;results:SR[]}>('/series/search', {method:'POST',body:{page:o.page||1,perpage:o.perPage||25,...(o.search?{search:o.search}:{})}}); }

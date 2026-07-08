@@ -22,20 +22,31 @@ export default async function handler(req, res) {
   headers.set('origin', 'https://www.mangaupdates.com');
   headers.set('referer', 'https://www.mangaupdates.com/');
 
-  const body = req.method === 'GET' || req.method === 'HEAD' ? undefined : req.body;
-  const response = await fetch(upstreamUrl, {
-    method: req.method,
-    headers,
-    body,
-  });
+  try {
+    const body =
+      req.method === 'GET' || req.method === 'HEAD'
+        ? undefined
+        : typeof req.body === 'string' || req.body instanceof Uint8Array || Buffer.isBuffer(req.body)
+          ? req.body
+          : JSON.stringify(req.body ?? {});
+    const response = await fetch(upstreamUrl, {
+      method: req.method,
+      headers,
+      body,
+    });
 
-  const responseBody = Buffer.from(await response.arrayBuffer());
-  res.statusCode = response.status;
-  response.headers.forEach((value, key) => {
-    if (key.toLowerCase() !== 'transfer-encoding') {
-      res.setHeader(key, value);
-    }
-  });
-  res.setHeader('content-length', responseBody.length);
-  res.end(responseBody);
+    const responseBody = Buffer.from(await response.arrayBuffer());
+    res.statusCode = response.status;
+    response.headers.forEach((value, key) => {
+      if (key.toLowerCase() !== 'transfer-encoding') {
+        res.setHeader(key, value);
+      }
+    });
+    res.setHeader('content-length', responseBody.length);
+    res.end(responseBody);
+  } catch (error) {
+    res.statusCode = 502;
+    res.setHeader('content-type', 'application/json');
+    res.end(JSON.stringify({ error: 'proxy_failure', message: error instanceof Error ? error.message : 'unknown error' }));
+  }
 }

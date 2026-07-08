@@ -12,7 +12,39 @@ import LegendPanel from "./components/LegendPanel";
 import FP from "./components/FilterPanel";
 import StatsPanel from "./components/StatsPanel";
 
-const LIVE_GRAPH_CACHE_KEY = "live:knowledge-graph";
+const LIVE_GRAPH_CACHE_PREFIX = "live:knowledge-graph:";
+const LIVE_GRAPH_CACHE_TTL_MS = 1000 * 60 * 60;
+const getLiveGraphCacheKey = (term: string) => `${LIVE_GRAPH_CACHE_PREFIX}${term.trim().toLowerCase()}`;
+type LiveNoticeKind = "input_required" | "no_results" | "cache_fallback" | "hard_failure";
+type LiveNotice = { kind: LiveNoticeKind; message: string };
+const getLiveNoticeMeta = (kind: LiveNoticeKind) => {
+  switch (kind) {
+    case "input_required":
+      return { title: "Search Needed", hint: "Enter a title to query MangaUpdates." };
+    case "no_results":
+      return { title: "No Live Results", hint: "MangaUpdates returned zero matches for this query." };
+    case "cache_fallback":
+      return { title: "Showing Cached Live Graph", hint: "The latest live refresh failed, so the browser reused a cached Live-mode graph for this same query." };
+    case "hard_failure":
+      return { title: "Live Request Failed", hint: "Open DevTools to inspect the console trace for the exact failure branch and payload." };
+  }
+};
+const traceLiveNotice = (kind: LiveNoticeKind, payload: Record<string, unknown>) => {
+  if (!import.meta.env.DEV) return;
+  const level = kind === "hard_failure" ? "error" : kind === "cache_fallback" ? "warn" : "info";
+  console[level]("[LiveMode]", { kind, ...payload });
+};
+// #region debug-point A:live-error-branches
+const DEBUG_SERVER_URL = 'http://127.0.0.1:7778/event';
+const DEBUG_SESSION_ID = 'live-request-failure';
+const reportDebug = (hypothesisId: string, msg: string, data: Record<string, unknown>) => {
+  void fetch(DEBUG_SERVER_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ sessionId: DEBUG_SESSION_ID, runId: 'pre-fix', hypothesisId, location: 'src/ui/App.tsx', msg: `[DEBUG] ${msg}`, data, ts: Date.now() }),
+  }).catch(() => {});
+};
+// #endregion
 
 const App: React.FC = () => {
   const [mode, setMode] = useState<AppMode>("atlas");
@@ -23,7 +55,7 @@ const App: React.FC = () => {
   const [atlasLoading, setAtlasLoading] = useState(true);
   const [liveData, setLiveData] = useState<GraphData | null>(null);
   const [liveLoading, setLiveLoading] = useState(false);
-  const [liveError, setLiveError] = useState<string | null>(null);
+  const [liveNotice, setLiveNotice] = useState<LiveNotice | null>(null);
   const active = mode === "atlas" ? atlasData : liveData;
 
   const [ntF, setNtF] = useState<Record<string, boolean>>({
@@ -96,17 +128,31 @@ const App: React.FC = () => {
   );
   const hLS = useCallback(async (t: string) => {
     const term = t.trim();
+    const liveCacheKey = getLiveGraphCacheKey(term);
     if (!term) {
-      setLiveError("Enter a search term to query MangaUpdates.");
+      const notice = { kind: "input_required" as const, message: "Enter a search term to query MangaUpdates." };
+      setLiveNotice(notice);
+      traceLiveNotice(notice.kind, { term, liveCacheKey, reason: "empty_input" });
       return;
     }
     setLiveLoading(true);
-    setLiveError(null);
+    setLiveNotice(null);
     setLiveData(null);
+    // #region debug-point A:live-search-start
+    reportDebug('A', 'live search started', { term, liveCacheKey });
+    // #endregion
     try {
       const searchResults = await api.searchSeries({ search: term, perPage: 5 });
+      // #region debug-point A:live-search-results
+      reportDebug('A', 'live search results received', { term, hits: searchResults.total_hits, resultCount: searchResults.results?.length || 0 });
+      // #endregion
       if (!searchResults.results?.length) {
-        setLiveError('No live results for "' + term + '".');
+        // #region debug-point A:live-search-empty
+        reportDebug('A', 'live search returned no results', { term });
+        // #endregion
+        const notice = { kind: "no_results" as const, message: 'No live results for "' + term + '".' };
+        setLiveNotice(notice);
+        traceLiveNotice(notice.kind, { term, liveCacheKey, resultCount: 0, cacheUsed: false });
         return;
       }
       const details: Awaited<ReturnType<typeof api.getSeriesDetail>>[] = [];
@@ -118,24 +164,46 @@ const App: React.FC = () => {
           details.push(await api.getSeriesDetail(id));
         } catch (err) {
           console.warn("Live detail fetch failed for", id, err);
+          // #region debug-point A:live-detail-failed
+          reportDebug('A', 'live detail fetch failed', { term, id, error: err instanceof Error ? err.message : 'unknown' });
+          // #endregion
         }
       }
       if (!details.length) {
+        // #region debug-point A:no-live-details
+        reportDebug('A', 'live search produced zero detail payloads', { term });
+        // #endregion
         throw new Error("MangaUpdates search succeeded, but every detail request failed.");
       }
       const freshGraph = buildGraphFromSeriesDetails(details);
       if (!freshGraph.nodes.length) {
+        // #region debug-point A:no-graphable-data
+        reportDebug('A', 'live graph build produced zero nodes', { term, detailCount: details.length });
+        // #endregion
         throw new Error("MangaUpdates returned no graphable detail data.");
       }
-      await cacheSet(LIVE_GRAPH_CACHE_KEY, freshGraph, 1000 * 60 * 60 * 24 * 7);
+      await cacheSet(liveCacheKey, freshGraph, LIVE_GRAPH_CACHE_TTL_MS);
       setLiveData(freshGraph);
+      // #region debug-point A:live-success
+      reportDebug('A', 'live search produced fresh graph', { term, detailCount: details.length, nodeCount: freshGraph.nodes.length, edgeCount: freshGraph.edges.length });
+      // #endregion
     } catch (e) {
-      const cachedGraph = await cacheGet<GraphData>(LIVE_GRAPH_CACHE_KEY, 1000 * 60 * 60 * 24 * 7);
+      const cachedGraph = await cacheGet<GraphData>(liveCacheKey, LIVE_GRAPH_CACHE_TTL_MS);
       if (cachedGraph) {
         setLiveData(cachedGraph);
-        setLiveError("Live refresh failed after trying all MangaUpdates routes; showing the cached knowledge graph.");
+        // #region debug-point A:cache-fallback
+        reportDebug('A', 'live error triggered cached fallback', { term, liveCacheKey, error: e instanceof Error ? e.message : 'unknown', nodeCount: cachedGraph.nodes.length, edgeCount: cachedGraph.edges.length });
+        // #endregion
+        const notice = { kind: "cache_fallback" as const, message: "Live refresh failed after trying all MangaUpdates routes; showing the cached knowledge graph." };
+        setLiveNotice(notice);
+        traceLiveNotice(notice.kind, { term, liveCacheKey, error: e instanceof Error ? e.message : "Unknown error", nodeCount: cachedGraph.nodes.length, edgeCount: cachedGraph.edges.length, cacheUsed: true });
       } else {
-        setLiveError("Live search failed: " + (e instanceof Error ? e.message : "Unknown error"));
+        // #region debug-point A:hard-failure
+        reportDebug('A', 'live error triggered without cached fallback', { term, liveCacheKey, error: e instanceof Error ? e.message : 'unknown' });
+        // #endregion
+        const notice = { kind: "hard_failure" as const, message: "Live search failed: " + (e instanceof Error ? e.message : "Unknown error") };
+        setLiveNotice(notice);
+        traceLiveNotice(notice.kind, { term, liveCacheKey, error: e instanceof Error ? e.message : "Unknown error", cacheUsed: false });
       }
     } finally {
       setLiveLoading(false);
@@ -145,7 +213,7 @@ const App: React.FC = () => {
     setMode(m);
     setSelNode(null);
     setSelId(null);
-    setLiveError(null);
+    setLiveNotice(null);
   }, []);
   const tNT = useCallback((t: string) => setNtF((p) => ({ ...p, [t]: !(p[t] !== false) })), []);
   const tET = useCallback((t: string) => setEtF((p) => ({ ...p, [t]: !(p[t] !== false) })), []);
@@ -189,15 +257,16 @@ const App: React.FC = () => {
           <LegendPanel />
         </aside>
         <main className="graph-area">
-          {mode === "live" && liveError && (
-            <div className="live-error">
-              <p>{liveError}</p>
-              <p className="live-error-hint">If this keeps happening, try refreshing the page and searching again.</p>
+          {mode === "live" && liveNotice && (
+            <div className={`live-error live-error--${liveNotice.kind}`}>
+              <p className="live-error-title">{getLiveNoticeMeta(liveNotice.kind).title}</p>
+              <p>{liveNotice.message}</p>
+              <p className="live-error-hint">{getLiveNoticeMeta(liveNotice.kind).hint}</p>
             </div>
           )}
           <GC
             graphData={active}
-            layoutData={atlasLayout}
+            layoutData={mode === "atlas" ? atlasLayout : null}
             nodeTypeFilters={ntF}
             edgeTypeFilters={etF}
             clusterFilter={clusterF}
