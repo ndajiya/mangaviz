@@ -1,7 +1,9 @@
 export type AtlasRefreshMode = "direct" | "pr";
+export type AtlasRefreshStrategy = "latest_updated" | "latest_published" | "recent_popularity" | "mixed_seed_queries";
 
 export type AtlasRefreshRequest = {
   mode: AtlasRefreshMode;
+  strategy: AtlasRefreshStrategy;
   ref: string;
   maxSeries: number;
   requestDelay: number;
@@ -13,6 +15,7 @@ export type AtlasRefreshResponse = {
   workflow: string;
   eventType: string;
   mode: AtlasRefreshMode;
+  strategy: AtlasRefreshStrategy;
   ref: string;
   maxSeries: number;
   requestDelay: number;
@@ -70,6 +73,7 @@ const atlasAdmin = {
       },
       body: JSON.stringify({
         mode: input.mode,
+        strategy: input.strategy,
         ref: input.ref,
         maxSeries: input.maxSeries,
         requestDelay: input.requestDelay,

@@ -8,6 +8,13 @@ const clampInteger = (value, fallback, min, max) => {
   return Math.min(max, Math.max(min, parsed));
 };
 
+const VALID_STRATEGIES = new Set([
+  'latest_updated',
+  'latest_published',
+  'recent_popularity',
+  'mixed_seed_queries',
+]);
+
 const isValidRef = (value) =>
   typeof value === 'string'
   && value.length > 0
@@ -56,6 +63,7 @@ export async function POST(request) {
   }
 
   const mode = payload?.mode === 'pr' ? 'pr' : 'direct';
+  const strategy = VALID_STRATEGIES.has(payload?.strategy) ? payload.strategy : 'mixed_seed_queries';
   const maxSeries = clampInteger(payload?.maxSeries, 500, 25, 5000);
   const requestDelay = clampInteger(payload?.requestDelay, 800, 200, 5000);
   const requestedRef = typeof payload?.ref === 'string' && payload.ref.trim() ? payload.ref.trim() : defaultRef;
@@ -79,6 +87,7 @@ export async function POST(request) {
       event_type: 'atlas_refresh_requested',
       client_payload: {
         mode,
+        strategy,
         max_series: String(maxSeries),
         request_delay: String(requestDelay),
         ref,
@@ -104,6 +113,7 @@ export async function POST(request) {
     workflow: 'atlas-refresh.yml',
     eventType: 'atlas_refresh_requested',
     mode,
+    strategy,
     ref,
     maxSeries,
     requestDelay,

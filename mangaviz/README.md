@@ -114,7 +114,11 @@ For a Vercel-friendly Atlas refresh without any scheduler, use the repo-root Git
 3. Choose `mode`
    - `direct` updates the target branch immediately
    - `pr` opens a reviewable pull request before deploy
-4. Optionally set `ref`, `max_series`, and `request_delay`
+4. Optionally set `strategy`, `ref`, `max_series`, and `request_delay`
+   - `latest_updated` follows recent release activity
+   - `latest_published` favors newer publication years
+   - `recent_popularity` blends recency with rating/vote strength
+   - `mixed_seed_queries` mixes multiple search seeds for broader discovery
 5. The workflow runs `npm run atlas:full` from `mangaviz/`
 6. Updated `mangaviz/public/data/*` is either committed back to the branch or placed in a PR
 7. Vercel redeploys after the direct push or after the PR is merged
@@ -135,6 +139,7 @@ This keeps Atlas generation out of Vercel build/runtime limits while preserving 
 - Enable the UI by setting `VITE_ATLAS_ADMIN_ENABLED=true`
 - Admin sign-in now uses Supabase Auth plus `POST /api/admin/session` to set a signed `HttpOnly` cookie
 - The browser no longer sends the GitHub trigger token or the Supabase secret on refresh requests
+- Atlas refresh now supports `latest_updated`, `latest_published`, `recent_popularity`, and `mixed_seed_queries`
 - State-changing admin requests require same-origin browser headers and repeated failed logins are temporarily rate-limited
 - Allow admin access by inserting the Supabase user ID into `public.admin_users`
 - A starter SQL migration lives at `supabase/migrations/atlas_admin_users.sql`

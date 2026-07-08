@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import atlasAdmin, { type AtlasRefreshMode } from "../../api/atlasAdmin";
+import atlasAdmin, { type AtlasRefreshMode, type AtlasRefreshStrategy } from "../../api/atlasAdmin";
 import { getSupabaseClient, hasSupabaseClientConfig } from "../../lib/supabase";
 
 const clamp = (value: number, fallback: number, min: number, max: number) => {
@@ -12,6 +12,7 @@ const AtlasAdminPanel: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [mode, setMode] = useState<AtlasRefreshMode>("pr");
+  const [strategy, setStrategy] = useState<AtlasRefreshStrategy>("mixed_seed_queries");
   const [ref, setRef] = useState("main");
   const [maxSeries, setMaxSeries] = useState("500");
   const [requestDelay, setRequestDelay] = useState("800");
@@ -27,6 +28,19 @@ const AtlasAdminPanel: React.FC = () => {
       : "Commits Atlas data directly to the target branch so Vercel redeploys immediately.",
     [mode],
   );
+
+  const strategyHelpText = useMemo(() => {
+    switch (strategy) {
+      case "latest_updated":
+        return "Uses recent release activity to surface newly updated titles first.";
+      case "latest_published":
+        return "Prioritizes newer publication years so recent titles enter the Atlas sooner.";
+      case "recent_popularity":
+        return "Blends rating strength, vote volume, and recency to approximate current popularity.";
+      case "mixed_seed_queries":
+        return "Combines multiple seeded searches for broader, more diverse Atlas expansion.";
+    }
+  }, [strategy]);
 
   useEffect(() => {
     if (!open) return;
@@ -141,6 +155,7 @@ const AtlasAdminPanel: React.FC = () => {
     try {
       const response = await atlasAdmin.triggerRefresh({
         mode,
+        strategy,
         ref: ref.trim() || "main",
         maxSeries: clamp(Number.parseInt(maxSeries, 10), 500, 25, 5000),
         requestDelay: clamp(Number.parseInt(requestDelay, 10), 800, 200, 5000),
@@ -193,6 +208,16 @@ const AtlasAdminPanel: React.FC = () => {
                   </select>
                 </label>
                 <p className="atlas-admin-hint">{helpText}</p>
+                <label className="atlas-admin-field">
+                  <span>Strategy</span>
+                  <select value={strategy} onChange={(event) => setStrategy(event.target.value as AtlasRefreshStrategy)}>
+                    <option value="mixed_seed_queries">Mixed seed queries</option>
+                    <option value="latest_updated">Latest updated</option>
+                    <option value="latest_published">Latest published</option>
+                    <option value="recent_popularity">Recent popularity</option>
+                  </select>
+                </label>
+                <p className="atlas-admin-hint">{strategyHelpText}</p>
                 <label className="atlas-admin-field">
                   <span>Branch</span>
                   <input type="text" value={ref} onChange={(event) => setRef(event.target.value)} placeholder="main" />
