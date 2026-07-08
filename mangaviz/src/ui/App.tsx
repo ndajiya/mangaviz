@@ -11,6 +11,7 @@ import NDP from "./components/NodeDetailPanel";
 import LegendPanel from "./components/LegendPanel";
 import FP from "./components/FilterPanel";
 import StatsPanel from "./components/StatsPanel";
+import AtlasAdminPanel from "./components/AtlasAdminPanel";
 
 const LIVE_GRAPH_CACHE_PREFIX = "live:knowledge-graph:";
 const LIVE_GRAPH_CACHE_TTL_MS = 1000 * 60 * 60;
@@ -34,6 +35,7 @@ const traceLiveNotice = (kind: LiveNoticeKind, payload: Record<string, unknown>)
   const level = kind === "hard_failure" ? "error" : kind === "cache_fallback" ? "warn" : "info";
   console[level]("[LiveMode]", { kind, ...payload });
 };
+const atlasAdminEnabled = import.meta.env.VITE_ATLAS_ADMIN_ENABLED === "true";
 
 const App: React.FC = () => {
   const [isMobileViewport, setIsMobileViewport] = useState(false);
@@ -307,6 +309,7 @@ const App: React.FC = () => {
           </div>
         </aside>
       </div>
+      {atlasAdminEnabled && <AtlasAdminPanel />}
     </div>
   );
 };

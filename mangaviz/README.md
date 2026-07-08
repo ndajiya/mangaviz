@@ -105,6 +105,57 @@ npm run collect:lite    # 200 series
 npm run atlas:lite      # Same as data:demo + layout + manifest
 ```
 
+### On-demand GitHub refresh
+
+For a Vercel-friendly Atlas refresh without any scheduler, use the repo-root GitHub Actions workflow at `.github/workflows/atlas-refresh.yml`.
+
+1. Open **GitHub -> Actions -> Atlas Refresh**
+2. Click **Run workflow**
+3. Choose `mode`
+   - `direct` updates the target branch immediately
+   - `pr` opens a reviewable pull request before deploy
+4. Optionally set `ref`, `max_series`, and `request_delay`
+5. The workflow runs `npm run atlas:full` from `mangaviz/`
+6. Updated `mangaviz/public/data/*` is either committed back to the branch or placed in a PR
+7. Vercel redeploys after the direct push or after the PR is merged
+
+This keeps Atlas generation out of Vercel build/runtime limits while preserving the normal Vercel deployment flow.
+
+### Three refresh phases
+
+#### Phase 1: Manual GitHub button
+
+- Trigger `Atlas Refresh` from GitHub Actions with `workflow_dispatch`
+- Best for explicit operator-controlled rebuilds
+
+#### Phase 2: Protected admin trigger
+
+- The app can trigger Atlas refresh through `POST /api/admin/atlas-refresh`
+- This dispatches a GitHub `repository_dispatch` event named `atlas_refresh_requested`
+- Enable the UI by setting `VITE_ATLAS_ADMIN_ENABLED=true`
+- Admin sign-in now uses `POST /api/admin/session` and a signed `HttpOnly` cookie
+- The browser no longer sends the GitHub trigger token or the admin secret on refresh requests
+- State-changing admin requests require same-origin browser headers and repeated failed logins are temporarily rate-limited
+
+Required Vercel environment variables:
+
+```bash
+ATLAS_ADMIN_PASSWORD=your-long-admin-password
+ATLAS_SESSION_SECRET=long-random-session-signing-secret
+GITHUB_ATLAS_TRIGGER_TOKEN=github-token-with-repo-access
+GITHUB_OWNER=your-github-org-or-user
+GITHUB_REPO=your-repository-name
+GITHUB_ATLAS_REF=main
+VITE_ATLAS_ADMIN_ENABLED=true
+```
+
+#### Phase 3: PR review flow
+
+- Set refresh `mode` to `pr`
+- The workflow creates a branch and opens a pull request containing refreshed `mangaviz/public/data/*`
+- Merge the PR when ready, then Vercel deploys the reviewed Atlas snapshot
+- The same authenticated admin session can trigger either direct deploy or PR review mode
+
 ### Pre-loaded demo
 
 The repo ships with a demo dataset of **16 popular manga/manhwa** including Berserk, One Piece, Naruto, Attack on Titan, Solo Leveling, and more — ready to explore immediately.
@@ -170,12 +221,6 @@ The `dist/` folder contains everything needed.
 npm run build
 npx serve dist
 ```
-
-### ⛔ Not using GitHub Pages
-
-This project does **not** support GitHub Pages due to its restrictions.
-
----
 
 ## 📊 Collector Details
 

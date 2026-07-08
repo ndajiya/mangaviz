@@ -1,0 +1,112 @@
+name: Atlas Refresh
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Refresh mode
+        required: false
+        default: direct
+        type: choice
+        options:
+          - direct
+          - pr
+      ref:
+        description: Branch to refresh against
+        required: false
+        default: main
+      max_series:
+        description: Maximum number of series to collect
+        required: false
+        default: "500"
+      request_delay:
+        description: Delay between collector requests in milliseconds
+        required: false
+        default: "800"
+  repository_dispatch:
+    types:
+      - atlas_refresh_requested
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: atlas-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh-atlas:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mangaviz
+    env:
+      REFRESH_MODE: ${{ github.event.inputs.mode || github.event.client_payload.mode || 'direct' }}
+      TARGET_REF: ${{ github.event.inputs.ref || github.event.client_payload.ref || github.event.repository.default_branch || 'main' }}
+      MAX_SERIES: ${{ github.event.inputs.max_series || github.event.client_payload.max_series || '500' }}
+      REQUEST_DELAY: ${{ github.event.inputs.request_delay || github.event.client_payload.request_delay || '800' }}
+      PR_BRANCH: atlas-refresh/${{ github.run_id }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TARGET_REF }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: mangaviz/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Rebuild Atlas data
+        run: npm run atlas:full
+
+      - name: Summarize atlas build
+        run: |
+          node -e "const fs=require('fs'); const manifest=JSON.parse(fs.readFileSync('public/data/manifest.json','utf8')); const lines=['## Atlas refresh complete', '', '- mode: ' + process.env.REFRESH_MODE, '- targetRef: ' + process.env.TARGET_REF, '- buildDate: ' + manifest.buildDate, '- seriesCount: ' + manifest.seriesCount, '- totalNodes: ' + manifest.totalNodes, '- totalEdges: ' + manifest.totalEdges, '- maxSeries input: ' + process.env.MAX_SERIES, '- requestDelay input: ' + process.env.REQUEST_DELAY]; fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n');"
+
+      - name: Commit refreshed atlas data
+        if: env.REFRESH_MODE != 'pr'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data
+          git diff --cached --quiet && echo "No atlas data changes detected." && exit 0
+          git commit -m "chore: refresh atlas data"
+          git push origin HEAD:${TARGET_REF}
+
+      - name: Open atlas refresh pull request
+        if: env.REFRESH_MODE == 'pr'
+        id: create-pr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: ${{ env.TARGET_REF }}
+          branch: ${{ env.PR_BRANCH }}
+          commit-message: "chore: refresh atlas data"
+          title: "chore: refresh atlas data"
+          body: |
+            ## Atlas refresh
+
+            - mode: `${{ env.REFRESH_MODE }}`
+            - target ref: `${{ env.TARGET_REF }}`
+            - max series: `${{ env.MAX_SERIES }}`
+            - request delay: `${{ env.REQUEST_DELAY }}`
+
+            This PR was created automatically by the Atlas refresh workflow.
+          add-paths: |
+            mangaviz/public/data
+          delete-branch: true
+
+      - name: Summarize pull request
+        if: env.REFRESH_MODE == 'pr' && steps.create-pr.outputs.pull-request-url != ''
+        run: |
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- pullRequest: ${{ steps.create-pr.outputs.pull-request-url }}" >> "$GITHUB_STEP_SUMMARY"
