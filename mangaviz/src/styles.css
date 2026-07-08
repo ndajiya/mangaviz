@@ -149,8 +149,11 @@ body{min-width:320px}
 .stats-toggle:hover{background:var(--bg3)}
 .stats-header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--border)}
 .stats-header h3{font-size:14px}
+.stats-panel--collapsed .stats-header{border-bottom:none}
 .stats-content{padding:12px 16px}
 .stats-panel{display:flex;flex-direction:column}
+.stats-action-btn{background:none;border:none;color:var(--txt3);font-size:22px;line-height:1;cursor:pointer;padding:0 4px;flex-shrink:0}
+.stats-action-btn:hover{color:var(--accent)}
 .stat-section{margin-bottom:16px}
 .stat-section h4{font-size:11px;text-transform:uppercase;color:var(--txt3);letter-spacing:.5px;margin-bottom:8px}
 .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
