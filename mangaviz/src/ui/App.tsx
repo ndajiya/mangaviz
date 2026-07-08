@@ -36,6 +36,8 @@ const traceLiveNotice = (kind: LiveNoticeKind, payload: Record<string, unknown>)
 };
 
 const App: React.FC = () => {
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
+  const [mobilePanel, setMobilePanel] = useState<"filters" | "details" | null>(null);
   const [mode, setMode] = useState<AppMode>("atlas");
   const [atlasData, setAtlasData] = useState<GraphData | null>(null);
   const [atlasLayout, setAtlasLayout] = useState<any>(null);
@@ -91,11 +93,23 @@ const App: React.FC = () => {
       }
     })();
   }, []);
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mq = window.matchMedia("(max-width: 768px)");
+    const sync = () => {
+      setIsMobileViewport(mq.matches);
+      if (!mq.matches) setMobilePanel(null);
+    };
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
   const hNC = useCallback((n: GraphNode | null) => {
     setSelNode(n);
     setSelId(n?.id ?? null);
     setFocusToken((v) => v + 1);
-  }, []);
+    if (n && isMobileViewport) setMobilePanel("details");
+  }, [isMobileViewport]);
   const hDC = useCallback(
     (id: string) => {
       const n = active?.nodes.find((n) => n.id === id);
@@ -103,9 +117,10 @@ const App: React.FC = () => {
         setSelNode(n);
         setSelId(id);
         setFocusToken((v) => v + 1);
+        if (isMobileViewport) setMobilePanel("details");
       }
     },
-    [active],
+    [active, isMobileViewport],
   );
   const hAS = useCallback(
     (t: string) => {
@@ -176,6 +191,7 @@ const App: React.FC = () => {
     setSelNode(null);
     setSelId(null);
     setLiveNotice(null);
+    setMobilePanel(null);
   }, []);
   const tNT = useCallback((t: string) => setNtF((p) => ({ ...p, [t]: !(p[t] !== false) })), []);
   const tET = useCallback((t: string) => setEtF((p) => ({ ...p, [t]: !(p[t] !== false) })), []);
@@ -203,10 +219,21 @@ const App: React.FC = () => {
           <a href="https://www.mangaupdates.com" target="_blank" rel="noopener noreferrer" className="mu-credit">
             MangaUpdates
           </a>
+          <button type="button" className="mobile-panel-btn" onClick={() => setMobilePanel((p) => p === "filters" ? null : "filters")}>
+            Filters
+          </button>
+          <button type="button" className="mobile-panel-btn" onClick={() => setMobilePanel((p) => p === "details" ? null : "details")}>
+            Details
+          </button>
         </div>
       </header>
+      {mobilePanel && <button type="button" className="mobile-panel-backdrop" aria-label="Close mobile panel" onClick={() => setMobilePanel(null)} />}
       <div className="app-body">
-        <aside className="left-panel">
+        <aside className={"left-panel"+(mobilePanel==="filters"?" is-open":"")}>
+          <div className="mobile-panel-header">
+            <h3>Filters</h3>
+            <button type="button" className="close-btn" onClick={() => setMobilePanel(null)}>&times;</button>
+          </div>
           <FP
             nodeTypeFilters={ntF}
             edgeTypeFilters={etF}
@@ -269,7 +296,11 @@ const App: React.FC = () => {
             </div>
           )}
         </main>
-        <aside className="right-panel">
+        <aside className={"right-panel"+(mobilePanel==="details"?" is-open":"")}>
+          <div className="mobile-panel-header">
+            <h3>{selNode ? "Details" : "Inspector"}</h3>
+            <button type="button" className="close-btn" onClick={() => setMobilePanel(null)}>&times;</button>
+          </div>
           <NDP node={selNode} onClose={() => setSelNode(null)} onNodeClick={hDC} />
           <div className="stats-area">
             <StatsPanel stats={active?.stats || null} visible={showStats} onToggle={() => setShowStats(!showStats)} />
