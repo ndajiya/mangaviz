@@ -297,6 +297,7 @@ const App: React.FC = () => {
               </div>
             </div>
           )}
+          {atlasAdminEnabled && <AtlasAdminPanel />}
         </main>
         <aside className={"right-panel"+(mobilePanel==="details"?" is-open":"")}>
           <div className="mobile-panel-header">
@@ -309,7 +310,6 @@ const App: React.FC = () => {
           </div>
         </aside>
       </div>
-      {atlasAdminEnabled && <AtlasAdminPanel />}
     </div>
   );
 };
