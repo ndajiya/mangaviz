@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/api/mangaupdates/(.*)",
+      "destination": "/api/mangaupdates?path=$1"
+    },
+    {
       "source": "/((?!api/).*)",
       "destination": "/index.html"
     }

@@ -18,13 +18,16 @@ Status: OPEN
 ## Evidence Log
 - Local reproduction succeeded through the configured proxy for `Naruto` and `Giant Killing`; search and all detail requests returned `200`, and IndexedDB cache writes completed.
 - Runtime trace file: `.dbg/trae-debug-log-live-request-failure.ndjson`
-- User-reported deployed failure on `https://mangaviz.vercel.app/` shows `Live Request Failed` with `MangaUpdates live request failed. configured proxy: API 405`.
-- User confirmed the failing deployed request is `POST /api/mangaupdates/series/search`, not a detail request and not a static asset.
-- This combination falsifies the direct-API/CORS hypothesis for the current regression and strongly supports a Vercel routing mismatch where the SPA fallback is still intercepting `/api/...` POST requests in production.
+- User-reported deployed failure first showed `405` on `POST /api/mangaupdates/series/search`, then after the rewrite change it shifted to `404 NOT_FOUND` with `x-vercel-error: NOT_FOUND`.
+- User confirmed the failing deployed request is still `POST /api/mangaupdates/series/search`, not a detail request and not a static asset.
+- The shift from `405` to `404 NOT_FOUND` falsifies the idea that the upstream MangaUpdates API is the immediate cause. Production is now reaching Vercel edge routing, but the proxy endpoint itself is not being published at that path.
+- Current strongest explanation: the catch-all function file shape `api/mangaupdates/[...path].js` is not being discovered/published the way the app expects in this Vite deployment.
 
 ## Applied Fix
 - Updated `mangaviz/vercel.json` to use a rewrite that excludes `/api/` paths from the SPA fallback.
 - Rationale: if API routes are not rewritten to `index.html`, Vercel can route `/api/mangaupdates/series/search` to the serverless function instead of returning `405` for a POST against a static page.
+- Replaced the catch-all proxy file with a concrete function at `mangaviz/api/mangaupdates.js`.
+- Added an explicit rewrite from `/api/mangaupdates/(.*)` to `/api/mangaupdates?path=$1` so production resolves all Live proxy requests through a single known function route.
 
 ## Notes
 - No business-logic changes applied in this session before collecting runtime evidence.
