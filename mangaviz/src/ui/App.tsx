@@ -34,17 +34,6 @@ const traceLiveNotice = (kind: LiveNoticeKind, payload: Record<string, unknown>)
   const level = kind === "hard_failure" ? "error" : kind === "cache_fallback" ? "warn" : "info";
   console[level]("[LiveMode]", { kind, ...payload });
 };
-// #region debug-point A:live-error-branches
-const DEBUG_SERVER_URL = 'http://127.0.0.1:7778/event';
-const DEBUG_SESSION_ID = 'live-request-failure';
-const reportDebug = (hypothesisId: string, msg: string, data: Record<string, unknown>) => {
-  void fetch(DEBUG_SERVER_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ sessionId: DEBUG_SESSION_ID, runId: 'pre-fix', hypothesisId, location: 'src/ui/App.tsx', msg: `[DEBUG] ${msg}`, data, ts: Date.now() }),
-  }).catch(() => {});
-};
-// #endregion
 
 const App: React.FC = () => {
   const [mode, setMode] = useState<AppMode>("atlas");
@@ -138,18 +127,9 @@ const App: React.FC = () => {
     setLiveLoading(true);
     setLiveNotice(null);
     setLiveData(null);
-    // #region debug-point A:live-search-start
-    reportDebug('A', 'live search started', { term, liveCacheKey });
-    // #endregion
     try {
       const searchResults = await api.searchSeries({ search: term, perPage: 5 });
-      // #region debug-point A:live-search-results
-      reportDebug('A', 'live search results received', { term, hits: searchResults.total_hits, resultCount: searchResults.results?.length || 0 });
-      // #endregion
       if (!searchResults.results?.length) {
-        // #region debug-point A:live-search-empty
-        reportDebug('A', 'live search returned no results', { term });
-        // #endregion
         const notice = { kind: "no_results" as const, message: 'No live results for "' + term + '".' };
         setLiveNotice(notice);
         traceLiveNotice(notice.kind, { term, liveCacheKey, resultCount: 0, cacheUsed: false });
@@ -164,43 +144,25 @@ const App: React.FC = () => {
           details.push(await api.getSeriesDetail(id));
         } catch (err) {
           console.warn("Live detail fetch failed for", id, err);
-          // #region debug-point A:live-detail-failed
-          reportDebug('A', 'live detail fetch failed', { term, id, error: err instanceof Error ? err.message : 'unknown' });
-          // #endregion
         }
       }
       if (!details.length) {
-        // #region debug-point A:no-live-details
-        reportDebug('A', 'live search produced zero detail payloads', { term });
-        // #endregion
         throw new Error("MangaUpdates search succeeded, but every detail request failed.");
       }
       const freshGraph = buildGraphFromSeriesDetails(details);
       if (!freshGraph.nodes.length) {
-        // #region debug-point A:no-graphable-data
-        reportDebug('A', 'live graph build produced zero nodes', { term, detailCount: details.length });
-        // #endregion
         throw new Error("MangaUpdates returned no graphable detail data.");
       }
       await cacheSet(liveCacheKey, freshGraph, LIVE_GRAPH_CACHE_TTL_MS);
       setLiveData(freshGraph);
-      // #region debug-point A:live-success
-      reportDebug('A', 'live search produced fresh graph', { term, detailCount: details.length, nodeCount: freshGraph.nodes.length, edgeCount: freshGraph.edges.length });
-      // #endregion
     } catch (e) {
       const cachedGraph = await cacheGet<GraphData>(liveCacheKey, LIVE_GRAPH_CACHE_TTL_MS);
       if (cachedGraph) {
         setLiveData(cachedGraph);
-        // #region debug-point A:cache-fallback
-        reportDebug('A', 'live error triggered cached fallback', { term, liveCacheKey, error: e instanceof Error ? e.message : 'unknown', nodeCount: cachedGraph.nodes.length, edgeCount: cachedGraph.edges.length });
-        // #endregion
         const notice = { kind: "cache_fallback" as const, message: "Live refresh failed after trying all MangaUpdates routes; showing the cached knowledge graph." };
         setLiveNotice(notice);
         traceLiveNotice(notice.kind, { term, liveCacheKey, error: e instanceof Error ? e.message : "Unknown error", nodeCount: cachedGraph.nodes.length, edgeCount: cachedGraph.edges.length, cacheUsed: true });
       } else {
-        // #region debug-point A:hard-failure
-        reportDebug('A', 'live error triggered without cached fallback', { term, liveCacheKey, error: e instanceof Error ? e.message : 'unknown' });
-        // #endregion
         const notice = { kind: "hard_failure" as const, message: "Live search failed: " + (e instanceof Error ? e.message : "Unknown error") };
         setLiveNotice(notice);
         traceLiveNotice(notice.kind, { term, liveCacheKey, error: e instanceof Error ? e.message : "Unknown error", cacheUsed: false });
