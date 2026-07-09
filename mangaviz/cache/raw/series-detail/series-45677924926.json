@@ -1,0 +1,216 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/45677924926",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:06.782Z",
+  "responseData": {
+    "series_id": 45677924926,
+    "title": "\"Aisanai Unmei\" datta Hazu na no ni ~ Tokimodoshi Kihi no Futatome no Kekkon",
+    "url": "https://www.mangaupdates.com/series/kzfggfy/aisanai-unmei-datta-hazu-na-no-ni-tokimodoshi-kihi-no-futatome-no-kekkon",
+    "associated": [
+      {
+        "title": "Destined to Be Unloved, But... The Time-Traveling Queen's Second Marriage"
+      },
+      {
+        "title": "I Thought It Was My 'Unloved Destiny' ~The Time-Regressed Queen's Second Marriage"
+      },
+      {
+        "title": "I Was Supposed to Be \"Fated Not to Be Loved,\" but After Turning Back Time"
+      },
+      {
+        "title": "I Was Supposed to Be “Fated Not to Be Loved,” but After Turning Back Time, This Is My Second Marriage as Queen"
+      },
+      {
+        "title": "I Was Supposed to Have an \"Unloved Fate\" ~ The Queen's Second Marriage After Turning Back Time"
+      },
+      {
+        "title": "I Was Supposed to Have an \"Unloved Fate\" ~The Queen's Second Marriage After Turning Back Time"
+      },
+      {
+        "title": "Supposed to Be an Unloved Fate: The Time-Leaped Queen's Second Marriage"
+      },
+      {
+        "title": "This Is My Second Marriage as Queen, I Thought It Was My 'Unloved Destiny' ~ The Time-Regressed Queen's Second Marriage"
+      },
+      {
+        "title": "だったはずなのに～時戻り王妃の二度目の結婚"
+      },
+      {
+        "title": "時戻り王妃の二度目の結婚"
+      }
+    ],
+    "description": "Christina married David, the young king of the powerful kingdom Romanova. But their marriage was cold; he was beautiful but silent, like an ice sculpture. Believing herself unloved due to her own inadequacies, Christina still loved him. When an assassin's blade threatened David, she shielded him with her own body and died. Yet she wakes up in the past, before their engagement. Granted a second life, Christina decides to live for her own happiness and avoids marrying David. But when they meet again, he is nothing like before—he pursues her with an intensity she never imagined. \"I wanted to see you again.\"\n\nhttps://www.cmoa.jp/title/350410/",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i522691.png",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i522691.png"
+      },
+      "height": 400,
+      "width": 266
+    },
+    "type": "Manga",
+    "year": "2026",
+    "bayesian_rating": 6.16,
+    "rating_votes": 2,
+    "genres": [
+      {
+        "genre": "Fantasy"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "Shoujo"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 45677924926,
+        "category": "Royalty/Imperial",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 29833567962
+      },
+      {
+        "series_id": 45677924926,
+        "category": "Time Rewind",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 29833567962
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 33727889228,
+    "status": null,
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "NIKAIDOU Maya",
+        "author_id": 39535412628,
+        "url": "https://www.mangaupdates.com/author/i5ud3mc/nikaidou-maya",
+        "type": "Author"
+      },
+      {
+        "name": "KAMIKI Waka",
+        "author_id": 64799967667,
+        "url": "https://www.mangaupdates.com/author/tro871v/kamiki-waka",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [],
+    "publications": [],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "Satsuriku no Ou",
+        "series_url": "https://www.mangaupdates.com/series/l4b6mco/satsuriku-no-ou",
+        "series_id": 45973078440,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i503134.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i503134.jpg"
+          },
+          "height": 348,
+          "width": 300
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Marriage of Convenience 2: The Unforgettable Song",
+        "series_url": "https://www.mangaupdates.com/series/lg8gfqs/marriage-of-convenience-2-the-unforgettable-song",
+        "series_id": 46694091700,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i517751.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i517751.jpg"
+          },
+          "height": 400,
+          "width": 279
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "I'll Start by Changing My Husband Through a Plunder Marriage",
+        "series_url": "https://www.mangaupdates.com/series/lsaz4ko/i-ll-start-by-changing-my-husband-through-a-plunder-marriage",
+        "series_id": 47423917032,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i514378.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i514378.jpg"
+          },
+          "height": 400,
+          "width": 279
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "To Be His Wish",
+        "series_url": "https://www.mangaupdates.com/series/m2dpcqj/to-be-his-wish",
+        "series_id": 48033161659,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i402843.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i402843.jpg"
+          },
+          "height": 232,
+          "width": 160
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Lady of the Bank",
+        "series_url": "https://www.mangaupdates.com/series/mks7waf/lady-of-the-bank",
+        "series_id": 49145932599,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i499550.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i499550.jpg"
+          },
+          "height": 400,
+          "width": 266
+        },
+        "weight": 14142
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 495,
+        "month": 1286,
+        "three_months": 1533,
+        "six_months": 3243,
+        "year": 4799
+      },
+      "old_position": {
+        "week": 737,
+        "month": 1295,
+        "three_months": 2375,
+        "six_months": 6132,
+        "year": 8748
+      },
+      "lists": {
+        "reading": 8,
+        "wish": 5,
+        "complete": null,
+        "unfinished": 1,
+        "custom": 4
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783539662,
+      "as_rfc3339": "2026-07-08T12:41:02-07:00",
+      "as_string": "July 8th, 2026 12:41pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

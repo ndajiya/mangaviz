@@ -1,0 +1,336 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/75816756825",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:20.910Z",
+  "responseData": {
+    "series_id": 75816756825,
+    "title": "A Note from Violet",
+    "url": "https://www.mangaupdates.com/series/ytvc7yx/a-note-from-violet",
+    "associated": [
+      {
+        "title": "A Word from Violet"
+      },
+      {
+        "title": "Violet's Poisoned Words"
+      },
+      {
+        "title": "Words from Violet"
+      },
+      {
+        "title": "バイオレットの一言"
+      },
+      {
+        "title": "바이올렛의 한마디"
+      }
+    ],
+    "description": "Violet Everdeen is known as the worst magician in the academy and she is an a illegitimate child from a noble family. Her home life and school life are awful. Suddenly, she gains the power to see visions of the future. The future seen, is a villainess, and an excution. Knowing this, she makes plans to avoid her death and the villainess label.\n\n**Original Novel:**    \n[Naver Series](https://series.naver.com/novel/detail.series?productNo=13518828)\n\n**Original Webtoon:**     \n[KakaoPage](https://page.kakao.com/content/69117162), [Daum](https://webtoon.kakao.com/content/%EB%B0%94%EC%9D%B4%EC%98%AC%EB%A0%9B%EC%9D%98-%ED%95%9C%EB%A7%88%EB%94%94/4841)\n\n **Official Translations:**    \n[Japanese](https://jp.piccoma.com/web/product/200923) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i523366.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i523366.jpg"
+      },
+      "height": 400,
+      "width": 279
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 6.2,
+    "rating_votes": 4,
+    "genres": [
+      {
+        "genre": "Drama"
+      },
+      {
+        "genre": "Fantasy"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "Shoujo"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 75816756825,
+        "category": "Abused Female Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 58827533977
+      },
+      {
+        "series_id": 75816756825,
+        "category": "Elixir",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 58827533977
+      },
+      {
+        "series_id": 75816756825,
+        "category": "European Ambience",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 58827533977
+      },
+      {
+        "series_id": 75816756825,
+        "category": "Knight/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 58827533977
+      },
+      {
+        "series_id": 75816756825,
+        "category": "long strip",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 39505547571
+      },
+      {
+        "series_id": 75816756825,
+        "category": "Magic",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 58827533977
+      },
+      {
+        "series_id": 75816756825,
+        "category": "Magic Item/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 58827533977
+      },
+      {
+        "series_id": 75816756825,
+        "category": "Magical World",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 58827533977
+      },
+      {
+        "series_id": 75816756825,
+        "category": "Nobility/Aristocracy",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 58827533977
+      },
+      {
+        "series_id": 75816756825,
+        "category": "Noble Female Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 58827533977
+      },
+      {
+        "series_id": 75816756825,
+        "category": "Rumor/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 58827533977
+      },
+      {
+        "series_id": 75816756825,
+        "category": "Villainess/es",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 58827533977
+      },
+      {
+        "series_id": 75816756825,
+        "category": "Webtoon/webcomic",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 39505547571
+      }
+    ],
+    "latest_chapter": 27,
+    "forum_id": 44558594360,
+    "status": "28 Chapters (Ongoing)",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Lisabel",
+        "author_id": 13795070620,
+        "url": "https://www.mangaupdates.com/author/6c588m4/lisabel",
+        "type": "Author"
+      },
+      {
+        "name": "Muhwa",
+        "author_id": 58028250737,
+        "url": "https://www.mangaupdates.com/author/qnoistt/muhwa",
+        "type": "Author"
+      },
+      {
+        "name": "Team Littlebun",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Daum",
+        "publisher_id": 69898887659,
+        "url": "https://www.mangaupdates.com/publisher/w3zzqwb/daum",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Kakao",
+        "publisher_id": 37090995261,
+        "url": "https://www.mangaupdates.com/publisher/h1f0r3x/kakao",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "SOY MEDIA",
+        "publisher_id": 62107298587,
+        "url": "https://www.mangaupdates.com/publisher/sj52yaj/soy-media",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Piccoma",
+        "publisher_name": "Kakao",
+        "publisher_id": 37090995261
+      },
+      {
+        "publication_name": "KakaoPage",
+        "publisher_name": "Kakao",
+        "publisher_id": 37090995261
+      },
+      {
+        "publication_name": "Kakao Webtoon",
+        "publisher_name": "Daum",
+        "publisher_id": 69898887659
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "Incubus Banishment ~I Was Banished From the Capital. But the More I Get Along With the Girls, the Stronger I Get~ (Novel)",
+        "series_url": "https://www.mangaupdates.com/series/zt1oyci/incubus-banishment-i-was-banished-from-the-capital-but-the-more-i-get-along-with-the-girls-the-stronger-i-get-novel",
+        "series_id": 77943744738,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i512854.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i512854.jpg"
+          },
+          "height": 400,
+          "width": 280
+        },
+        "weight": 28284
+      },
+      {
+        "series_name": "How I Remarried That Monster",
+        "series_url": "https://www.mangaupdates.com/series/zwulif8/how-i-remarried-that-monster",
+        "series_id": 78173691524,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i528752.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i528752.jpg"
+          },
+          "height": 400,
+          "width": 282
+        },
+        "weight": 26458
+      },
+      {
+        "series_name": "I Was Doted on After Raising the Final Boss Duke's Nephew",
+        "series_url": "https://www.mangaupdates.com/series/zub8gcl/i-was-doted-on-after-raising-the-final-boss-duke-s-nephew",
+        "series_id": 78020237253,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i477714.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i477714.png"
+          },
+          "height": 390,
+          "width": 276
+        },
+        "weight": 24495
+      },
+      {
+        "series_name": "The Bride's Education From the Butler",
+        "series_url": "https://www.mangaupdates.com/series/z91vrzo/the-bride-s-education-from-the-butler",
+        "series_id": 76734739572,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i495476.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i495476.jpg"
+          },
+          "height": 400,
+          "width": 275
+        },
+        "weight": 22361
+      },
+      {
+        "series_name": "I Can See the Title",
+        "series_url": "https://www.mangaupdates.com/series/znt900z/i-can-see-the-title",
+        "series_id": 77627232611,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i510472.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i510472.png"
+          },
+          "height": 400,
+          "width": 279
+        },
+        "weight": 22361
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 866,
+        "month": 1768,
+        "three_months": 2345,
+        "six_months": 4299,
+        "year": 5920
+      },
+      "old_position": {
+        "week": 883,
+        "month": 1790,
+        "three_months": 3171,
+        "six_months": null,
+        "year": 9278
+      },
+      "lists": {
+        "reading": 22,
+        "wish": 29,
+        "complete": 2,
+        "unfinished": 3,
+        "custom": 20
+      }
+    },
+    "last_updated": {
+      "timestamp": 1782629756,
+      "as_rfc3339": "2026-06-27T23:55:56-07:00",
+      "as_string": "June 27th, 2026 11:55pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

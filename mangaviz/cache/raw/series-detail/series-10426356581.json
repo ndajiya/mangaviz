@@ -1,0 +1,257 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/10426356581",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:04.964Z",
+  "responseData": {
+    "series_id": 10426356581,
+    "title": "0 Temperature",
+    "url": "https://www.mangaupdates.com/series/4sfl085/0-temperature",
+    "associated": [
+      {
+        "title": "0의 온도"
+      },
+      {
+        "title": "Zero Degrees"
+      }
+    ],
+    "description": "Min Kyung‑hee falls in love with a spirit called “Zero,” an entity that has followed her around ever since her first year of high school. As soon as she becomes an adult, she holds a “spirit wedding” with Zero and makes a plan: she will use a man in the real world as an empty shell, just a vessel, in order to give Zero a physical body. Things go smoothly at first as she puts in the effort to win over this “shell” man and her plan advances without a hitch. But one day, Kyung‑hee realizes what her own heart truly feels—and she comes to regret all of her choices. She has always chosen to run away rather than take responsibility. Will she avoid it all again this time too, or will she face the consequences of her love and her decisions?\n\n**Original Webtoon:**   \n[Naver Webtoon](https://comic.naver.com/webtoon/list?titleId=850650), [Naver Series](https://series.naver.com/comic/detail.series?productNo=14151563)  ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i524913.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i524913.jpg"
+      },
+      "height": 400,
+      "width": 276
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 6.43,
+    "rating_votes": 4,
+    "genres": [
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Mystery"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "School Life"
+      },
+      {
+        "genre": "Supernatural"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 10426356581,
+        "category": "Dead Male Lead",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 21547698789
+      },
+      {
+        "series_id": 10426356581,
+        "category": "Ghost Male Lead",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 21547698789
+      },
+      {
+        "series_id": 10426356581,
+        "category": "Lonely Female Lead",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 21547698789
+      },
+      {
+        "series_id": 10426356581,
+        "category": "Loner Protagonist",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 21547698789
+      },
+      {
+        "series_id": 10426356581,
+        "category": "Possession",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 21547698789
+      },
+      {
+        "series_id": 10426356581,
+        "category": "Spirit/s",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 21547698789
+      },
+      {
+        "series_id": 10426356581,
+        "category": "Villain Couple",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 21547698789
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 8312026065,
+    "status": "14",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "0g",
+        "author_id": 41220579392,
+        "url": "https://www.mangaupdates.com/author/ixpo2m8/0g",
+        "type": "Author"
+      },
+      {
+        "name": "0g",
+        "author_id": 41220579392,
+        "url": "https://www.mangaupdates.com/author/ixpo2m8/0g",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162,
+        "url": "https://www.mangaupdates.com/publisher/9vh24ju/naver",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Naver Webtoon",
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162
+      },
+      {
+        "publication_name": "Naver Series",
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "Harpy",
+        "series_url": "https://www.mangaupdates.com/series/5ixg76r/harpy",
+        "series_id": 12028485987,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i101875.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i101875.png"
+          },
+          "height": 250,
+          "width": 158
+        },
+        "weight": 17321
+      },
+      {
+        "series_name": "The Lurking Spirit",
+        "series_url": "https://www.mangaupdates.com/series/nsjmlci/the-lurking-spirit",
+        "series_id": 51792013458,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i291024.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i291024.jpg"
+          },
+          "height": 225,
+          "width": 159
+        },
+        "weight": 17321
+      },
+      {
+        "series_name": "Otsukare-sama desu, Tsukimiya-san ~Dekiai Shikijourei vs Yokkyuu Fuman OL no 1-Kagetsu~ Joujun",
+        "series_url": "https://www.mangaupdates.com/series/wai4n41/otsukare-sama-desu-tsukimiya-san-dekiai-shikijourei-vs-yokkyuu-fuman-ol-no-1-kagetsu-joujun",
+        "series_id": 70292146177,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i427713.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i427713.jpg"
+          },
+          "height": 224,
+          "width": 160
+        },
+        "weight": 17321
+      },
+      {
+        "series_name": "Mawarisei no Ketsumeisha",
+        "series_url": "https://www.mangaupdates.com/series/6qq5xrw/mawarisei-no-ketsumeisha",
+        "series_id": 14676761660,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i511415.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i511415.jpg"
+          },
+          "height": 400,
+          "width": 281
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Yoru no Shita de Machiawase",
+        "series_url": "https://www.mangaupdates.com/series/7ah0k14/yoru-no-shita-de-machiawase",
+        "series_id": 15870717544,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i389989.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i389989.jpg"
+          },
+          "height": 243,
+          "width": 160
+        },
+        "weight": 14142
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 843,
+        "month": 1649,
+        "three_months": 1957,
+        "six_months": 4223,
+        "year": 5843
+      },
+      "old_position": {
+        "week": 860,
+        "month": 1584,
+        "three_months": 3134,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": 11,
+        "wish": 21,
+        "complete": 2,
+        "unfinished": null,
+        "custom": 7
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783539689,
+      "as_rfc3339": "2026-07-08T12:41:29-07:00",
+      "as_string": "July 8th, 2026 12:41pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

@@ -1,0 +1,246 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/63453517136",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:07.212Z",
+  "responseData": {
+    "series_id": 63453517136,
+    "title": "About Impure Obsession",
+    "url": "https://www.mangaupdates.com/series/t5el368/about-impure-obsession",
+    "associated": [
+      {
+        "title": "Impure Obsession"
+      },
+      {
+        "title": "Regarding Impure Obsession"
+      },
+      {
+        "title": "불순한 집착에 대하여"
+      }
+    ],
+    "description": "\"Look only at me, where I can see you.\"      \n\n\"How would you like to attend a dinner as my partner, Ms. Yun Ha-ru?\" \n\nThey were just an ordinary employee and customer—at least, until she dropped her notebook at his house. \n\n\"Honestly, I'm uncomfortable and find it difficult to be involved with you, Mr. Cho Jae-yun.\"    \n\n\"What should I do? I have no intention of letting you go.\"    \n\nHa-ru thought everything would end once she accepted his proposal and got her notebook back. But hearing his words, which sounded like he needed her, and feeling a warmth and consideration she had never received before, her fragile heart kept drifting toward him. Even though she knew she was nothing more or less than a partner to this man, it was like a swamp she could neither reject nor escape.    \n\n\"I like you.\"     \n\n\"I've come to like you, Director.\" Even so, she confessed to the man who said he didn't know or believe in love. \"If only I could go back to before I liked you... I wouldn't be in this much pain.\" \n\nWithout knowing that she would regret this day for a long, long time.\n\n**Original Webtoon:**    \nR19: [Naver Series](https://series.naver.com/comic/detail.series?productNo=14051097)    \nR15: [Naver Series](https://series.naver.com/comic/detail.series?productNo=14051095) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i524888.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i524888.jpg"
+      },
+      "height": 400,
+      "width": 275
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Adult"
+      },
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Mature"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "Smut"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 63453517136,
+        "category": "Blackmail",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 36115633174
+      },
+      {
+        "series_id": 63453517136,
+        "category": "Dead Father",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 36115633174
+      },
+      {
+        "series_id": 63453517136,
+        "category": "Hard-Working Female Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 36115633174
+      },
+      {
+        "series_id": 63453517136,
+        "category": "Poor Female Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 36115633174
+      },
+      {
+        "series_id": 63453517136,
+        "category": "Rich Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 36115633174
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 38731960986,
+    "status": "13",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Yoon Soda",
+        "author_id": 71356087225,
+        "url": "https://www.mangaupdates.com/author/ws3kla1/yoon-soda",
+        "type": "Author"
+      },
+      {
+        "name": "Red Peach Studio",
+        "author_id": 55977225621,
+        "url": "https://www.mangaupdates.com/author/ppre7px/red-peach-studio",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162,
+        "url": "https://www.mangaupdates.com/publisher/9vh24ju/naver",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Red Peach Studio",
+        "publisher_id": 70819591560,
+        "url": "https://www.mangaupdates.com/publisher/wj85mko/red-peach-studio",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Naver Series",
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "Cinderella no Shutsuji",
+        "series_url": "https://www.mangaupdates.com/series/ufahoxw/cinderella-no-shutsuji",
+        "series_id": 66228084356,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i383859.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i383859.jpg"
+          },
+          "height": 227,
+          "width": 160
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "The Fake Saint of a Reverse Harem Game",
+        "series_url": "https://www.mangaupdates.com/series/t6pg9ty/the-fake-saint-of-a-reverse-harem-game",
+        "series_id": 63532234438,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i509361.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i509361.jpg"
+          },
+          "height": 400,
+          "width": 278
+        },
+        "weight": 17321
+      },
+      {
+        "series_name": "10 Billion Owners",
+        "series_url": "https://www.mangaupdates.com/series/tmql494/10-billion-owners",
+        "series_id": 64501598920,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i489021.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i489021.jpg"
+          },
+          "height": 400,
+          "width": 279
+        },
+        "weight": 17321
+      },
+      {
+        "series_name": "Migomori Keiyaku Hanayome",
+        "series_url": "https://www.mangaupdates.com/series/tc814l8/migomori-keiyaku-hanayome",
+        "series_id": 63865771388,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i390955.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i390955.jpg"
+          },
+          "height": 227,
+          "width": 160
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Lion Heart (Choi Soo-hyun)",
+        "series_url": "https://www.mangaupdates.com/series/tlggl5p/lion-heart-choi-soo-hyun",
+        "series_id": 64424125213,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i514646.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i514646.png"
+          },
+          "height": 400,
+          "width": 266
+        },
+        "weight": 14142
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 789,
+        "month": 2102,
+        "three_months": 3330,
+        "six_months": null,
+        "year": null
+      },
+      "old_position": {
+        "week": 886,
+        "month": 2102,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": 2,
+        "wish": 6,
+        "complete": null,
+        "unfinished": null,
+        "custom": 11
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783539902,
+      "as_rfc3339": "2026-07-08T12:45:02-07:00",
+      "as_string": "July 8th, 2026 12:45pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

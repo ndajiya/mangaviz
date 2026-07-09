@@ -1,0 +1,232 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/55266543329",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:08.516Z",
+  "responseData": {
+    "series_id": 55266543329,
+    "title": "A Romance of Fidelity",
+    "url": "https://www.mangaupdates.com/series/pe09tr5/a-romance-of-fidelity",
+    "associated": [
+      {
+        "title": "A Celibate Romance"
+      },
+      {
+        "title": "Virtuous Romance"
+      },
+      {
+        "title": "수절한 로맨스"
+      }
+    ],
+    "description": "With perfect specs and face, Lee Seung-Woo\nhas lived a life loved by both men and women, yet he is an upright, chaste man who has never once \"done\" love. For him, love was something he could pursue whenever he set his mind to it. That was his belief until he met the impenetrable Baek Su-Rin.\n\n“Noona, think objectively.”\n“With this face, with this body… how often do you find a virgin who likes you?”\n“Noona, there’s no one in my department as pure as me.”\n\nCompletely smitten with Su-Rin, Seung-Woo tries to emphasize his virginity...\n\n**Original Webtoon:**   \n[Ridibooks](https://ridibooks.com/books/1716002952)  ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i522450.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i522450.jpg"
+      },
+      "height": 400,
+      "width": 283
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "Smut"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 55266543329,
+        "category": "Full Color",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55051757646
+      },
+      {
+        "series_id": 55266543329,
+        "category": "Older Female Younger Male",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55051757646
+      },
+      {
+        "series_id": 55266543329,
+        "category": "University/Post-Secondary Student/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55051757646
+      },
+      {
+        "series_id": 55266543329,
+        "category": "Webtoon/Webcomic",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55051757646
+      }
+    ],
+    "latest_chapter": 14,
+    "forum_id": 24528370016,
+    "status": "26",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Chab Chab1",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": "Egg",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": "Nezi",
+        "author_id": 24218562207,
+        "url": "https://www.mangaupdates.com/author/b4j3u73/nezi",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Ridibooks",
+        "publisher_id": 26086657674,
+        "url": "https://www.mangaupdates.com/publisher/bzfblvu/ridibooks",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "To You Dream",
+        "publisher_id": 55434030099,
+        "url": "https://www.mangaupdates.com/publisher/pgrzndf/to-you-dream",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "Dancing With the Girls",
+        "series_url": "https://www.mangaupdates.com/series/s457m0g/dancing-with-the-girls",
+        "series_id": 61200523312,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i512014.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i512014.png"
+          },
+          "height": 400,
+          "width": 229
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "The Best Friend's Secret",
+        "series_url": "https://www.mangaupdates.com/series/s87hjrt/the-best-friend-s-secret",
+        "series_id": 61446210905,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i468026.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i468026.jpg"
+          },
+          "height": 227,
+          "width": 160
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "Strongest System",
+        "series_url": "https://www.mangaupdates.com/series/tgz88pf/strongest-system",
+        "series_id": 64153317651,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i345244.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i345244.jpg"
+          },
+          "height": 213,
+          "width": 160
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "Dazzled By You",
+        "series_url": "https://www.mangaupdates.com/series/vxfndl7/dazzled-by-you",
+        "series_id": 69501921163,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i356854.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i356854.jpg"
+          },
+          "height": 226,
+          "width": 160
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "Age of Innocence",
+        "series_url": "https://www.mangaupdates.com/series/zwerryi/age-of-innocence",
+        "series_id": 78147109962,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i529187.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i529187.jpg"
+          },
+          "height": 400,
+          "width": 285
+        },
+        "weight": 20000
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 894,
+        "month": 1971,
+        "three_months": 2781,
+        "six_months": 4203,
+        "year": 5823
+      },
+      "old_position": {
+        "week": 875,
+        "month": 2026,
+        "three_months": 2988,
+        "six_months": 5933,
+        "year": 8946
+      },
+      "lists": {
+        "reading": 3,
+        "wish": 13,
+        "complete": 1,
+        "unfinished": 1,
+        "custom": 19
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783539856,
+      "as_rfc3339": "2026-07-08T12:44:16-07:00",
+      "as_string": "July 8th, 2026 12:44pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

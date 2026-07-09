@@ -1,0 +1,112 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/16662357701",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:11.115Z",
+  "responseData": {
+    "series_id": 16662357701,
+    "title": "3 Years Later, He Became My Boss",
+    "url": "https://www.mangaupdates.com/series/7nkc5hh/3-years-later-he-became-my-boss",
+    "associated": [
+      {
+        "title": "Bỏ Trốn Ba Năm, Người Yêu Cũ Lại Là Cấp Trên Của Tôi"
+      },
+      {
+        "title": "跑路三年，前男友竟成了顶头上司"
+      }
+    ],
+    "description": "[Original Webtoon](https://www.kuaikanmanhua.com/web/topic/27817) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i529915.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i529915.jpg"
+      },
+      "height": 400,
+      "width": 289
+    },
+    "type": "Manhua",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Drama"
+      },
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Romance"
+      }
+    ],
+    "categories": [],
+    "latest_chapter": 0,
+    "forum_id": 55302120627,
+    "status": null,
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "灼灼喵",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": "一十八社",
+        "author_id": 31856452280,
+        "url": "https://www.mangaupdates.com/author/emuibw8",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "KuaiKan",
+        "publisher_id": 577390863,
+        "url": "https://www.mangaupdates.com/publisher/09jrhn3/kuaikan",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [],
+    "recommendations": [],
+    "category_recommendations": [],
+    "rank": {
+      "position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "old_position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": 1,
+        "wish": null,
+        "complete": null,
+        "unfinished": null,
+        "custom": 1
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783531953,
+      "as_rfc3339": "2026-07-08T10:32:33-07:00",
+      "as_string": "July 8th, 2026 10:32am PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

@@ -1,0 +1,261 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/46389358225",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:16.250Z",
+  "responseData": {
+    "series_id": 46389358225,
+    "title": "A Peace-Loving Vampire Who Has Lived for Tens of Thousands of Years Has Somehow Become the Strongest in the World",
+    "url": "https://www.mangaupdates.com/series/lb70xw1/a-peace-loving-vampire-who-has-lived-for-tens-of-thousands-of-years-has-somehow-become-the-strongest-in-the-world",
+    "associated": [
+      {
+        "title": "Man Nen Wo Ikiru Heiwa Shugi Vampire, Itsunomanika Sekai Saikyo Ni Ore Ga Mao Gun Shitenno De Aratana Shiso? Dare to Machigatte N No?"
+      },
+      {
+        "title": "The Peace-Loving Vampire Who Lived for Millennia Is Mistaken for One of the Demon King's Four Heavenly Kings"
+      },
+      {
+        "title": "万年を生きる平和主義ヴァンパイア、いつの間にか世界最強に～俺が魔王軍四天王で新たな始祖?誰と間違ってんの?～"
+      }
+    ],
+    "description": "—No, no, aren't you mistaken?\n\nAlto a vampire who had lived peacefully for about 2000 years, secluded in his own territory.\n\nThen one day, an invitation arrived...\n\nLord Alto, the oldest vampire among the Four Heavenly Kings of the Demon Lord's Army;\nPlease participate in the Demon Lord's Army Executive Meeting.\nFailure to participate will result in purging. ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i531291.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i531291.jpg"
+      },
+      "height": 300,
+      "width": 300
+    },
+    "type": "Manga",
+    "year": "2026",
+    "bayesian_rating": 6.23,
+    "rating_votes": 1,
+    "genres": [
+      {
+        "genre": "Comedy"
+      },
+      {
+        "genre": "Fantasy"
+      },
+      {
+        "genre": "Shounen"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 46389358225,
+        "category": "Based on a Webnovel",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 21473430881
+      },
+      {
+        "series_id": 46389358225,
+        "category": "Blood and Gore",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 21473430881
+      },
+      {
+        "series_id": 46389358225,
+        "category": "Demon Lord/King",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 21473430881
+      },
+      {
+        "series_id": 46389358225,
+        "category": "Demon/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 21473430881
+      },
+      {
+        "series_id": 46389358225,
+        "category": "Nudity",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 21473430881
+      },
+      {
+        "series_id": 46389358225,
+        "category": "Vampire Protagonist",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 21473430881
+      },
+      {
+        "series_id": 46389358225,
+        "category": "Vampire/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 21473430881
+      }
+    ],
+    "latest_chapter": 3,
+    "forum_id": 4292790172,
+    "status": "0 Volumes (Ongoing)",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "HAZUKI Sou",
+        "author_id": 57334392422,
+        "url": "https://www.mangaupdates.com/author/qc7f0bq/hazuki-sou",
+        "type": "Author"
+      },
+      {
+        "name": "Katou",
+        "author_id": 39723601685,
+        "url": "https://www.mangaupdates.com/author/i8yen85/katou",
+        "type": "Author"
+      },
+      {
+        "name": "Handa",
+        "author_id": 8631484108,
+        "url": "https://www.mangaupdates.com/author/3yqynrg/handa",
+        "type": "Artist"
+      },
+      {
+        "name": "TEDDY",
+        "author_id": 44452230078,
+        "url": "https://www.mangaupdates.com/author/kf5pk8u/teddy",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "DASHXBunko",
+        "publisher_id": 75685974639,
+        "url": "https://www.mangaupdates.com/publisher/yrph3sf/dashxbunko",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Dwango",
+        "publisher_name": null,
+        "publisher_id": null
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "Yuusha Izoku",
+        "series_url": "https://www.mangaupdates.com/series/v8qsky1/yuusha-izoku",
+        "series_id": 68008985353,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i530739.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i530739.jpg"
+          },
+          "height": 400,
+          "width": 281
+        },
+        "weight": 22361
+      },
+      {
+        "series_name": "DQN Saga",
+        "series_url": "https://www.mangaupdates.com/series/u0os008/dqn-saga",
+        "series_id": 65345087240,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i465517.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i465517.jpg"
+          },
+          "height": 227,
+          "width": 160
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "Incubus Banishment ~I Was Banished From the Capital. But the More I Get Along With the Girls, the Stronger I Get~ (Novel)",
+        "series_url": "https://www.mangaupdates.com/series/zt1oyci/incubus-banishment-i-was-banished-from-the-capital-but-the-more-i-get-along-with-the-girls-the-stronger-i-get-novel",
+        "series_id": 77943744738,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i512854.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i512854.jpg"
+          },
+          "height": 400,
+          "width": 280
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "Blood Lovers",
+        "series_url": "https://www.mangaupdates.com/series/p8s72e5/blood-lovers",
+        "series_id": 54950646749,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i343635.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i343635.jpg"
+          },
+          "height": 213,
+          "width": 160
+        },
+        "weight": 17321
+      },
+      {
+        "series_name": "The Saintess's Petals Are Drenched",
+        "series_url": "https://www.mangaupdates.com/series/pc0ckvy/the-saintess-s-petals-are-drenched",
+        "series_id": 55145739454,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i487090.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i487090.jpg"
+          },
+          "height": 400,
+          "width": 296
+        },
+        "weight": 17321
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 464,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "old_position": {
+        "week": 865,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": 2,
+        "wish": 2,
+        "complete": null,
+        "unfinished": null,
+        "custom": 5
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783328412,
+      "as_rfc3339": "2026-07-06T02:00:12-07:00",
+      "as_string": "July 6th, 2026 2:00am PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

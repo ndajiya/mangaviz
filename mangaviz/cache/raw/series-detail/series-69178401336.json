@@ -1,0 +1,434 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/69178401336",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:17.594Z",
+  "responseData": {
+    "series_id": 69178401336,
+    "title": "A Lifelong Yearning for You",
+    "url": "https://www.mangaupdates.com/series/vs3183c/a-lifelong-yearning-for-you",
+    "associated": [
+      {
+        "title": "Endless Yearning"
+      },
+      {
+        "title": "Everlasting Longing"
+      },
+      {
+        "title": "I Deeply Long For Your Return"
+      },
+      {
+        "title": "Longing For You"
+      },
+      {
+        "title": "Pining Endlessly"
+      },
+      {
+        "title": "寤寐不忘"
+      },
+      {
+        "title": "오매불망"
+      }
+    ],
+    "description": "Chae Do-young has admired Seo Ki-hyeon on TV ever since childhood. When they reunite in high school, Ki-hyeon turns out to hide a sharp, calculating nature behind his gentle smile. The person he truly loves is his childhood friend Kim Ga-on — and to win that love, Ki-hyeon uses Do-young as a pawn. Even as she is used and hurt again and again, Do-young cannot stop her feelings for Ki-hyeon.\n\n**Original Webtoon:**  \n[Naver Webtoon](https://comic.naver.com/webtoon/list?titleId=849508), [Naver Series](https://series.naver.com/comic/detail.series?productNo=13975756)\n\n**Official Translations:**     \n[S.Chinese](https://www.dongmanmanhua.cn/LOVE/wumeibuwang/list?title_no=2899) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i522400.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i522400.jpg"
+      },
+      "height": 400,
+      "width": 276
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 5.38,
+    "rating_votes": 21,
+    "genres": [
+      {
+        "genre": "Drama"
+      },
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Romance"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 69178401336,
+        "category": "Abused Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 39473696102
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Angst",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 61741866584
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Appearance Different from Personality",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Arrogant Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Black-Eyed Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 39473696102
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Black-Haired Female Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 39473696102
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Child Actor/Actress",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Childhood Crush",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Childhood Friend/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Cunning Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 61741866584
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Female Lead Falls in Love First",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Full Color",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55051757646
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Gap Moe",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 39473696102
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Haraguro / Black Belly",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 61741866584
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Haraguro Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 61741866584
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Love Triangle/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Manipulative Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Pathetic Female Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Piercing/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 39473696102
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Purple/Violet-Eyed Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 39473696102
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Purple/Violet-Haired Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 39473696102
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Stalkerish Female Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Suicide/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 39473696102
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Time Skip",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 39473696102
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Two-Faced Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Unrequited Love",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Webtoon/Webcomic",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55051757646
+      },
+      {
+        "series_id": 69178401336,
+        "category": "Yandere Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 39473696102
+      }
+    ],
+    "latest_chapter": 15,
+    "forum_id": 59399156089,
+    "status": "11 Chapters (Ongoing)",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "2L",
+        "author_id": 21188534014,
+        "url": "https://www.mangaupdates.com/author/9qf3tha/2l",
+        "type": "Author"
+      },
+      {
+        "name": "2L",
+        "author_id": 21188534014,
+        "url": "https://www.mangaupdates.com/author/9qf3tha/2l",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162,
+        "url": "https://www.mangaupdates.com/publisher/9vh24ju/naver",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Naver Webtoon",
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162
+      },
+      {
+        "publication_name": "Naver Series",
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "How I Remarried That Monster",
+        "series_url": "https://www.mangaupdates.com/series/zwulif8/how-i-remarried-that-monster",
+        "series_id": 78173691524,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i528752.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i528752.jpg"
+          },
+          "height": 400,
+          "width": 282
+        },
+        "weight": 28284
+      },
+      {
+        "series_name": "Adapted Male Lead (Pre-serialization)",
+        "series_url": "https://www.mangaupdates.com/series/07ia9q8/adapted-male-lead-pre-serialization",
+        "series_id": 453975488,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i334352.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i334352.jpg"
+          },
+          "height": 90,
+          "width": 152
+        },
+        "weight": 24495
+      },
+      {
+        "series_name": "Neap Tide",
+        "series_url": "https://www.mangaupdates.com/series/ic2od20/neap-tide",
+        "series_id": 39912172056,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i480874.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i480874.jpg"
+          },
+          "height": 400,
+          "width": 297
+        },
+        "weight": 24495
+      },
+      {
+        "series_name": "Gentle Beast",
+        "series_url": "https://www.mangaupdates.com/series/ndle719/gentle-beast",
+        "series_id": 50887988253,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i364341.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i364341.jpg"
+          },
+          "height": 213,
+          "width": 160
+        },
+        "weight": 24495
+      },
+      {
+        "series_name": "101st Confession",
+        "series_url": "https://www.mangaupdates.com/series/u8dlzo9/101st-confession",
+        "series_id": 65810060505,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i518970.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i518970.png"
+          },
+          "height": 400,
+          "width": 266
+        },
+        "weight": 22361
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 102,
+        "month": 103,
+        "three_months": 104,
+        "six_months": 195,
+        "year": 461
+      },
+      "old_position": {
+        "week": 130,
+        "month": 96,
+        "three_months": 106,
+        "six_months": 1495,
+        "year": 2530
+      },
+      "lists": {
+        "reading": 79,
+        "wish": 64,
+        "complete": 2,
+        "unfinished": 2,
+        "custom": 31
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783124508,
+      "as_rfc3339": "2026-07-03T17:21:48-07:00",
+      "as_string": "July 3rd, 2026 5:21pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

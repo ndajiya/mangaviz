@@ -1,0 +1,132 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/46443698267",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:24.226Z",
+  "responseData": {
+    "series_id": 46443698267,
+    "title": "A Punk, Devoted to Pure Love",
+    "url": "https://www.mangaupdates.com/series/lc3dmxn/a-punk-devoted-to-pure-love",
+    "associated": [
+      {
+        "title": "A Delinquent, Devoted to Love"
+      },
+      {
+        "title": "The Delinquent's Pure Love"
+      },
+      {
+        "title": "Tình Yêu Thuần Khiết Của Trai Hư"
+      },
+      {
+        "title": "양아치, 순애합니다"
+      }
+    ],
+    "description": "Yujin, a straight-A student who dreamed of getting into medical school, had her entire rhythm thrown off by a brief romance in high school—and ended up blowing her college entrance exams. While retaking the year to try again, her delinquent ex-boyfriend Junha suddenly reappears in her life. Is he here to sabotage her exams once more… or is he still hung up on her? A sexy campus rom-com about two people who are impossibly different—and irresistibly drawn to each other.\n\n**Original Webtoon:**     \n[Naver Webtoon](https://comic.naver.com/webtoon/list?titleId=847748), [Naver Series](https://series.naver.com/comic/detail.series?productNo=13725734) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i515738.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i515738.jpg"
+      },
+      "height": 400,
+      "width": 276
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 6.14,
+    "rating_votes": 3,
+    "genres": [
+      {
+        "genre": "Drama"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "School Life"
+      },
+      {
+        "genre": "Shoujo"
+      }
+    ],
+    "categories": [],
+    "latest_chapter": 0,
+    "forum_id": 46720816221,
+    "status": "26",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Seonan",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": "Seonan",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162,
+        "url": "https://www.mangaupdates.com/publisher/9vh24ju/naver",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Naver Webtoon",
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162
+      },
+      {
+        "publication_name": "Naver Series",
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [],
+    "rank": {
+      "position": {
+        "week": 867,
+        "month": 1954,
+        "three_months": 3065,
+        "six_months": 4271,
+        "year": 5611
+      },
+      "old_position": {
+        "week": 862,
+        "month": 2071,
+        "three_months": 3571,
+        "six_months": 5546,
+        "year": 8757
+      },
+      "lists": {
+        "reading": 36,
+        "wish": 31,
+        "complete": null,
+        "unfinished": 1,
+        "custom": 18
+      }
+    },
+    "last_updated": {
+      "timestamp": 1782244829,
+      "as_rfc3339": "2026-06-23T13:00:29-07:00",
+      "as_string": "June 23rd, 2026 1:00pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

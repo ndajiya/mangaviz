@@ -1,0 +1,219 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/62704327279",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:10.380Z",
+  "responseData": {
+    "series_id": 62704327279,
+    "title": "A Kiss to the Knight Who Swore Revenge",
+    "url": "https://www.mangaupdates.com/series/st0jckv/a-kiss-to-the-knight-who-swore-revenge",
+    "associated": [
+      {
+        "title": "A Kiss for the Knight Who Swore Revenge"
+      },
+      {
+        "title": "破滅の魔術師は復讐を誓った男装騎士にキスをする ～淫らな王家に終止符を～"
+      },
+      {
+        "title": "복수를 맹세한 기사에게 입맞춤을"
+      }
+    ],
+    "description": "“You came to offer your fate to me.” \n\nFine is a girl who unjustly lost her two older brothers in the kingdom’s greatest scandal, the “Neltop Incident.” Disguising herself as a man, she becomes a knight and tries to take revenge on the corrupt royal family, but she falls into a trap and is driven into a corner. The one who saves her then is Victor, known as the “Wizard of Ruin.” \n\nVictor tells Fine, “I’ll grant you your revenge, but in exchange, give me everything you have.” \n\nWhat he asks of her is to infiltrate the “Room of Domination,” the secret space of the crown prince and princess, and retrieve the vow ring containing the contract between the royal family and Victor. Fine and Victor begin working together toward the same goal. Though they constantly clash at first, before long, they begin to soothe each other’s loneliness and find themselves drawn to one another… \n\nA fated romance fantasy woven from the flames of revenge and the light of pure love.\n\n**Original Webtoon:**   \n[Naver Series](https://series.naver.com/comic/detail.series?productNo=14051297), [Lezhin](https://www.lezhin.com/ko/comic/revenge_kiss)\n\n**Official Translations:**     \nJapanese: [Cmoa](https://www.cmoa.jp/title/338185/) \n",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i522798.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i522798.jpg"
+      },
+      "height": 400,
+      "width": 286
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Adult"
+      },
+      {
+        "genre": "Fantasy"
+      },
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Romance"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 62704327279,
+        "category": "Full Color",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 39505547571
+      },
+      {
+        "series_id": 62704327279,
+        "category": "long strip",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 39505547571
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 43482390489,
+    "status": "16",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "LiRiYu",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": "Enri",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162,
+        "url": "https://www.mangaupdates.com/publisher/9vh24ju/naver",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "YLAB",
+        "publisher_id": 44118723117,
+        "url": "https://www.mangaupdates.com/publisher/k9n5cml/ylab",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Naver Series",
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "Bansahoejeok Anjeonjidae",
+        "series_url": "https://www.mangaupdates.com/series/sxfg2bi/bansahoejeok-anjeonjidae",
+        "series_id": 62971232958,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i523489.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i523489.jpg"
+          },
+          "height": 400,
+          "width": 279
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "One Timer",
+        "series_url": "https://www.mangaupdates.com/series/t23olps/one-timer",
+        "series_id": 63253806832,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i511145.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i511145.jpg"
+          },
+          "height": 400,
+          "width": 276
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Jebok-e Michin Yeoja",
+        "series_url": "https://www.mangaupdates.com/series/t2c9hi9/jebok-e-michin-yeoja",
+        "series_id": 63268218081,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i527747.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i527747.jpg"
+          },
+          "height": 400,
+          "width": 300
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Handle With Special Care!",
+        "series_url": "https://www.mangaupdates.com/series/tap0bcd/handle-with-special-care",
+        "series_id": 63773354605,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i527756.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i527756.jpg"
+          },
+          "height": 400,
+          "width": 275
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Poisoned Chalice: The Poisoned Princess",
+        "series_url": "https://www.mangaupdates.com/series/tasktfd/poisoned-chalice-the-poisoned-princess",
+        "series_id": 63779350009,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i509592.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i509592.jpg"
+          },
+          "height": 400,
+          "width": 276
+        },
+        "weight": 14142
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 616,
+        "month": 2161,
+        "three_months": 3167,
+        "six_months": 4483,
+        "year": 6104
+      },
+      "old_position": {
+        "week": 608,
+        "month": 2161,
+        "three_months": 3196,
+        "six_months": 5906,
+        "year": 9069
+      },
+      "lists": {
+        "reading": 4,
+        "wish": 13,
+        "complete": 2,
+        "unfinished": null,
+        "custom": 7
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783539793,
+      "as_rfc3339": "2026-07-08T12:43:13-07:00",
+      "as_string": "July 8th, 2026 12:43pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

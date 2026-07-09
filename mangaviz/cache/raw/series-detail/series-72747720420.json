@@ -1,0 +1,274 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/72747720420",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:19.807Z",
+  "responseData": {
+    "series_id": 72747720420,
+    "title": "A Night When Stars Fell",
+    "url": "https://www.mangaupdates.com/series/xf444bo/a-night-when-stars-fell",
+    "associated": [
+      {
+        "title": "별이 내린 밤"
+      }
+    ],
+    "description": "On a rainy night, Yuseong wakes up alone among piles of garbage. With no memory of who he is or where he came from, he begins a new life working at Café Noah.\n\nThough his days are peaceful, they are also precarious - until Kim Woohyun, the owner of a hardware store, appears. With a seemingly indifferent yet piercing gaze, he watches Yuseong’s every move, exuding an air of danger.\n\nWhat Yuseong assumes is a fleeting encounter turns into something more when Woohyun saves him from an attack, and surprises him with unexpected words:\n\n“Don’t we know each other? You don’t remember?”  \n“Do you want to be friends?”\n\nYuseong, numb to his own wounds, and Woohyun, who persistently probes the trembling emotions beneath them, begin a connection. What will the two of them discover at the end of this night?\n\n[Original Webtoon](https://ridibooks.com/books/4624000075) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i520482.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i520482.jpg"
+      },
+      "height": 400,
+      "width": 275
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Adult"
+      },
+      {
+        "genre": "Drama"
+      },
+      {
+        "genre": "Fantasy"
+      },
+      {
+        "genre": "Smut"
+      },
+      {
+        "genre": "Yaoi"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 72747720420,
+        "category": "Cruel Seme",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 72747720420,
+        "category": "Full Color",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 72747720420,
+        "category": "Glasses-Wearing Seme",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 72747720420,
+        "category": "Human-Nonhuman Relationship",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 72747720420,
+        "category": "Korean BL",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 72747720420,
+        "category": "Naive Uke",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 72747720420,
+        "category": "Post-Apocalyptic",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 49759758707
+      },
+      {
+        "series_id": 72747720420,
+        "category": "Reunion/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 72747720420,
+        "category": "Scheming Seme",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 72747720420,
+        "category": "Webtoon/Webcomic",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 26195977189,
+    "status": "15 Chapters (Ongoing)",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Gihoebiyong",
+        "author_id": 59260059137,
+        "url": "https://www.mangaupdates.com/author/r81wq9t/gihoebiyong",
+        "type": "Author"
+      },
+      {
+        "name": "Gihoebiyong",
+        "author_id": 59260059137,
+        "url": "https://www.mangaupdates.com/author/r81wq9t/gihoebiyong",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Beyond",
+        "publisher_id": 27869966269,
+        "url": "https://www.mangaupdates.com/publisher/csx23lp/beyond",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Ridibooks",
+        "publisher_id": 26086657674,
+        "url": "https://www.mangaupdates.com/publisher/bzfblvu/ridibooks",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "The White Pine",
+        "series_url": "https://www.mangaupdates.com/series/z5j8zyx/the-white-pine",
+        "series_id": 76522045209,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i511791.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i511791.jpg"
+          },
+          "height": 400,
+          "width": 275
+        },
+        "weight": 24495
+      },
+      {
+        "series_name": "Tinder Box",
+        "series_url": "https://www.mangaupdates.com/series/xb27wbo/tinder-box",
+        "series_id": 72502672740,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i530325.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i530325.jpg"
+          },
+          "height": 400,
+          "width": 275
+        },
+        "weight": 22361
+      },
+      {
+        "series_name": "Blue Monster's Shell",
+        "series_url": "https://www.mangaupdates.com/series/4j3f1tg/blue-monster-s-shell",
+        "series_id": 9861727732,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i429014.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i429014.jpg"
+          },
+          "height": 232,
+          "width": 160
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "Hubae Will Help You",
+        "series_url": "https://www.mangaupdates.com/series/xg6so3q/hubae-will-help-you",
+        "series_id": 72812691206,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i524657.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i524657.jpg"
+          },
+          "height": 400,
+          "width": 288
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "The Shadow Monster and His Groom",
+        "series_url": "https://www.mangaupdates.com/series/yc67w0u/the-shadow-monster-and-his-groom",
+        "series_id": 74746639326,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i501347.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i501347.jpg"
+          },
+          "height": 341,
+          "width": 300
+        },
+        "weight": 20000
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 821,
+        "month": 1652,
+        "three_months": 2370,
+        "six_months": 3427,
+        "year": 5007
+      },
+      "old_position": {
+        "week": 837,
+        "month": 1804,
+        "three_months": 2405,
+        "six_months": 5426,
+        "year": 8481
+      },
+      "lists": {
+        "reading": 33,
+        "wish": 38,
+        "complete": null,
+        "unfinished": null,
+        "custom": 22
+      }
+    },
+    "last_updated": {
+      "timestamp": 1782929007,
+      "as_rfc3339": "2026-07-01T11:03:27-07:00",
+      "as_string": "July 1st, 2026 11:03am PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

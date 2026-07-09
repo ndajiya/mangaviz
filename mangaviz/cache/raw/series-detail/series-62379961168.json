@@ -1,0 +1,122 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/62379961168",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:21.978Z",
+  "responseData": {
+    "series_id": 62379961168,
+    "title": "#Love Comedy-zuki to Kossori Tsunagaritai",
+    "url": "https://www.mangaupdates.com/series/snnf234/love-comedy-zuki-to-kossori-tsunagaritai",
+    "associated": [
+      {
+        "title": "# Rabu kome-suki to kossori tsunagaritai"
+      },
+      {
+        "title": "#Secretly Looking to Connect With Rom-Com Fans"
+      },
+      {
+        "title": "#ラブコメ好きとこっそり繋がりたい"
+      }
+    ],
+    "description": null,
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i530492.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i530492.jpg"
+      },
+      "height": 400,
+      "width": 282
+    },
+    "type": "Manga",
+    "year": "2026",
+    "bayesian_rating": 6.26,
+    "rating_votes": 1,
+    "genres": [
+      {
+        "genre": "Comedy"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "School Life"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 62379961168,
+        "category": "Oneshot",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 57277710525
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 19280368784,
+    "status": "Oneshot (Complete)",
+    "licensed": false,
+    "completed": true,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "HAZUKI Aya",
+        "author_id": 21398593566,
+        "url": "https://www.mangaupdates.com/author/9tw64gu/hazuki-aya",
+        "type": "Author"
+      },
+      {
+        "name": "NAITOU Marcey",
+        "author_id": 52645402514,
+        "url": "https://www.mangaupdates.com/author/o6npok2/naitou-marcey",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [],
+    "publications": [
+      {
+        "publication_name": "Novecomi+",
+        "publisher_name": null,
+        "publisher_id": null
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [],
+    "rank": {
+      "position": {
+        "week": 814,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "old_position": {
+        "week": 822,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": null,
+        "wish": 3,
+        "complete": 4,
+        "unfinished": null,
+        "custom": 3
+      }
+    },
+    "last_updated": {
+      "timestamp": 1782512166,
+      "as_rfc3339": "2026-06-26T15:16:06-07:00",
+      "as_string": "June 26th, 2026 3:16pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

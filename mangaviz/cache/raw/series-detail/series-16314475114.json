@@ -1,0 +1,258 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/16314475114",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:16.924Z",
+  "responseData": {
+    "series_id": 16314475114,
+    "title": "5-Ri no Otoko ni Korosare Sou na hodo Shuuchaku Sarete Imasu",
+    "url": "https://www.mangaupdates.com/series/7ht7tka/5-ri-no-otoko-ni-korosare-sou-na-hodo-shuuchaku-sarete-imasu",
+    "associated": [
+      {
+        "title": "5人の男に殺されそうなほど執着されています"
+      },
+      {
+        "title": "Five Men Are Obsessed With Me"
+      },
+      {
+        "title": "Five Men are Obsessed With Me - To the Point of Murder"
+      },
+      {
+        "title": "Five Men Are Obsessed With Me Enough to K*ll"
+      },
+      {
+        "title": "Five Men Are Obsessed With Me Enough to Kill"
+      },
+      {
+        "title": "Five Men Are So Obsessed With Me They Might Kill Me"
+      },
+      {
+        "title": "Five Men's Deadly Obsession With Me"
+      },
+      {
+        "title": "I'm Being Obsessed Over by 5 Men to the Point of Being Killed"
+      },
+      {
+        "title": "I'm Being Obsessed Over by Five Men Who Are Out for My Life"
+      },
+      {
+        "title": "I'm Being Obsessed Over by Five Men Who Nearly Killed Me"
+      }
+    ],
+    "description": "Lavinia is a villainous queen in a novel who is murdered by someone she trusts. When the reader wakes up as Lavinia, she knows there are five murder suspects: her seemingly loyal knight, her sly chancellor, her spy who was formerly an assassin, a brutal tribal king, and her brother, who's also her political rival. These men are all fixated on her, but when Lavinia changes her tyrannic ways, their obsession becomes less hostile and more friendly... even romantic, for some! Although her odds of survival are higher, Lavinia isn't sure she can juggle the affections of her dangerous suitors...\n\n**Original Webtoon:**    \n[LINE Manga](https://manga.line.me/product/periodic?id=S157885), [ebookJapan](https://ebookjapan.yahoo.co.jp/books/943280/), [honto](https://honto.jp/ebook/pd-series_C-MBJ-21665-4-594524X.html), [Mecha Comic](https://mechacomic.jp/books/260299), [Cmoa](https://www.cmoa.jp/title/358087/) \n\n**Official Translations:**    \n[English](https://www.tappytoon.com/en/book/five-men-are-so-obsessed-with-me-they-might-kill-me) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i513564.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i513564.jpg"
+      },
+      "height": 400,
+      "width": 280
+    },
+    "type": "Manga",
+    "year": "2026",
+    "bayesian_rating": 6.1,
+    "rating_votes": 3,
+    "genres": [
+      {
+        "genre": "Drama"
+      },
+      {
+        "genre": "Fantasy"
+      },
+      {
+        "genre": "Harem"
+      },
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Romance"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 16314475114,
+        "category": "Queen/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 26227206880
+      },
+      {
+        "series_id": 16314475114,
+        "category": "Villainess/es",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 26227206880
+      },
+      {
+        "series_id": 16314475114,
+        "category": "Webtoon/Webcomic",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 15771971772
+      }
+    ],
+    "latest_chapter": 26,
+    "forum_id": 62905045282,
+    "status": "CH 30 (Complete) ",
+    "licensed": true,
+    "completed": true,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "HAYASHI Mari",
+        "author_id": 35144988722,
+        "url": "https://www.mangaupdates.com/author/g58f2uq/hayashi-mari",
+        "type": "Author"
+      },
+      {
+        "name": "RNK",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": "sanmont",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "en-dolphin",
+        "publisher_id": 30272223114,
+        "url": "https://www.mangaupdates.com/publisher/dwnasui/en-dolphin",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Honcomi",
+        "publisher_id": 26860976869,
+        "url": "https://www.mangaupdates.com/publisher/cc8byed/honcomi",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Tappytoon",
+        "publisher_id": 44201966230,
+        "url": "https://www.mangaupdates.com/publisher/kb0pjfa/tappytoon",
+        "type": "English",
+        "notes": null
+      }
+    ],
+    "publications": [],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "Lun Fanpai Bai Lan De Yibai Ling Ba Zhong Fangshi",
+        "series_url": "https://www.mangaupdates.com/series/7k8tr4e/lun-fanpai-bai-lan-de-yibai-ling-ba-zhong-fangshi",
+        "series_id": 16461624974,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i422554.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i422554.png"
+          },
+          "height": 213,
+          "width": 160
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Yaochuan Ta Ren Mei Xin Shan",
+        "series_url": "https://www.mangaupdates.com/series/8co21bb/yaochuan-ta-ren-mei-xin-shan",
+        "series_id": 18180258599,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i503384.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i503384.jpg"
+          },
+          "height": 400,
+          "width": 270
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "The Villainess Who Stole the Paladin's First",
+        "series_url": "https://www.mangaupdates.com/series/8jzmtrf/the-villainess-who-stole-the-paladin-s-first",
+        "series_id": 18622967595,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i450393.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i450393.jpg"
+          },
+          "height": 232,
+          "width": 160
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "How a Villainess Survives as a Saint",
+        "series_url": "https://www.mangaupdates.com/series/9d6c6x0/how-a-villainess-survives-as-a-saint",
+        "series_id": 20387747844,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i449091.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i449091.jpg"
+          },
+          "height": 229,
+          "width": 160
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "I Am the Male Lead's Ex-Girlfriend (Pre-Serialization)",
+        "series_url": "https://www.mangaupdates.com/series/9u42q18/i-am-the-male-lead-s-ex-girlfriend-pre-serialization",
+        "series_id": 21411871820,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i314361.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i314361.jpg"
+          },
+          "height": 242,
+          "width": 160
+        },
+        "weight": 14142
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 824,
+        "month": 1952,
+        "three_months": 3348,
+        "six_months": 4653,
+        "year": 5722
+      },
+      "old_position": {
+        "week": 817,
+        "month": 1952,
+        "three_months": 3803,
+        "six_months": 5348,
+        "year": 8616
+      },
+      "lists": {
+        "reading": 30,
+        "wish": 27,
+        "complete": 4,
+        "unfinished": 2,
+        "custom": 23
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783209361,
+      "as_rfc3339": "2026-07-04T16:56:01-07:00",
+      "as_string": "July 4th, 2026 4:56pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

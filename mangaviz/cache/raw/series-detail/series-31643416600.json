@@ -1,0 +1,276 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/31643416600",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:22.316Z",
+  "responseData": {
+    "series_id": 31643416600,
+    "title": "Acting Husband's Brother-in-Law",
+    "url": "https://www.mangaupdates.com/series/ejbo8ig/acting-husband-s-brother-in-law",
+    "associated": [
+      {
+        "title": "My Brother-in-Law Acting as My Husband"
+      },
+      {
+        "title": "My Brother-in-Law Is My Husband's Replacement"
+      },
+      {
+        "title": "시동생의 남편 대행"
+      }
+    ],
+    "description": "Dahlia had an ecstatic, once-in-a-lifetime experience on her wedding night. As she longed for that moment to happen again, her married life went on in a dull and painfully monotonous way, until she witnessed her husband’s infidelity. One night, while drunk, her husband slipped on the rooftop and died. At her husband’s funeral, Dahlia suddenly finds herself unjustly accused of murdering him. Then Sebastian, her husband’s identical twin brother, appears before her. Sebastian offers to help her avoid the royal guard’s infamous interrogation, on the condition that she bear his child. When she refuses, he reveals a shocking truth. “Dahlia, do you really believe the man who spent your wedding night with you was Calix?” The truth is, the one who shared that intoxicating wedding night with Dahlia was not her husband, but her brother-in-law.\n\n**Original Webtoon:**    \n[Naver Series](https://series.naver.com/comic/detail.series?productNo=13758423), [Ridibooks](https://ridibooks.com/books/297088177), [Bomtoon](https://www.bomtoon.com/detail/brotherinlawsproxy), [MrBlue](https://www.mrblue.com/webtoon/wt_000076732), [BookCube](https://www.bookcube.com/toon/detail.asp?webtoon_num=260147), [Mootoon](https://www.mootoon.co.kr/comic/moo_list.mg?tcode=avgm), [Qtoon](https://www.qtoon.co.kr/toon/list.mg?tcode=6azo), [Toon365](https://www.toon365.com/domestic/domestic_detail.asp?toon_idx=49143), [ZzangComic](https://www.zzangcomic.co.kr/comic/detailview_comic.asp?comic_idx=52077), [Onestory](https://onestory.co.kr/detail/H049247365), [Nate](https://toonnbook.nate.com/detail/H049247365), [Aladin](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=388780826), [KyoboBook](https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012653155), [Yes24](https://www.yes24.com/product/goods/183640135)",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i517278.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i517278.jpg"
+      },
+      "height": 400,
+      "width": 285
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 6.31,
+    "rating_votes": 3,
+    "genres": [
+      {
+        "genre": "Adult"
+      },
+      {
+        "genre": "Drama"
+      },
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "Smut"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 31643416600,
+        "category": "Accidental Death",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 70310153281
+      },
+      {
+        "series_id": 31643416600,
+        "category": "Arranged Marriage",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 70310153281
+      },
+      {
+        "series_id": 31643416600,
+        "category": "Cheating Husband",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 70310153281
+      },
+      {
+        "series_id": 31643416600,
+        "category": "First-Night Intercourse",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 70310153281
+      },
+      {
+        "series_id": 31643416600,
+        "category": "Knight Male Lead",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 70310153281
+      },
+      {
+        "series_id": 31643416600,
+        "category": "Male Lead Falls in Love First",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 70310153281
+      },
+      {
+        "series_id": 31643416600,
+        "category": "Reunion/s",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 70310153281
+      },
+      {
+        "series_id": 31643416600,
+        "category": "Twin/s",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 43706520851
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 38127178061,
+    "status": "10 chapters (Complete)",
+    "licensed": false,
+    "completed": true,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Roll Cake Kkyu",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": "Woots",
+        "author_id": 32821244349,
+        "url": "https://www.mangaupdates.com/author/f2sx67x/woots",
+        "type": "Author"
+      },
+      {
+        "name": "Cro",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Daiwon",
+        "publisher_id": 14263278361,
+        "url": "https://www.mangaupdates.com/publisher/6jvzk0p/daiwon",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162,
+        "url": "https://www.mangaupdates.com/publisher/9vh24ju/naver",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Naver Series",
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "I'd Prefer Bankruptcy Over Marriage",
+        "series_url": "https://www.mangaupdates.com/series/uocuvqc/i-d-prefer-bankruptcy-over-marriage",
+        "series_id": 66776254500,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i528755.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i528755.jpg"
+          },
+          "height": 400,
+          "width": 275
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "Flowers Garden: Gensou no Meikyuu",
+        "series_url": "https://www.mangaupdates.com/series/fihgwwm/flowers-garden-gensou-no-meikyuu",
+        "series_id": 33769468822,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i518481.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i518481.png"
+          },
+          "height": 400,
+          "width": 273
+        },
+        "weight": 17321
+      },
+      {
+        "series_name": "What if I Married My Enemy?",
+        "series_url": "https://www.mangaupdates.com/series/ggxzfgm/what-if-i-married-my-enemy",
+        "series_id": 35853056518,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i527428.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i527428.png"
+          },
+          "height": 400,
+          "width": 275
+        },
+        "weight": 17321
+      },
+      {
+        "series_name": "A Despicable Marriage",
+        "series_url": "https://www.mangaupdates.com/series/kog5lyf/a-despicable-marriage",
+        "series_id": 45013970535,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i515425.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i515425.jpg"
+          },
+          "height": 400,
+          "width": 292
+        },
+        "weight": 17321
+      },
+      {
+        "series_name": "Koutei Heika to Ganbaru Niizuma no Amaku Kiken na Mitsugetsu Seikatsu",
+        "series_url": "https://www.mangaupdates.com/series/rndy5q0/koutei-heika-to-ganbaru-niizuma-no-amaku-kiken-na-mitsugetsu-seikatsu",
+        "series_id": 60187273848,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i396464.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i396464.jpg"
+          },
+          "height": 228,
+          "width": 160
+        },
+        "weight": 17321
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 793,
+        "month": 1879,
+        "three_months": 3405,
+        "six_months": 4076,
+        "year": 5694
+      },
+      "old_position": {
+        "week": 791,
+        "month": 2054,
+        "three_months": 3863,
+        "six_months": 5295,
+        "year": 8571
+      },
+      "lists": {
+        "reading": 10,
+        "wish": 13,
+        "complete": 14,
+        "unfinished": null,
+        "custom": 13
+      }
+    },
+    "last_updated": {
+      "timestamp": 1782458187,
+      "as_rfc3339": "2026-06-26T00:16:27-07:00",
+      "as_string": "June 26th, 2026 12:16am PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

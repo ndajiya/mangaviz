@@ -1,0 +1,118 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/29256990328",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:17.975Z",
+  "responseData": {
+    "series_id": 29256990328,
+    "title": "100-kai Mawatte Ai wo Nake",
+    "url": "https://www.mangaupdates.com/series/dfuuu7s/100-kai-mawatte-ai-wo-nake",
+    "associated": [
+      {
+        "title": "100回まわって愛を啼け"
+      }
+    ],
+    "description": "Iroha, a poor student on a scholarship, accidentally injures Kyogoku Matsuri, the school's biggest troublemaker!\nMasuri, a hedonistic man, declares Iroha his dog as compensation and, for some reason, forces her to help with his rehabilitation!?\n",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i531134.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i531134.jpg"
+      },
+      "height": 400,
+      "width": 254
+    },
+    "type": "Manga",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Comedy"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "School Life"
+      },
+      {
+        "genre": "Shoujo"
+      }
+    ],
+    "categories": [],
+    "latest_chapter": 0,
+    "forum_id": 13584324673,
+    "status": null,
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "IKE Junko",
+        "author_id": 22681612152,
+        "url": "https://www.mangaupdates.com/author/af41ny0/ike-junko",
+        "type": "Author"
+      },
+      {
+        "name": "IKE Junko",
+        "author_id": 22681612152,
+        "url": "https://www.mangaupdates.com/author/af41ny0/ike-junko",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Hakusensha",
+        "publisher_id": 31534224107,
+        "url": "https://www.mangaupdates.com/publisher/ehinv1n/hakusensha",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "LaLa",
+        "publisher_name": "Hakusensha",
+        "publisher_id": 31534224107
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [],
+    "rank": {
+      "position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "old_position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": 3,
+        "wish": 1,
+        "complete": null,
+        "unfinished": null,
+        "custom": 1
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783100438,
+      "as_rfc3339": "2026-07-03T10:40:38-07:00",
+      "as_string": "July 3rd, 2026 10:40am PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

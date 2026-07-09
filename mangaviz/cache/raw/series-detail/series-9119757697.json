@@ -1,0 +1,410 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/9119757697",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:17.250Z",
+  "responseData": {
+    "series_id": 9119757697,
+    "title": "Academy Saikyou no Mob Healer",
+    "url": "https://www.mangaupdates.com/series/46to22p/academy-saikyou-no-mob-healer",
+    "associated": [
+      {
+        "title": "The Academy's Strongest Mob Healer ~ I Reincarnated as a Mob in a Death Game World, Got the Terrible Draw of \"Healer\" as My Job, and Became the Strongest Using My Knowledge of the Game"
+      },
+      {
+        "title": "アカデミー最強のモブヒーラー 〜死にゲー世界のモブに転生した俺は、外れジョブ【ヒーラー】と原作知識で無双する〜"
+      }
+    ],
+    "description": "A famous game romance action RPG \"Dungeon Academia\". In that famous world of \"game to the death,\" I reincarnated as a mob with the worst job possible: \"Healer. \" My fate was dying right away... However... I'll use my knowledge from grinding this game for days on end in my previous life to overturn that fate. A reincarnation fantasy, where healing is turned into a weapon to fashion a meteoric rise to the strongest in the world.",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i531233.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i531233.jpg"
+      },
+      "height": 400,
+      "width": 281
+    },
+    "type": "Manga",
+    "year": "2026",
+    "bayesian_rating": 6.1,
+    "rating_votes": 3,
+    "genres": [
+      {
+        "genre": "Action"
+      },
+      {
+        "genre": "Drama"
+      },
+      {
+        "genre": "Fantasy"
+      },
+      {
+        "genre": "Harem"
+      },
+      {
+        "genre": "Shounen"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 9119757697,
+        "category": "Academy",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Appearance Different from Personality",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Big Breasts",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55600882303
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Commoner Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Commoner Protagonist",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Demon/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Discrimination",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Dungeon/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Dungeon/s Exploring",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "European Ambience",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Healer Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55600882303
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Healer Protagonist",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 69402740089
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Healer/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55600882303
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Isekai",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1610130030
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Male Protagonist",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55600882303
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Orphan Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Orphan Protagonist",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Princess/es",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Reincarnated as a Side/Extra/Mob Character",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Reincarnated in a Game World",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Royalty/Imperial",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Seemingly Useless Power",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Stoic Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Stoic Protagonist",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "Weak to Strong",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      },
+      {
+        "series_id": 9119757697,
+        "category": "White/Silver-Haired Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 74536069083
+      }
+    ],
+    "latest_chapter": 3,
+    "forum_id": 49444404170,
+    "status": "1 Volume (Ongoing)",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "YAMATA Nagato",
+        "author_id": 76295985577,
+        "url": "https://www.mangaupdates.com/author/z1snr8p/yamata-nagato",
+        "type": "Author"
+      },
+      {
+        "name": "ABENO Chako",
+        "author_id": 3643359012,
+        "url": "https://www.mangaupdates.com/author/1o95tt0/abeno-chako",
+        "type": "Artist"
+      },
+      {
+        "name": "TENNOUJI Kitsune",
+        "author_id": 7428699405,
+        "url": "https://www.mangaupdates.com/author/3euut59/tennouji-kitsune",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Kodansha",
+        "publisher_id": 52396899975,
+        "url": "https://www.mangaupdates.com/publisher/o2jrerr/kodansha",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Young Magazine Web",
+        "publisher_name": null,
+        "publisher_id": null
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "Suterare Ouji ga Saizensen de Tekikoku no Heishi o Chiryou Shitara Jitsu wa Dainana Oujo datta Ken (Novel)",
+        "series_url": "https://www.mangaupdates.com/series/7efuzt2/suterare-ouji-ga-saizensen-de-tekikoku-no-heishi-o-chiryou-shitara-jitsu-wa-dainana-oujo-datta-ken-novel",
+        "series_id": 16110643142,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i510604.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i510604.jpg"
+          },
+          "height": 400,
+          "width": 281
+        },
+        "weight": 36056
+      },
+      {
+        "series_name": "Destined to Be an Outcast",
+        "series_url": "https://www.mangaupdates.com/series/a5q01jm/destined-to-be-an-outcast",
+        "series_id": 22113826258,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i518968.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i518968.png"
+          },
+          "height": 400,
+          "width": 266
+        },
+        "weight": 31623
+      },
+      {
+        "series_name": "I Thought I Tamed the Villain",
+        "series_url": "https://www.mangaupdates.com/series/67jla4b/i-thought-i-tamed-the-villain",
+        "series_id": 13516862843,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i526961.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i526961.png"
+          },
+          "height": 400,
+          "width": 275
+        },
+        "weight": 30000
+      },
+      {
+        "series_name": "Incubus Banishment ~I Was Banished From the Capital. But the More I Get Along With the Girls, the Stronger I Get~ (Novel)",
+        "series_url": "https://www.mangaupdates.com/series/zt1oyci/incubus-banishment-i-was-banished-from-the-capital-but-the-more-i-get-along-with-the-girls-the-stronger-i-get-novel",
+        "series_id": 77943744738,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i512854.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i512854.jpg"
+          },
+          "height": 400,
+          "width": 280
+        },
+        "weight": 30000
+      },
+      {
+        "series_name": "There's No Such Thing as a Bad Lady",
+        "series_url": "https://www.mangaupdates.com/series/fx9ewqq/there-s-no-such-thing-as-a-bad-lady",
+        "series_id": 34662931010,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i514902.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i514902.jpg"
+          },
+          "height": 400,
+          "width": 283
+        },
+        "weight": 28284
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 343,
+        "month": 1153,
+        "three_months": 1475,
+        "six_months": 2814,
+        "year": 4329
+      },
+      "old_position": {
+        "week": 573,
+        "month": 1480,
+        "three_months": 2092,
+        "six_months": 5652,
+        "year": 8334
+      },
+      "lists": {
+        "reading": 46,
+        "wish": 12,
+        "complete": null,
+        "unfinished": null,
+        "custom": 10
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783198300,
+      "as_rfc3339": "2026-07-04T13:51:40-07:00",
+      "as_string": "July 4th, 2026 1:51pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

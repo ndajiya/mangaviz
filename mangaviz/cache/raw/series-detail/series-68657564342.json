@@ -1,0 +1,115 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/68657564342",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:13.142Z",
+  "responseData": {
+    "series_id": 68657564342,
+    "title": "A Lucky Day",
+    "url": "https://www.mangaupdates.com/series/vjgxvp2/a-lucky-day",
+    "associated": [
+      {
+        "title": "운수 좋은 날"
+      }
+    ],
+    "description": "[Original Webtoon](https://www.toomics.com/webtoon/episode/toon/9139) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i531565.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i531565.jpg"
+      },
+      "height": 250,
+      "width": 250
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Adult"
+      },
+      {
+        "genre": "Drama"
+      },
+      {
+        "genre": "Mature"
+      },
+      {
+        "genre": "Seinen"
+      },
+      {
+        "genre": "Smut"
+      }
+    ],
+    "categories": [],
+    "latest_chapter": 0,
+    "forum_id": 37781656564,
+    "status": null,
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Tokki Samchon",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": "Yeoksamdong Haektandu",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Toomics",
+        "publisher_id": 74844276224,
+        "url": "https://www.mangaupdates.com/publisher/ydscl4w/toomics",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [],
+    "recommendations": [],
+    "category_recommendations": [],
+    "rank": {
+      "position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "old_position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": null,
+        "wish": null,
+        "complete": null,
+        "unfinished": null,
+        "custom": null
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783506001,
+      "as_rfc3339": "2026-07-08T03:20:01-07:00",
+      "as_string": "July 8th, 2026 3:20am PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

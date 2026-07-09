@@ -1,0 +1,253 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/74938116889",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:19.108Z",
+  "responseData": {
+    "series_id": 74938116889,
+    "title": "[Inter-Floor X-Sound Anthology] Collection",
+    "url": "https://www.mangaupdates.com/series/yfc7x21/inter-floor-x-sound-anthology-collection",
+    "associated": [
+      {
+        "title": "[Inter-Floor X-Sound Anthology]"
+      },
+      {
+        "title": "[층간 X음 단편선]"
+      },
+      {
+        "title": "[층간X음 단편선]"
+      }
+    ],
+    "description": null,
+    "image": {
+      "url": {
+        "original": null,
+        "thumb": null
+      },
+      "height": null,
+      "width": null
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Adult"
+      },
+      {
+        "genre": "Mature"
+      },
+      {
+        "genre": "Smut"
+      },
+      {
+        "genre": "Yaoi"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 74938116889,
+        "category": "Anthology",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 74938116889,
+        "category": "Collection of Stories",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 23794725993,
+    "status": null,
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [
+      {
+        "relation_id": 104449,
+        "relation_type": "Part of Anthology",
+        "related_series_id": 44402202282,
+        "related_series_name": "To My Detestable Younger Sibling",
+        "related_series_url": "https://www.mangaupdates.com/series/kebxaju/to-my-detestable-younger-sibling",
+        "triggered_by_relation_id": 0
+      },
+      {
+        "relation_id": 104450,
+        "relation_type": "Part of Anthology",
+        "related_series_id": 65283127756,
+        "related_series_name": "B1",
+        "related_series_url": "https://www.mangaupdates.com/series/tznvzrg/b1",
+        "triggered_by_relation_id": 0
+      },
+      {
+        "relation_id": 104451,
+        "relation_type": "Part of Anthology",
+        "related_series_id": 43276191223,
+        "related_series_name": "Made by Devil",
+        "related_series_url": "https://www.mangaupdates.com/series/jvpiyuv/made-by-devil",
+        "triggered_by_relation_id": 0
+      },
+      {
+        "relation_id": 104452,
+        "relation_type": "Part of Anthology",
+        "related_series_id": 26503364574,
+        "related_series_name": "Between Walls",
+        "related_series_url": "https://www.mangaupdates.com/series/c6bf2zi/between-walls",
+        "triggered_by_relation_id": 0
+      },
+      {
+        "relation_id": 104453,
+        "relation_type": "Part of Anthology",
+        "related_series_id": 33007137863,
+        "related_series_name": "Radius 0m",
+        "related_series_url": "https://www.mangaupdates.com/series/f5vlikn/radius-0m",
+        "triggered_by_relation_id": 0
+      }
+    ],
+    "authors": [
+      {
+        "name": "Anthology",
+        "author_id": 6713743855,
+        "url": "https://www.mangaupdates.com/author/3316twv/anthology",
+        "type": "Author"
+      },
+      {
+        "name": "Anthology",
+        "author_id": 6713743855,
+        "url": "https://www.mangaupdates.com/author/3316twv/anthology",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Luscent",
+        "publisher_id": 68322874258,
+        "url": "https://www.mangaupdates.com/publisher/vdxob6a/luscent",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Ridibooks",
+        "publisher_name": "RIDI",
+        "publisher_id": 26086657674
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "Nuide Kara Hajimaru Natsu",
+        "series_url": "https://www.mangaupdates.com/series/yg8w5rb/nuide-kara-hajimaru-natsu",
+        "series_id": 74992995623,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i337015.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i337015.jpg"
+          },
+          "height": 229,
+          "width": 160
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Kyoufu Manga Tanpenshuu: Kodoku",
+        "series_url": "https://www.mangaupdates.com/series/ygpzfyq/kyoufu-manga-tanpenshuu-kodoku",
+        "series_id": 75021702290,
+        "series_image": {
+          "url": {
+            "original": null,
+            "thumb": null
+          },
+          "height": null,
+          "width": null
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Love na Doukyo, Shite Mitai.",
+        "series_url": "https://www.mangaupdates.com/series/ygxp94g/love-na-doukyo-shite-mitai",
+        "series_id": 75034663792,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i181427.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i181427.jpg"
+          },
+          "height": 245,
+          "width": 160
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Happy End Kakutei!? Dekiai ga Tomarimasen! Aisare Reijou Anthology Comic",
+        "series_url": "https://www.mangaupdates.com/series/yhnmzfn/happy-end-kakutei-dekiai-ga-tomarimasen-aisare-reijou-anthology-comic",
+        "series_id": 75078227939,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i458498.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i458498.jpg"
+          },
+          "height": 225,
+          "width": 160
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Keiyaku Renai",
+        "series_url": "https://www.mangaupdates.com/series/yk66nao/keiyaku-renai",
+        "series_id": 75230310768,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i316220.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i316220.jpg"
+          },
+          "height": 250,
+          "width": 159
+        },
+        "weight": 14142
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 800,
+        "month": 2155,
+        "three_months": 3273,
+        "six_months": 4627,
+        "year": 6249
+      },
+      "old_position": {
+        "week": 784,
+        "month": 2155,
+        "three_months": 3347,
+        "six_months": 5921,
+        "year": 9121
+      },
+      "lists": {
+        "reading": 5,
+        "wish": 11,
+        "complete": 2,
+        "unfinished": 1,
+        "custom": 4
+      }
+    },
+    "last_updated": {
+      "timestamp": 1782953850,
+      "as_rfc3339": "2026-07-01T17:57:30-07:00",
+      "as_string": "July 1st, 2026 5:57pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

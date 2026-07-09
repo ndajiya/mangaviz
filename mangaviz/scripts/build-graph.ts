@@ -8,6 +8,24 @@ interface RC { responseData: Record<string,any>; }
 
 function slugify(t: string) { return t.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
 
+// #region debug-point E:debug-report
+const debugReport = async (hypothesisId: string, location: string, msg: string, data: Record<string, unknown> = {}) => {
+  let debugServerUrl = 'http://127.0.0.1:7777/event';
+  let debugSessionId = 'atlas-refresh-stale';
+  try {
+    const envFile = path.resolve(process.cwd(), '..', '.dbg', 'atlas-refresh-stale.env');
+    const envContent = fs.readFileSync(envFile, 'utf8');
+    debugServerUrl = envContent.match(/DEBUG_SERVER_URL=(.+)/)?.[1]?.trim() || debugServerUrl;
+    debugSessionId = envContent.match(/DEBUG_SESSION_ID=(.+)/)?.[1]?.trim() || debugSessionId;
+  } catch {}
+  await fetch(debugServerUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ sessionId: debugSessionId, runId: 'pre-fix', hypothesisId, location, msg: `[DEBUG] ${msg}`, data, ts: Date.now() }),
+  }).catch(() => {});
+};
+// #endregion
+
 function loadSeriesDetails(): Map<number, any> {
   const m = new Map();
   const dd = path.join(CACHE_DIR, 'series-detail');
@@ -34,6 +52,11 @@ function main() {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   const seriesMap = loadSeriesDetails();
   console.log(`Loaded ${seriesMap.size} series`);
+  // #region debug-point E:build-start
+  void debugReport('E', 'build-graph.ts:main:start', 'Graph build started from persisted series detail files.', {
+    detailSeriesCount: seriesMap.size,
+  });
+  // #endregion
 
   const nodeMap = new Map<string,any>();
   const edgeSet = new Set<string>(); const edges: any[] = [];
@@ -75,6 +98,14 @@ function main() {
   fs.writeFileSync(path.join(OUTPUT_DIR,'search-index.json'), JSON.stringify(si));
   const manifest = { version:'1.0.0', buildDate: new Date().toISOString(), seriesCount: seriesMap.size, totalNodes: nodeMap.size, totalEdges: edges.length, shards: { nodes: Object.keys(byType).map(t=>`nodes.${t}.json`), edges: Object.keys(byEdgeType).map(t=>`edges.${t}.json`), positions: ['positions.json'], clusters: ['clusters.json'] }, searchIndex: 'search-index.json' };
   fs.writeFileSync(path.join(OUTPUT_DIR,'manifest.json'), JSON.stringify(manifest,null,2));
+  // #region debug-point E:build-finish
+  void debugReport('E', 'build-graph.ts:main:finish', 'Graph build finished and manifest was written.', {
+    detailSeriesCount: seriesMap.size,
+    seriesNodeCount: byType.series?.length||0,
+    totalNodeCount: nodeMap.size,
+    totalEdgeCount: edges.length,
+  });
+  // #endregion
   console.log(`Graph built: ${nodeMap.size} nodes, ${edges.length} edges`);
 }
 

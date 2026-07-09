@@ -1,0 +1,439 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/74613151158",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:18.359Z",
+  "responseData": {
+    "series_id": 74613151158,
+    "title": "A Blessed Night",
+    "url": "https://www.mangaupdates.com/series/y9yqrw6/a-blessed-night",
+    "associated": [
+      {
+        "title": "Eine gesegnete Nacht"
+      },
+      {
+        "title": "La Nuit des Grâces"
+      },
+      {
+        "title": "Una noche de bendición"
+      },
+      {
+        "title": "พรางรักในคืนพร"
+      },
+      {
+        "title": "恩寵の夜"
+      },
+      {
+        "title": "恩寵之夜"
+      },
+      {
+        "title": "은총의 밤"
+      }
+    ],
+    "description": "Kim Eunchong is the definition of a devoted church boy - in fact, his name literally means “Blessing.” But one heartbroken, drunken night of regret shatters his pristine reputation. He wakes up with a massive hangover and a scandalous secret -  he slept with a man. Even worse, the mystery lover is one of his two best friends from church: Ju Hyeonu or Shin Ian. Eunchong prays that he can bury his mistake forever…but then a blackmail text featuring explicit photos of that sinful night hits his phone. One of his best friends has now turned into his biggest enemy, and returning to his peaceful life of faith is nothing but a pipe dream unless he can catch him. *(Source: Lezhin US)*\n\n---\n\n**Original Webtoon:**  \n[Lezhin](https://www.lezhin.com/ko/comic/night_of_grace)\n\n**Official Translations:**  \n[English](https://www.lezhinus.com/en/comic/blessednight), [Spanish](https://www.lezhin.es/detail/una-noche-de-bendicion), [French](https://www.lezhinfr.com/detail/bt_1111330), [German](https://www.lezhinde.com/detail/dbd_00531), [Japanese](https://www.beltoon.jp/detail/blessed_night), [T.Chinese](https://www.bomtoon.tw/detail/nightofgrace), [Thai](https://www.lezhinth.com/detail/blessed_night)\n\n##### Note: This series is a global release, meaning all official translations come out on the same day as the original Korean. All official translations are uncensored, except for Japanese.",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i523010.png",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i523010.png"
+      },
+      "height": 400,
+      "width": 273
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 6.19,
+    "rating_votes": 8,
+    "genres": [
+      {
+        "genre": "Adult"
+      },
+      {
+        "genre": "Mature"
+      },
+      {
+        "genre": "Smut"
+      },
+      {
+        "genre": "Yaoi"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 74613151158,
+        "category": "Anal Fingering",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 64591213753
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Anal Intercourse",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 64591213753
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Betrayal",
+        "votes": 2,
+        "votes_plus": 2,
+        "votes_minus": 0,
+        "added_by": 64591213753
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Blackmail",
+        "votes": 4,
+        "votes_plus": 4,
+        "votes_minus": 0,
+        "added_by": 38958464451
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Childhood Friend/s",
+        "votes": 3,
+        "votes_plus": 3,
+        "votes_minus": 0,
+        "added_by": 38958464451
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Childhood Friends Become Lovers",
+        "votes": 1,
+        "votes_plus": 0,
+        "votes_minus": 1,
+        "added_by": 38958464451
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Church",
+        "votes": 3,
+        "votes_plus": 3,
+        "votes_minus": 0,
+        "added_by": 38958464451
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Dark-Haired Uke",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 38958464451
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Drunken Intercourse",
+        "votes": 4,
+        "votes_plus": 4,
+        "votes_minus": 0,
+        "added_by": 64591213753
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Full Color",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Glasses-Wearing Uke",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 64591213753
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Korean BL",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Love Triangle/s",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 38958464451
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Memory Loss",
+        "votes": 1,
+        "votes_plus": 0,
+        "votes_minus": 1,
+        "added_by": 38958464451
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Muscular Uke",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 47243114737
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Official English Uncensored",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 74613151158,
+        "category": "One Uke Multiple Semes",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 74613151158,
+        "category": "One-Night Stand",
+        "votes": 1,
+        "votes_plus": 0,
+        "votes_minus": 1,
+        "added_by": 38958464451
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Rape",
+        "votes": 6,
+        "votes_plus": 6,
+        "votes_minus": 0,
+        "added_by": 64591213753
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Ring/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 64591213753
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Same Age",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Scheming Seme",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Sexual Assault",
+        "votes": 4,
+        "votes_plus": 4,
+        "votes_minus": 0,
+        "added_by": 27786215736
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Sleep Molestation",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 54273721765
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Somnophilia",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 64591213753
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Threesome",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Uncensored Version Available",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 74613151158,
+        "category": "Webtoon/Webcomic",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 36190334028,
+    "status": "15 Chapters (Ongoing)",
+    "licensed": true,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Kang Unnie",
+        "author_id": 1641213853,
+        "url": "https://www.mangaupdates.com/author/0r54wpp/kang-unnie",
+        "type": "Author"
+      },
+      {
+        "name": "MissPM",
+        "author_id": 38308283012,
+        "url": "https://www.mangaupdates.com/author/hljrgck/misspm",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Lezhin",
+        "publisher_id": 53821671329,
+        "url": "https://www.mangaupdates.com/publisher/oq417dt/lezhin",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Lezhin US",
+        "publisher_id": 58351550609,
+        "url": "https://www.mangaupdates.com/publisher/qt108lt/lezhin-us",
+        "type": "English",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Lezhin",
+        "publisher_name": null,
+        "publisher_id": null
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "Yuri's Part Time Job",
+        "series_url": "https://www.mangaupdates.com/series/yks2z44/yuri-s-part-time-job",
+        "series_id": 75267091012,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i416262.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i416262.jpg"
+          },
+          "height": 221,
+          "width": 160
+        },
+        "weight": 16371
+      },
+      {
+        "series_name": "Incubus Banishment ~I Was Banished From the Capital. But the More I Get Along With the Girls, the Stronger I Get~ (Novel)",
+        "series_url": "https://www.mangaupdates.com/series/zt1oyci/incubus-banishment-i-was-banished-from-the-capital-but-the-more-i-get-along-with-the-girls-the-stronger-i-get-novel",
+        "series_id": 77943744738,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i512854.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i512854.jpg"
+          },
+          "height": 400,
+          "width": 280
+        },
+        "weight": 15297
+      },
+      {
+        "series_name": "Shitsuren to Soushitsu",
+        "series_url": "https://www.mangaupdates.com/series/ye5d6lz/shitsuren-to-soushitsu",
+        "series_id": 74866139063,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i430786.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i430786.jpg"
+          },
+          "height": 226,
+          "width": 160
+        },
+        "weight": 14765
+      },
+      {
+        "series_name": "Katei Kyoshi",
+        "series_url": "https://www.mangaupdates.com/series/zrcti8r/katei-kyoshi",
+        "series_id": 77841500571,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i346869.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i346869.jpg"
+          },
+          "height": 120,
+          "width": 160
+        },
+        "weight": 14765
+      },
+      {
+        "series_name": "Horegusuri wo Nonda Supadari ga Yabasugimasu!",
+        "series_url": "https://www.mangaupdates.com/series/zva36dj/horegusuri-wo-nonda-supadari-ga-yabasugimasu",
+        "series_id": 78078777607,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i507982.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i507982.jpg"
+          },
+          "height": 400,
+          "width": 281
+        },
+        "weight": 14765
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 242,
+        "month": 16,
+        "three_months": 4,
+        "six_months": 26,
+        "year": 60
+      },
+      "old_position": {
+        "week": 155,
+        "month": 2,
+        "three_months": 9,
+        "six_months": 618,
+        "year": 627
+      },
+      "lists": {
+        "reading": 98,
+        "wish": 104,
+        "complete": 2,
+        "unfinished": 2,
+        "custom": 67
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783070613,
+      "as_rfc3339": "2026-07-03T02:23:33-07:00",
+      "as_string": "July 3rd, 2026 2:23am PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

@@ -1,0 +1,307 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/3436975961",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:14.454Z",
+  "responseData": {
+    "series_id": 3436975961,
+    "title": "2-Shuume no Youhei wa Shizuka ni Ikirahenai",
+    "url": "https://www.mangaupdates.com/series/1kuabmh/2-shuume-no-youhei-wa-shizuka-ni-ikirahenai",
+    "associated": [
+      {
+        "title": "2周目の傭兵は静かに生きられない"
+      },
+      {
+        "title": "A Mercenary's Second Playthrough Is Anything but Peaceful"
+      },
+      {
+        "title": "The Mercenary of the Second Loop Cannot Live Quietly"
+      }
+    ],
+    "description": "The \"Grim Reaper\" of the battlefield returns to his middle school days. Kurona Masamune, a mercenary who single-handedly turns the tide of battle on the East African battlefield, faithfully followed his father's teachings: \"Don't have your own will, just follow orders.\" Living as the ultimate \"tool,\" he loses his life due to betrayal during a mission. However, when he awakens, he finds himself in a middle school classroom 15 years in the past. \"If I could do it over, I could do it better...\" With this dying regret in his heart, the strongest former mercenary crushes evil within the school with \"his own will\" in this revenge action!\n\nSource: [eBookJapan](https://ebookjapan.yahoo.co.jp/books/986099/?type=serialStory), Translated",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i530566.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i530566.jpg"
+      },
+      "height": 400,
+      "width": 283
+    },
+    "type": "Manga",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Action"
+      },
+      {
+        "genre": "Drama"
+      },
+      {
+        "genre": "School Life"
+      },
+      {
+        "genre": "Shounen"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 3436975961,
+        "category": "Full Color",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 46509938262
+      },
+      {
+        "series_id": 3436975961,
+        "category": "Long Strip",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 46509938262
+      },
+      {
+        "series_id": 3436975961,
+        "category": "Male Protagonist",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 46509938262
+      },
+      {
+        "series_id": 3436975961,
+        "category": "Mercenary/ies",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 46509938262
+      },
+      {
+        "series_id": 3436975961,
+        "category": "Modern Era",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 46509938262
+      },
+      {
+        "series_id": 3436975961,
+        "category": "Overpowered Protagonist",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 46509938262
+      },
+      {
+        "series_id": 3436975961,
+        "category": "Regression",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 46509938262
+      },
+      {
+        "series_id": 3436975961,
+        "category": "Revenge",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 46509938262
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 19981825685,
+    "status": "15 Chapters (Ongoing)",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Kazami Moyo",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": "Tailpot",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": ".NOZ",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      },
+      {
+        "name": "IGASAKI",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      },
+      {
+        "name": "KASEKI Kokeshima",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      },
+      {
+        "name": "krin",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      },
+      {
+        "name": "Suzutaro",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      },
+      {
+        "name": "TAKUMI Sameo",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      },
+      {
+        "name": "Tamiko",
+        "author_id": 7761923851,
+        "url": "https://www.mangaupdates.com/author/3kd8yrv/tamiko",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Weavin",
+        "publisher_id": 30694138267,
+        "url": "https://www.mangaupdates.com/publisher/e3mhwnv/weavin",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "LINE Manga",
+        "publisher_name": null,
+        "publisher_id": null
+      },
+      {
+        "publication_name": "eBookJapan",
+        "publisher_name": null,
+        "publisher_id": null
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "The Ex-Mercenary Prosecutor",
+        "series_url": "https://www.mangaupdates.com/series/71xj3wn/the-ex-mercenary-prosecutor",
+        "series_id": 15354261383,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i491863.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i491863.jpg"
+          },
+          "height": 400,
+          "width": 276
+        },
+        "weight": 22361
+      },
+      {
+        "series_name": "Wuya",
+        "series_url": "https://www.mangaupdates.com/series/1pp6wu9/wuya",
+        "series_id": 3730749633,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i401207.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i401207.jpg"
+          },
+          "height": 213,
+          "width": 160
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "Kindergarten for Divine Beasts",
+        "series_url": "https://www.mangaupdates.com/series/2lwu3ui/kindergarten-for-divine-beasts",
+        "series_id": 5678506746,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i474273.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i474273.jpg"
+          },
+          "height": 400,
+          "width": 276
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "Spirit Catcher (Yin Dynasty)",
+        "series_url": "https://www.mangaupdates.com/series/37da7kn/spirit-catcher-yin-dynasty",
+        "series_id": 6975921623,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i382549.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i382549.jpg"
+          },
+          "height": 250,
+          "width": 159
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "Returned as the Duke",
+        "series_url": "https://www.mangaupdates.com/series/38kkx7q/returned-as-the-duke",
+        "series_id": 7048644902,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i421214.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i421214.jpg"
+          },
+          "height": 228,
+          "width": 160
+        },
+        "weight": 20000
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 859,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "old_position": {
+        "week": 875,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": null,
+        "wish": 2,
+        "complete": null,
+        "unfinished": null,
+        "custom": null
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783414076,
+      "as_rfc3339": "2026-07-07T01:47:56-07:00",
+      "as_string": "July 7th, 2026 1:47am PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

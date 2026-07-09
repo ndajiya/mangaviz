@@ -1,0 +1,311 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/61390517798",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:12.771Z",
+  "responseData": {
+    "series_id": 61390517798,
+    "title": "A Dragon's Love",
+    "url": "https://www.mangaupdates.com/series/s7abup2/a-dragon-s-love",
+    "associated": [
+      {
+        "title": "Das Liebesnest"
+      },
+      {
+        "title": "Le nid d'amour"
+      },
+      {
+        "title": "Nidito de amor"
+      },
+      {
+        "title": "วิมานรักมังกรฉบับข้าวใหม่ปลามัน"
+      },
+      {
+        "title": "我的新婚對象是龍 ?!"
+      },
+      {
+        "title": "我的新婚對象是龍？！"
+      },
+      {
+        "title": "新婚ですが!?"
+      },
+      {
+        "title": "신혼입니다만?!"
+      }
+    ],
+    "description": "On a stormy night, hardened mobster Cha San is limping home when he stumbles upon Shin Ro, a dragon bleeding out on the pavement. It’s love at first sight, pulling two entirely different worlds together in an instant. Fast forward to the present, and the unlikely couple is officially navigating newlyweds bliss. To support his beloved, Shin Ro hilariously adapts to human life by taking a job as a car salesman, while Cha San completely leaves his criminal syndicate behind to become a dedicated, apron-wearing stay-at-home husband. Relying entirely on each other, they dive headfirst into a chaotic, sweet, and incredibly steamy new chapter together.\n\n---\n\n**Original Webtoon:**  \n[Bomtoon](https://www.bomtoon.com/detail/newly_married)\n\n**Official Translations:**  \n[English](https://www.lezhinus.com/en/comic/dragonslove), [Spanish](https://www.lezhin.es/detail/nidito-de-amor), [French](https://www.lezhinfr.com/detail/bt_1111338), [German](https://www.lezhinde.com/detail/dbd_00535), [T.Chinese](https://www.bomtoon.tw/detail/newly_married), [Thai](https://www.lezhinth.com/detail/Newlywed), [Japanese](https://www.beltoon.jp/detail/newlyweds_but)\n\n##### Note: All official translations are uncensored, except for Japanese. This series is a global release, meaning all official translations come out on the same day as the original Korean.",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i530852.png",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i530852.png"
+      },
+      "height": 400,
+      "width": 300
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 6.42,
+    "rating_votes": 2,
+    "genres": [
+      {
+        "genre": "Adult"
+      },
+      {
+        "genre": "Fantasy"
+      },
+      {
+        "genre": "Mature"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "Smut"
+      },
+      {
+        "genre": "Yaoi"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 61390517798,
+        "category": "Dragon/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 38958464451
+      },
+      {
+        "series_id": 61390517798,
+        "category": "Full Color",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 61390517798,
+        "category": "Gangster/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 38958464451
+      },
+      {
+        "series_id": 61390517798,
+        "category": "Human-Nonhuman Relationship",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 38958464451
+      },
+      {
+        "series_id": 61390517798,
+        "category": "Korean BL",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      },
+      {
+        "series_id": 61390517798,
+        "category": "Marriage",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 38958464451
+      },
+      {
+        "series_id": 61390517798,
+        "category": "Muscular Uke",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 38958464451
+      },
+      {
+        "series_id": 61390517798,
+        "category": "Official English Uncensored",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 38958464451
+      },
+      {
+        "series_id": 61390517798,
+        "category": "Uncensored Version Available",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 38958464451
+      },
+      {
+        "series_id": 61390517798,
+        "category": "Webtoon/Webcomic",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 1885521175
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 31624608274,
+    "status": "1 Chapters (Ongoing)\n\nOfficially launches on July 8, 2026",
+    "licensed": true,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Brothers Without a Tomorrow",
+        "author_id": 37064200363,
+        "url": "https://www.mangaupdates.com/author/h0z2g17/brothers-without-a-tomorrow",
+        "type": "Author"
+      },
+      {
+        "name": "Mannanna",
+        "author_id": 63356507749,
+        "url": "https://www.mangaupdates.com/author/t3stu91/mannanna",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Bomtoon",
+        "publisher_id": 77073573187,
+        "url": "https://www.mangaupdates.com/publisher/zenm5oj/bomtoon",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Kidari Studio",
+        "publisher_id": 71614484495,
+        "url": "https://www.mangaupdates.com/publisher/wwdexvz/kidari-studio",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Lezhin US",
+        "publisher_id": 58351550609,
+        "url": "https://www.mangaupdates.com/publisher/qt108lt/lezhin-us",
+        "type": "English",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Bomtoon",
+        "publisher_name": null,
+        "publisher_id": null
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "Of Curse and Tide",
+        "series_url": "https://www.mangaupdates.com/series/z9yia79/of-curse-and-tide",
+        "series_id": 76789537317,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i511316.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i511316.jpg"
+          },
+          "height": 400,
+          "width": 300
+        },
+        "weight": 26458
+      },
+      {
+        "series_name": "In My Desert",
+        "series_url": "https://www.mangaupdates.com/series/ocl101j/in-my-desert",
+        "series_id": 53003688823,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i353156.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i353156.jpg"
+          },
+          "height": 222,
+          "width": 160
+        },
+        "weight": 24495
+      },
+      {
+        "series_name": "Winterbound",
+        "series_url": "https://www.mangaupdates.com/series/t7pysai/winterbound",
+        "series_id": 63593564346,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i526802.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i526802.png"
+          },
+          "height": 400,
+          "width": 300
+        },
+        "weight": 24495
+      },
+      {
+        "series_name": "Can I Rate Your Body, Too?",
+        "series_url": "https://www.mangaupdates.com/series/ut0wgu1/can-i-rate-your-body-too",
+        "series_id": 67058503993,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i520674.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i520674.jpg"
+          },
+          "height": 400,
+          "width": 278
+        },
+        "weight": 24495
+      },
+      {
+        "series_name": "Insatiable Slave",
+        "series_url": "https://www.mangaupdates.com/series/wd1x5va/insatiable-slave",
+        "series_id": 70446321910,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i504309.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i504309.jpg"
+          },
+          "height": 400,
+          "width": 275
+        },
+        "weight": 24495
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 32,
+        "month": 145,
+        "three_months": 820,
+        "six_months": 2595,
+        "year": 4072
+      },
+      "old_position": {
+        "week": 8,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": 43,
+        "wish": 53,
+        "complete": 1,
+        "unfinished": null,
+        "custom": 24
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783507620,
+      "as_rfc3339": "2026-07-08T03:47:00-07:00",
+      "as_string": "July 8th, 2026 3:47am PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

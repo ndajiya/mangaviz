@@ -1,0 +1,377 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/26387388589",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:13.610Z",
+  "responseData": {
+    "series_id": 26387388589,
+    "title": "A Retired Saint Will Raise Your Home Value",
+    "url": "https://www.mangaupdates.com/series/c4edbcd/a-retired-saint-will-raise-your-home-value",
+    "associated": [
+      {
+        "title": "A Retired Saint Will Raise Your House Price"
+      },
+      {
+        "title": "Retired Woman Will Raise Your House Price"
+      },
+      {
+        "title": "The Retired Saintess Raises Property Values"
+      },
+      {
+        "title": "This Retired Saintess Will Raise Your Property Value"
+      },
+      {
+        "title": "은퇴 성녀가 집값 올려드립니다"
+      }
+    ],
+    "description": "I ended up transmigrating into the web novel *If You’ve Drawn Your Sword, You Might as Well Cut a Throat*, where the male lead, after endlessly regressing, loses his mind and sets the entire empire ablaze.\n\n…And of all roles, I became one of the countless saintesses.\n\nI have only one goal:\n\nGet out before he goes insane and avoid the fiery ending!\n\nBut reality?\n\n“Former Saintess Shuana. You are under arrest on charges of witchcraft and worshipping evil spirits.”\n\nThe moment I step outside the temple, some pseudo-religious bounty-hunting maniac starts chasing me, calling me a witch.\n\n“You’re insane, right? Then die as much as you want. I’ll keep coming after you.”\n\nThe unhinged male lead obsessively hunts me down, even killing himself over and over just to regress and pursue me.\n\nAnd to top it all off, I’ve been dragged into his endless regression loop.\n\n…Will I be able to make it out of this novel alive?\n\n**Original Webtoon:**   \n[Naver Webtoon](https://comic.naver.com/webtoon/list?titleId=847991), [Naver Series](https://series.naver.com/comic/detail.series?productNo=13640149)  ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i517234.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i517234.jpg"
+      },
+      "height": 400,
+      "width": 279
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 6.75,
+    "rating_votes": 8,
+    "genres": [
+      {
+        "genre": "Fantasy"
+      },
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Romance"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 26387388589,
+        "category": "Cult",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 5230197154
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Full Color",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 39505547571
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Isekai",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 4411760110
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Knight/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 5230197154
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Multiple Lives",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 43706520851
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Nobility/Aristocracy",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 5230197154
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Regressed Female Lead",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 43706520851
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Regressed Male Lead",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 4411760110
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Regression",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 4411760110
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Regressor Protagonist",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 43706520851
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Saint/Saintess",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 4411760110
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Spirit/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 5230197154
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Suicide/s",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 43706520851
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Supernatural Element/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 5230197154
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Temple/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 5230197154
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Time Loop",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 78357973077
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Transmigrated as a Side/Extra/Mob Character",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 43706520851
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Transmigrated Female Lead",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 43706520851
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Transmigrated into a Book World",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 4411760110
+      },
+      {
+        "series_id": 26387388589,
+        "category": "Webtoon/Webcomic",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 39505547571
+      }
+    ],
+    "latest_chapter": 26,
+    "forum_id": 58851574099,
+    "status": "26 Chapters (Ongoing)",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Dandy",
+        "author_id": 71918272797,
+        "url": "https://www.mangaupdates.com/author/x1ea6fx/dandy",
+        "type": "Author"
+      },
+      {
+        "name": "Firestorm",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": "Hackal",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Jaedam",
+        "publisher_id": 32788043894,
+        "url": "https://www.mangaupdates.com/publisher/f295kl2/jaedam",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162,
+        "url": "https://www.mangaupdates.com/publisher/9vh24ju/naver",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Naver Webtoon",
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162
+      },
+      {
+        "publication_name": "Naver Series",
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "How I Remarried That Monster",
+        "series_url": "https://www.mangaupdates.com/series/zwulif8/how-i-remarried-that-monster",
+        "series_id": 78173691524,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i528752.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i528752.jpg"
+          },
+          "height": 400,
+          "width": 282
+        },
+        "weight": 30000
+      },
+      {
+        "series_name": "Just Kill Me Now",
+        "series_url": "https://www.mangaupdates.com/series/vkxzjob/just-kill-me-now",
+        "series_id": 68746661723,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i529501.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i529501.png"
+          },
+          "height": 400,
+          "width": 279
+        },
+        "weight": 28284
+      },
+      {
+        "series_name": "I Became the Demonic Cult Leader's Husband",
+        "series_url": "https://www.mangaupdates.com/series/f1pw3ui/i-became-the-demonic-cult-leader-s-husband",
+        "series_id": 32755689594,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i483698.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i483698.jpg"
+          },
+          "height": 400,
+          "width": 276
+        },
+        "weight": 26458
+      },
+      {
+        "series_name": "Move Over, Female Lead!",
+        "series_url": "https://www.mangaupdates.com/series/fcq1i82/move-over-female-lead",
+        "series_id": 33421069442,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i509461.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i509461.jpg"
+          },
+          "height": 400,
+          "width": 279
+        },
+        "weight": 26458
+      },
+      {
+        "series_name": "Alessa's Frills",
+        "series_url": "https://www.mangaupdates.com/series/foegxdu/alessa-s-frills",
+        "series_id": 34127227650,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i406478.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i406478.png"
+          },
+          "height": 228,
+          "width": 160
+        },
+        "weight": 26458
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 915,
+        "month": 2017,
+        "three_months": 2714,
+        "six_months": 2599,
+        "year": 4077
+      },
+      "old_position": {
+        "week": 874,
+        "month": 2056,
+        "three_months": 2918,
+        "six_months": 4045,
+        "year": 7085
+      },
+      "lists": {
+        "reading": 60,
+        "wish": 43,
+        "complete": 2,
+        "unfinished": 4,
+        "custom": 37
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783481380,
+      "as_rfc3339": "2026-07-07T20:29:40-07:00",
+      "as_string": "July 7th, 2026 8:29pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

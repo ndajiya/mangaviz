@@ -1,0 +1,112 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/14639835999",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:15.134Z",
+  "responseData": {
+    "series_id": 14639835999,
+    "title": "A Saint Opens a Nursery School With a Retired King in Another World in Her Thirties",
+    "url": "https://www.mangaupdates.com/series/6q46hr3/a-saint-opens-a-nursery-school-with-a-retired-king-in-another-world-in-her-thirties",
+    "associated": [
+      {
+        "title": "Arasaa Seijo, Isekai de Ittai-ou to Hoikuen o Hirakimashite"
+      },
+      {
+        "title": "アラサー聖女、異世界で引退王と保育園を開きまして"
+      }
+    ],
+    "description": "\"An unwanted Saint? Fine then, I'll just make a place for myself!\"\n\nKyoko, an around-thirty nursery school teacher, hit rock bottom after her engagement was broken off right before her wedding, forcing her to take a leave of absence from work. Even when she is summoned to another world as a Saint candidate, she is immediately dismissed as \"useless.\"\n\n──But she's determined to overcome this adversity using her childcare skills and her powers as a Saint! With the full cooperation of a fiercely-intimidating former king, she ends up opening a nursery school in this new world?! Surrounded by adorable children and a wonderfully clumsy man, her blissful new slow life begins!",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i531467.png",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i531467.png"
+      },
+      "height": 168,
+      "width": 300
+    },
+    "type": "Manga",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Fantasy"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "Shoujo"
+      }
+    ],
+    "categories": [],
+    "latest_chapter": 1,
+    "forum_id": 10617129439,
+    "status": null,
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "YUZUHARA Tail",
+        "author_id": 52723596093,
+        "url": "https://www.mangaupdates.com/author/o7y9n3x/yuzuhara-tail",
+        "type": "Author"
+      },
+      {
+        "name": "Kei Furuichi",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Comic-walker",
+        "publisher_id": null,
+        "url": null,
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [],
+    "recommendations": [],
+    "category_recommendations": [],
+    "rank": {
+      "position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "old_position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": 1,
+        "wish": 1,
+        "complete": null,
+        "unfinished": null,
+        "custom": 1
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783405817,
+      "as_rfc3339": "2026-07-06T23:30:17-07:00",
+      "as_string": "July 6th, 2026 11:30pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

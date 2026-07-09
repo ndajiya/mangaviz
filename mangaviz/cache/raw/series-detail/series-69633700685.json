@@ -1,0 +1,418 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/69633700685",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:13.960Z",
+  "responseData": {
+    "series_id": 69633700685,
+    "title": "A 28-Year-Old Office Lady Becomes a Villain Prince",
+    "url": "https://www.mangaupdates.com/series/vzm3vbh/a-28-year-old-office-lady-becomes-a-villain-prince",
+    "associated": [
+      {
+        "title": "28-sai OL, Akuyaku Ouji wo Hajimemashita ~ Fujiyuu na Isekai wo Kaikakushimasu! ~"
+      },
+      {
+        "title": "28岁OL，开始扮演恶役王子"
+      },
+      {
+        "title": "28歳OL、悪役王子を始めました～不自由な異世界を改革します! ～"
+      },
+      {
+        "title": "A 28-Year-Old Office Worker Has Started Playing the Role of a Villainous Prince ~I Will Reform This Restrictive Other World!~"
+      }
+    ],
+    "description": "At the end of a miserable day, office worker Oriha Amakawa was walking home, despairing of the world. Suddenly, lightning struck—and she found herself reincarnated in an unfamiliar world as an unfamiliar prince!?\n\nIn utter confusion, she gradually comes to understand the situation and discovers that her original owner, Oliver, was a notorious villainous prince with a ruthless and cruel personality, hated by everyone...!　\n\nDesperate to clear her name, Oriha works tirelessly for the good of the world and its people. A new life begins for this hardworking office worker who has been reincarnated as the most hated person in the world!? An otherworldly revolutionary fantasy!\n\nhttps://comic-boost.com/content/01730001\n\n\n",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i530369.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i530369.jpg"
+      },
+      "height": 400,
+      "width": 266
+    },
+    "type": "Manga",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Drama"
+      },
+      {
+        "genre": "Fantasy"
+      },
+      {
+        "genre": "Gender Bender"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "Shoujo"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 69633700685,
+        "category": "Black-Haired Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Black-Haired Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Black-Haired Protagonist",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Blue-Eyed Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Blue-Eyed Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Blue-Eyed Protagonist",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Forced into Marriage",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Gender Swapped Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Gender Swapped Protagonist",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Handsome Protagonist",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 10402087254
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Isekai",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Kind Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Kind Protagonist",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Medieval European Ambience",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Nobility/Aristocracy",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Office Lady",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Office Worker/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Prince Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Prince Protagonist",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Prince/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Reincarnated",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Reincarnated as the Villain/ess",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Reincarnation",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Royalty/Imperial",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Villain Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Villain Protagonist",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      },
+      {
+        "series_id": 69633700685,
+        "category": "Villain/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 75986039195
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 10321327424,
+    "status": "4 Chapters (Ongoing)",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Rokkaku Wrench",
+        "author_id": 67847619343,
+        "url": "https://www.mangaupdates.com/author/v62py4v/rokkaku-wrench",
+        "type": "Author"
+      },
+      {
+        "name": "Rokkaku Wrench",
+        "author_id": 67847619343,
+        "url": "https://www.mangaupdates.com/author/v62py4v/rokkaku-wrench",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Comic  Boost",
+        "publisher_id": null,
+        "url": null,
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Comic  Boost",
+        "publisher_name": null,
+        "publisher_id": null
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "The Seventh Prince Wants to Bail",
+        "series_url": "https://www.mangaupdates.com/series/vmz45lc/the-seventh-prince-wants-to-bail",
+        "series_id": 68869488720,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i527089.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i527089.jpg"
+          },
+          "height": 400,
+          "width": 276
+        },
+        "weight": 26458
+      },
+      {
+        "series_name": "Tensei Daihachiouji no Shiawase Kazoku Keikaku",
+        "series_url": "https://www.mangaupdates.com/series/nguovzy/tensei-daihachiouji-no-shiawase-kazoku-keikaku",
+        "series_id": 51085002238,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i484955.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i484955.png"
+          },
+          "height": 400,
+          "width": 281
+        },
+        "weight": 24495
+      },
+      {
+        "series_name": "Akuyaku Reijou, Ore",
+        "series_url": "https://www.mangaupdates.com/series/wx9p9in/akuyaku-reijou-ore",
+        "series_id": 71668713839,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i502601.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i502601.jpg"
+          },
+          "height": 400,
+          "width": 266
+        },
+        "weight": 24495
+      },
+      {
+        "series_name": "I Became the Young Villain's Sister-in-Law",
+        "series_url": "https://www.mangaupdates.com/series/y9i63dr/i-became-the-young-villain-s-sister-in-law",
+        "series_id": 74585312415,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i513544.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i513544.jpg"
+          },
+          "height": 400,
+          "width": 279
+        },
+        "weight": 24495
+      },
+      {
+        "series_name": "How I Remarried That Monster",
+        "series_url": "https://www.mangaupdates.com/series/zwulif8/how-i-remarried-that-monster",
+        "series_id": 78173691524,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i528752.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i528752.jpg"
+          },
+          "height": 400,
+          "width": 282
+        },
+        "weight": 24495
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "old_position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": 4,
+        "wish": null,
+        "complete": null,
+        "unfinished": null,
+        "custom": 3
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783486092,
+      "as_rfc3339": "2026-07-07T21:48:12-07:00",
+      "as_string": "July 7th, 2026 9:48pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

@@ -1,0 +1,139 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/34279186141",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:04.512Z",
+  "responseData": {
+    "series_id": 34279186141,
+    "title": "According to Their Own Instincts",
+    "url": "https://www.mangaupdates.com/series/fqwxxb1/according-to-their-own-instincts",
+    "associated": [
+      {
+        "title": "각자의 본능대로"
+      }
+    ],
+    "description": "Kang Yu-Jin, an executive director at Shin-A Food, has lived by the belief that proving herself through numbers and skills is everything. \n\nTo seize control of \"Shin-A Food\", her ultimate goal, she proposes a contract marriage to Ki Seung-Hyun, the president of SOO ENM. Ki Seung-Hyun, who lives while concealing his beastly nature, readily accepts her proposal to use him and cooperates by acting as a loving partner.\n\n**Original Novel:**    \n[Chapters](https://series.naver.com/novel/detail.series?productNo=8119082), [Volumes](https://series.naver.com/novel/detail.series?productNo=13230931) \n\n**Original Webtoon:**   \n[Naver Webtoon](https://comic.naver.com/webtoon/list?titleId=850889), [Naver Series](https://series.naver.com/comic/detail.series?productNo=14158077)",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i526757.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i526757.jpg"
+      },
+      "height": 400,
+      "width": 279
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 6.33,
+    "rating_votes": 1,
+    "genres": [
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Mature"
+      },
+      {
+        "genre": "Romance"
+      }
+    ],
+    "categories": [],
+    "latest_chapter": 0,
+    "forum_id": 47114597960,
+    "status": "18",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Ante",
+        "author_id": 31606745266,
+        "url": "https://www.mangaupdates.com/author/eipu8qa/ante",
+        "type": "Author"
+      },
+      {
+        "name": "Buja",
+        "author_id": 29595418225,
+        "url": "https://www.mangaupdates.com/author/dlgciup/buja",
+        "type": "Author"
+      },
+      {
+        "name": "Major",
+        "author_id": 34696168297,
+        "url": "https://www.mangaupdates.com/author/fxt7asp/major",
+        "type": "Author"
+      },
+      {
+        "name": "Yeseo Gok",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162,
+        "url": "https://www.mangaupdates.com/publisher/9vh24ju/naver",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "The Grimm Entertainment",
+        "publisher_id": 59484915708,
+        "url": "https://www.mangaupdates.com/publisher/rbrs6po/the-grimm-entertainment",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Naver Webtoon",
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162
+      },
+      {
+        "publication_name": "Naver Series",
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [],
+    "rank": {
+      "position": {
+        "week": 852,
+        "month": 1604,
+        "three_months": 575,
+        "six_months": 2095,
+        "year": 3463
+      },
+      "old_position": {
+        "week": 868,
+        "month": 156,
+        "three_months": 1195,
+        "six_months": null,
+        "year": 7464
+      },
+      "lists": {
+        "reading": 10,
+        "wish": 15,
+        "complete": null,
+        "unfinished": 1,
+        "custom": 9
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783540028,
+      "as_rfc3339": "2026-07-08T12:47:08-07:00",
+      "as_string": "July 8th, 2026 12:47pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

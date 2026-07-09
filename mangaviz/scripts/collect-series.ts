@@ -67,6 +67,24 @@ const STRATEGY: Strategy = isStrategy(process.env.ATLAS_STRATEGY || '')
 
 let lastRequestAt = 0;
 
+// #region debug-point A:debug-report
+const debugReport = async (hypothesisId: string, location: string, msg: string, data: Record<string, unknown> = {}) => {
+  let debugServerUrl = 'http://127.0.0.1:7777/event';
+  let debugSessionId = 'atlas-refresh-stale';
+  try {
+    const envFile = path.resolve(process.cwd(), '..', '.dbg', 'atlas-refresh-stale.env');
+    const envContent = fs.readFileSync(envFile, 'utf8');
+    debugServerUrl = envContent.match(/DEBUG_SERVER_URL=(.+)/)?.[1]?.trim() || debugServerUrl;
+    debugSessionId = envContent.match(/DEBUG_SESSION_ID=(.+)/)?.[1]?.trim() || debugSessionId;
+  } catch {}
+  await fetch(debugServerUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ sessionId: debugSessionId, runId: 'pre-fix', hypothesisId, location, msg: `[DEBUG] ${msg}`, data, ts: Date.now() }),
+  }).catch(() => {});
+};
+// #endregion
+
 async function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -253,7 +271,15 @@ async function resolveReleaseTitleToSeries(releaseTitle: string) {
     })
     .filter((entry): entry is { hit: SearchHit; id: number; score: number } => Boolean(entry))
     .sort((left, right) => right.score - left.score);
-  if (ranked.length === 0) return null;
+  if (ranked.length === 0) {
+    // #region debug-point C:resolve-release-miss
+    void debugReport('C', 'collect-series.ts:resolveReleaseTitleToSeries', 'Release title could not be resolved to a series.', { releaseTitle, resultCount: results.length });
+    // #endregion
+    return null;
+  }
+  // #region debug-point C:resolve-release-hit
+  void debugReport('C', 'collect-series.ts:resolveReleaseTitleToSeries', 'Resolved release title to best series candidate.', { releaseTitle, chosenSeriesId: ranked[0].id, chosenTitle: searchRecordTitle(ranked[0].hit), resultCount: ranked.length });
+  // #endregion
   return {
     id: ranked[0].id,
     title: searchRecordTitle(ranked[0].hit),
@@ -405,9 +431,28 @@ async function main() {
   ensureDir(RELEASE_DIR);
   ensureDir(DETAIL_DIR);
 
+  // #region debug-point A:collector-start
+  await debugReport('A', 'collect-series.ts:main:start', 'Collector started with current Atlas refresh inputs.', {
+    strategy: STRATEGY,
+    maxSeries: MAX_SERIES,
+    requestDelay: REQUEST_DELAY,
+    candidateTarget: CANDIDATE_TARGET,
+    minDetailSeries: MIN_DETAIL_SERIES,
+    mixedSeedCount: MIXED_SEEDS.length,
+  });
+  // #endregion
+
   console.log(`Collecting up to ${MAX_SERIES} series using strategy "${STRATEGY}"...`);
   const candidates = await buildCandidates();
   const selectedIds = getSelectedIds(candidates);
+  // #region debug-point B:candidate-pool
+  await debugReport('B', 'collect-series.ts:main:candidates', 'Collector built Atlas candidate pool.', {
+    strategy: STRATEGY,
+    candidateCount: candidates.size,
+    selectedCount: selectedIds.length,
+    topSelectedIds: selectedIds.slice(0, 12),
+  });
+  // #endregion
   if (selectedIds.length < MIN_DETAIL_SERIES) {
     throw new Error(
       `Collector found only ${selectedIds.length} candidate series for strategy "${STRATEGY}". Expected at least ${MIN_DETAIL_SERIES}.`,
@@ -433,6 +478,16 @@ async function main() {
   const selectedIdSet = new Set(selectedIds);
   pruneSeriesDetailCache(selectedIdSet);
   const readyIds = selectedIds.filter((id) => fs.existsSync(detailPathFor(id)));
+  // #region debug-point D:detail-ready
+  await debugReport('D', 'collect-series.ts:main:detail-ready', 'Collector finished detail persistence pass.', {
+    strategy: STRATEGY,
+    selectedCount: selectedIds.length,
+    readyCount: readyIds.length,
+    fetchedCount: fetched,
+    missingCount: selectedIds.length - readyIds.length,
+    sampleReadyIds: readyIds.slice(0, 12),
+  });
+  // #endregion
   if (readyIds.length < MIN_DETAIL_SERIES) {
     throw new Error(
       `Collector prepared only ${readyIds.length} detailed series after fetching. Expected at least ${MIN_DETAIL_SERIES}.`,

@@ -1,0 +1,122 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/7560299064",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:16.608Z",
+  "responseData": {
+    "series_id": 7560299064,
+    "title": "A Housewife's Deviation",
+    "url": "https://www.mangaupdates.com/series/3h17g3c/a-housewife-s-deviation",
+    "associated": [
+      {
+        "title": "주부의 일탈"
+      }
+    ],
+    "description": "[Original Webtoon](https://www.toomics.com/uplmscg/episode/toon/9270) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i531298.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i531298.jpg"
+      },
+      "height": 250,
+      "width": 250
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Adult"
+      },
+      {
+        "genre": "Drama"
+      },
+      {
+        "genre": "Mature"
+      },
+      {
+        "genre": "Seinen"
+      },
+      {
+        "genre": "Smut"
+      }
+    ],
+    "categories": [],
+    "latest_chapter": 0,
+    "forum_id": 8554380282,
+    "status": null,
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Studio Moon",
+        "author_id": 10366689963,
+        "url": "https://www.mangaupdates.com/author/4rg2563/studio-moon",
+        "type": "Author"
+      },
+      {
+        "name": "one team",
+        "author_id": 70837665578,
+        "url": "https://www.mangaupdates.com/author/wjix0kq/one-team",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "MoonTechnology",
+        "publisher_id": 63438859420,
+        "url": "https://www.mangaupdates.com/publisher/t55ux7g/moontechnology",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Toomics",
+        "publisher_id": 74844276224,
+        "url": "https://www.mangaupdates.com/publisher/ydscl4w/toomics",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [],
+    "recommendations": [],
+    "category_recommendations": [],
+    "rank": {
+      "position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "old_position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": 1,
+        "wish": 1,
+        "complete": null,
+        "unfinished": null,
+        "custom": 1
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783256093,
+      "as_rfc3339": "2026-07-05T05:54:53-07:00",
+      "as_string": "July 5th, 2026 5:54am PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

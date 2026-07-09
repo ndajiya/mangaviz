@@ -1,0 +1,127 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/72937963218",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:15.817Z",
+  "responseData": {
+    "series_id": 72937963218,
+    "title": "Abandoned Son-in-law",
+    "url": "https://www.mangaupdates.com/series/xi9dolu/abandoned-son-in-law",
+    "associated": [
+      {
+        "title": "The Abandoned Husband Dominates"
+      },
+      {
+        "title": "The Discarded Son-in-Law's Rise"
+      },
+      {
+        "title": "冷遇婿殿の逆襲"
+      },
+      {
+        "title": "弃婿当道"
+      }
+    ],
+    "description": "The story revolves around Ye Chen, a billionaire who married into the family three years ago, only to be kicked out of his home after his wife's betrayal. After the divorce, his ex-wife and mother-in-law's attitudes undergo a dramatic change. His wife begs for another chance, while his mother-in-law is even willing to do housework and cook just to get him back home.\n\n[Original Webtoon](https://ac.qq.com/Comic/comicInfo/id/657129)\n\n**Official Translations:**    \n[Japanese](https://jp.piccoma.com/web/product/209311) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i513997.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i513997.jpg"
+      },
+      "height": 400,
+      "width": 300
+    },
+    "type": "Manhua",
+    "year": "2026",
+    "bayesian_rating": 6.06,
+    "rating_votes": 8,
+    "genres": [
+      {
+        "genre": "Action"
+      },
+      {
+        "genre": "Fantasy"
+      },
+      {
+        "genre": "Romance"
+      }
+    ],
+    "categories": [],
+    "latest_chapter": 0,
+    "forum_id": 11943537863,
+    "status": null,
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [
+      {
+        "relation_id": 103542,
+        "relation_type": "Adapted From",
+        "related_series_id": 69634994621,
+        "related_series_name": "The Abandoned Husband Dominates (Novel)",
+        "related_series_url": "https://www.mangaupdates.com/series/vzmvlq5/the-abandoned-husband-dominates-novel",
+        "triggered_by_relation_id": 103541
+      }
+    ],
+    "authors": [
+      {
+        "name": "I Have Something To Say",
+        "author_id": 55281381329,
+        "url": "https://www.mangaupdates.com/author/pe93utt/i-have-something-to-say",
+        "type": "Author"
+      },
+      {
+        "name": "汪汪汪汪汪",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "AC.QQ",
+        "publisher_id": 67334290404,
+        "url": "https://www.mangaupdates.com/publisher/uxl3izo/ac-qq",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [],
+    "recommendations": [],
+    "category_recommendations": [],
+    "rank": {
+      "position": {
+        "week": 797,
+        "month": 2156,
+        "three_months": 3077,
+        "six_months": 3003,
+        "year": 2929
+      },
+      "old_position": {
+        "week": 798,
+        "month": 2156,
+        "three_months": 2934,
+        "six_months": 2611,
+        "year": 5500
+      },
+      "lists": {
+        "reading": 59,
+        "wish": 8,
+        "complete": 1,
+        "unfinished": null,
+        "custom": 8
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783342938,
+      "as_rfc3339": "2026-07-06T06:02:18-07:00",
+      "as_string": "July 6th, 2026 6:02am PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

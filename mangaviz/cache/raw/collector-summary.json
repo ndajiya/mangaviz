@@ -1,0 +1,10 @@
+{
+  "strategy": "latest_published",
+  "maxSeries": 40,
+  "minDetailSeries": 15,
+  "candidateCount": 100,
+  "selectedSeriesCount": 40,
+  "detailSeriesCount": 40,
+  "fetchedSeriesCount": 40,
+  "generatedAt": "2026-07-08T20:14:25.014Z"
+}

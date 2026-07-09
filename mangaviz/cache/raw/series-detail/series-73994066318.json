@@ -1,0 +1,251 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/73994066318",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:23.883Z",
+  "responseData": {
+    "series_id": 73994066318,
+    "title": "A Benevolent Curse and a Tasty Childhood Friend",
+    "url": "https://www.mangaupdates.com/series/xzq5mz2/a-benevolent-curse-and-a-tasty-childhood-friend",
+    "associated": [
+      {
+        "title": "La maldición es amable y el amigo de la infancia es delicioso"
+      },
+      {
+        "title": "Maldición Benévola"
+      },
+      {
+        "title": "The Curse Is Kind and the Childhood Friend Is Delicious"
+      },
+      {
+        "title": "The Curse Is Kind, and My Childhood Friend Is Delicious"
+      },
+      {
+        "title": "คำสาปแสนอ่อนโยน กับเพื่อนสมัยเด็กที่ชวนให้ลิ้มลอง"
+      },
+      {
+        "title": "ติดคำสาปรักกับเพื่อนวัยเด็ก"
+      },
+      {
+        "title": "诅咒很温柔，青梅竹马也很美味"
+      },
+      {
+        "title": "저주가 친절하고 소꿉친구가 맛있어요"
+      }
+    ],
+    "description": "'Sex with a childhood friend... Is that possible for anyone?'\n\nEnsign Lee Seol, an S-class hunter in South Korea, has one childhood friend.\nCaptain Yeo Woogyeong, an S-class hunter who is so outstanding he even received a special promotion.\n\n\"You should suck, Seol-ah.\"\n\nBut with this foxy bastard...\nShe's been caught by a terrible curse that will kill her if she doesn't 'shamelessly' (or 'sexually') stick with him!\n\n[Kissing her childhood friend vs. Kissing her friend's 'balls']\n\nWhen she was a naive twenty-year-old, after sleeping with Woogyeong while drunk, Seol had resolved never to make trouble again.\nHowever, because of the sudden curse, Seol's resolve crumbles, and their relationship becomes even more complicated...\n\n'Are we still friends, or not?'\n\n[Original Webtoon](https://ridibooks.com/books/1746033656) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i523256.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i523256.jpg"
+      },
+      "height": 400,
+      "width": 295
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 6.33,
+    "rating_votes": 1,
+    "genres": [
+      {
+        "genre": "Adult"
+      },
+      {
+        "genre": "Fantasy"
+      },
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "Smut"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 73994066318,
+        "category": "Childhood Friends Become Lovers",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 4411760110
+      },
+      {
+        "series_id": 73994066318,
+        "category": "Curse/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 4411760110
+      },
+      {
+        "series_id": 73994066318,
+        "category": "Full Color",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 4411760110
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 50709096919,
+    "status": "17 Chapters (ongoing)",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "624",
+        "author_id": 32461929233,
+        "url": "https://www.mangaupdates.com/author/ewuzswh/624",
+        "type": "Author"
+      },
+      {
+        "name": "Joesonghan Chwihyang",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": "Cheongchun",
+        "author_id": 3271875320,
+        "url": "https://www.mangaupdates.com/author/1i3zn5k/cheongchun",
+        "type": "Artist"
+      },
+      {
+        "name": "SZ Media",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Jaedam",
+        "publisher_id": 32788043894,
+        "url": "https://www.mangaupdates.com/publisher/f295kl2/jaedam",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Ridibooks",
+        "publisher_id": 26086657674,
+        "url": "https://www.mangaupdates.com/publisher/bzfblvu/ridibooks",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "I Became the Young Villain's Sister-in-Law",
+        "series_url": "https://www.mangaupdates.com/series/y9i63dr/i-became-the-young-villain-s-sister-in-law",
+        "series_id": 74585312415,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i513544.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i513544.jpg"
+          },
+          "height": 400,
+          "width": 279
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Kingdom of Innocence",
+        "series_url": "https://www.mangaupdates.com/series/y9ze4y5/kingdom-of-innocence",
+        "series_id": 74614241165,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i500389.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i500389.jpg"
+          },
+          "height": 400,
+          "width": 275
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Bad Dream (Susomoon)",
+        "series_url": "https://www.mangaupdates.com/series/ya1mwdh/bad-dream-susomoon",
+        "series_id": 74618009189,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i516471.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i516471.jpg"
+          },
+          "height": 400,
+          "width": 288
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Fanpai Yao Xu",
+        "series_url": "https://www.mangaupdates.com/series/yjew0yo/fanpai-yao-xu",
+        "series_id": 75184465632,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i334836.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i334836.png"
+          },
+          "height": 213,
+          "width": 160
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Oh, My Goddess",
+        "series_url": "https://www.mangaupdates.com/series/yuse6rw/oh-my-goddess",
+        "series_id": 75872275916,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i381758.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i381758.jpg"
+          },
+          "height": 211,
+          "width": 160
+        },
+        "weight": 14142
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 436,
+        "month": 822,
+        "three_months": 818,
+        "six_months": 1947,
+        "year": 3278
+      },
+      "old_position": {
+        "week": 657,
+        "month": 851,
+        "three_months": 1402,
+        "six_months": 5300,
+        "year": 7488
+      },
+      "lists": {
+        "reading": 24,
+        "wish": 11,
+        "complete": 1,
+        "unfinished": 1,
+        "custom": 12
+      }
+    },
+    "last_updated": {
+      "timestamp": 1782316940,
+      "as_rfc3339": "2026-06-24T09:02:20-07:00",
+      "as_string": "June 24th, 2026 9:02am PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

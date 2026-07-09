@@ -1,0 +1,121 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/33997088277",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:10.731Z",
+  "responseData": {
+    "series_id": 33997088277,
+    "title": "A Happy Ending After Divorce",
+    "url": "https://www.mangaupdates.com/series/fm8zl79/a-happy-ending-after-divorce",
+    "associated": [
+      {
+        "title": "Ly Hôn Rồi, Ta Hướng Tới Hạnh Phúc"
+      },
+      {
+        "title": "Moving Toward a Happy Ending After Divorce"
+      },
+      {
+        "title": "离婚后走向幸福结局"
+      }
+    ],
+    "description": "After three years of marriage, Shen Zhiyi finally realizes she has only ever been a stand‑in for the “white moonlight” in Gu Huaixu’s heart. Crushed by disappointment, she decides to divorce him. Only then does Gu Huaixu begin to recognize his true feelings for her and try to win her back—but time and again, he ends up hurting Zhiyi because of that same white moonlight.\n\n[Original Webtoon](https://www.kuaikanmanhua.com/web/topic/27706/) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i531542.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i531542.jpg"
+      },
+      "height": 400,
+      "width": 264
+    },
+    "type": "Manhua",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Drama"
+      },
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Romance"
+      }
+    ],
+    "categories": [],
+    "latest_chapter": 0,
+    "forum_id": 26035639770,
+    "status": null,
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "种花小狒狒",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": "阅文集团潇湘书院",
+        "author_id": 46764812185,
+        "url": "https://www.mangaupdates.com/author/lhek80p",
+        "type": "Author"
+      },
+      {
+        "name": "五月三工作室",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "KuaiKan",
+        "publisher_id": 577390863,
+        "url": "https://www.mangaupdates.com/publisher/09jrhn3/kuaikan",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [],
+    "recommendations": [],
+    "category_recommendations": [],
+    "rank": {
+      "position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "old_position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": null,
+        "wish": null,
+        "complete": null,
+        "unfinished": null,
+        "custom": null
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783532078,
+      "as_rfc3339": "2026-07-08T10:34:38-07:00",
+      "as_string": "July 8th, 2026 10:34am PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

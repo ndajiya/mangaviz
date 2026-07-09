@@ -1,0 +1,304 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/8382888398",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:24.589Z",
+  "responseData": {
+    "series_id": 8382888398,
+    "title": "A Romance Beyond Boundaries",
+    "url": "https://www.mangaupdates.com/series/3umye32/a-romance-beyond-boundaries",
+    "associated": [
+      {
+        "title": "A Romance That Goes Too Far"
+      },
+      {
+        "title": "L'Amour au-delà des lignes"
+      },
+      {
+        "title": "Mối Tình Vượt Quá Giới Hạn"
+      },
+      {
+        "title": "一線を超える恋"
+      },
+      {
+        "title": "선 넘는 로맨스"
+      }
+    ],
+    "description": "It seems that the fiancée of Ian’s older brother—whose wedding is just around the corner—is having an affair with a coworker.\n\nDetermined to stop the marriage, Ian disguises herself as the secretary to the CEO of the company where her would-be sister-in-law works, planning to gather solid evidence within two months.\n\n“Do you think boundaries exist just to be crossed?”\n\nThe man she ends up serving, CEO Cha Jeong-han, has a handsome face but a personality that leaves much to be desired. He constantly gets on Ian’s nerves.\n\n“Yes. Boundaries exist to be crossed, actually.”\n\nWith no fear of getting fired, Ian decides to freely cross Jeong-han’s carefully drawn lines. And somehow, the once arrogant man who thought himself untouchable—\n\n“Did you put on makeup today?”\n\n“What?”\n\n“It looks like you’re wearing lipstick.”\n\n—suddenly starts acting differently.\n\n“This won’t do.”\n\nA thrilling romantic comedy with a dangerously escalating curve of emotions!\n\n**Original Webtoon:**   \n[KakaoPage](https://page.kakao.com/content/68302804), [Daum](https://webtoon.kakao.com/content/%EC%84%A0-%EB%84%98%EB%8A%94-%EB%A1%9C%EB%A7%A8%EC%8A%A4/4741)\n\n**Official Translations:**     \n[French](https://www.webtoons.com/fr/romance/a-romance-beyond-boundaries/list?title_no=10049), [Japanese](https://jp.piccoma.com/web/product/179800) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i513204.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i513204.jpg"
+      },
+      "height": 400,
+      "width": 278
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 6.06,
+    "rating_votes": 3,
+    "genres": [
+      {
+        "genre": "Drama"
+      },
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Romance"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 8382888398,
+        "category": "Annoying Female Lead",
+        "votes": 2,
+        "votes_plus": 1,
+        "votes_minus": 1,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 8382888398,
+        "category": "Cold Male Lead",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 8382888398,
+        "category": "Ex-Girlfriend/s",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 8382888398,
+        "category": "Female Lead Falls in Love First",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 8382888398,
+        "category": "Full Color",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55051757646
+      },
+      {
+        "series_id": 8382888398,
+        "category": "Male Lead with Sexual Experience",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 8382888398,
+        "category": "Male Lead with Trauma",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 8382888398,
+        "category": "Persistent Female Lead",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 8382888398,
+        "category": "Pushover Female Lead",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 77102133958
+      },
+      {
+        "series_id": 8382888398,
+        "category": "Webtoon/Webcomic",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55051757646
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 59084607650,
+    "status": "34 Chapters (Ongoing)",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Min Ji-an",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": "Yu-Ring",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": "Tancha",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Daum",
+        "publisher_id": 69898887659,
+        "url": "https://www.mangaupdates.com/publisher/w3zzqwb/daum",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "DCCENT",
+        "publisher_id": 14840821891,
+        "url": "https://www.mangaupdates.com/publisher/6tfubgj/dccent",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Kakao",
+        "publisher_id": 37090995261,
+        "url": "https://www.mangaupdates.com/publisher/h1f0r3x/kakao",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "KakaoPage",
+        "publisher_name": "Kakao",
+        "publisher_id": 37090995261
+      },
+      {
+        "publication_name": "Kakao Webtoon",
+        "publisher_name": "Daum",
+        "publisher_id": 69898887659
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "We've Already Broken Up, Your Majesty",
+        "series_url": "https://www.mangaupdates.com/series/t5u91en/we-ve-already-broken-up-your-majesty",
+        "series_id": 63479828831,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i520847.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i520847.png"
+          },
+          "height": 400,
+          "width": 266
+        },
+        "weight": 15811
+      },
+      {
+        "series_name": "The Substitute Bride (KaiYuan Comic)",
+        "series_url": "https://www.mangaupdates.com/series/4vdfagi/the-substitute-bride-kaiyuan-comic",
+        "series_id": 10604129202,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i314298.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i314298.jpg"
+          },
+          "height": 230,
+          "width": 160
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "Even Though I Know I Shouldn't Act Like This in Front of the Duke",
+        "series_url": "https://www.mangaupdates.com/series/58bo3v4/even-though-i-know-i-shouldn-t-act-like-this-in-front-of-the-duke",
+        "series_id": 11387241616,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i520111.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i520111.jpg"
+          },
+          "height": 400,
+          "width": 260
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "I Thought I Tamed the Villain",
+        "series_url": "https://www.mangaupdates.com/series/67jla4b/i-thought-i-tamed-the-villain",
+        "series_id": 13516862843,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i526961.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i526961.png"
+          },
+          "height": 400,
+          "width": 275
+        },
+        "weight": 14142
+      },
+      {
+        "series_name": "I Spy a Married Life",
+        "series_url": "https://www.mangaupdates.com/series/8t2baj8/i-spy-a-married-life",
+        "series_id": 19171663892,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i454986.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i454986.jpg"
+          },
+          "height": 231,
+          "width": 160
+        },
+        "weight": 14142
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 681,
+        "month": 2157,
+        "three_months": 3206,
+        "six_months": 4587,
+        "year": 5328
+      },
+      "old_position": {
+        "week": 678,
+        "month": 2157,
+        "three_months": 3799,
+        "six_months": 5073,
+        "year": 8257
+      },
+      "lists": {
+        "reading": 23,
+        "wish": 26,
+        "complete": null,
+        "unfinished": 2,
+        "custom": 16
+      }
+    },
+    "last_updated": {
+      "timestamp": 1782244887,
+      "as_rfc3339": "2026-06-23T13:01:27-07:00",
+      "as_string": "June 23rd, 2026 1:01pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

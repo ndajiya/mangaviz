@@ -1,0 +1,139 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/53977031112",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:19.438Z",
+  "responseData": {
+    "series_id": 53977031112,
+    "title": "100 Oku de Rakusatsu Sareta Seijo wa Tekikoku Ooji no Hanayome ni Naru",
+    "url": "https://www.mangaupdates.com/series/osoj3rc/100-oku-de-rakusatsu-sareta-seijo-wa-tekikoku-ooji-no-hanayome-ni-naru",
+    "associated": [
+      {
+        "title": "100億で落札された聖女は敵国王子の花嫁になる"
+      },
+      {
+        "title": "The Saint Bride Sold for 10 Billion to the Enemy Prince"
+      },
+      {
+        "title": "The Saint Who Was Bought for 10 Billion Will Become the Bride of the Enemy Prince"
+      },
+      {
+        "title": "The Saintess Sold for 10 Billion Becomes the Bride of an Enemy Prince"
+      }
+    ],
+    "description": "Iris, the kingdom’s only saint, possesses the power to make plants grow. After her country loses a war, she is forced to marry into the neighboring nation. She accepts this fate of her own will in order to protect her people, but on the journey she is attacked by bandits and put up for auction. In the depths of despair, the one who purchases her for 10 billion is Victor, the neighboring country’s second prince, rumored to be cold and ruthless. Iris feels a deep gratitude toward him, yet Victor mistakenly believes she was sold off because she schemed to escape from him.",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i529950.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i529950.jpg"
+      },
+      "height": 400,
+      "width": 282
+    },
+    "type": "Manga",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Fantasy"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "Shoujo"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 53977031112,
+        "category": "Webtoon/Webcomic",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 15771971772
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 44241182109,
+    "status": null,
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "SHIJIMA Tomoko",
+        "author_id": 43714430017,
+        "url": "https://www.mangaupdates.com/author/k2yfy2p/shijima-tomoko",
+        "type": "Author"
+      },
+      {
+        "name": "Motoyoru",
+        "author_id": 55712952733,
+        "url": "https://www.mangaupdates.com/author/ple1xgd/motoyoru",
+        "type": "Artist"
+      },
+      {
+        "name": "Umiumi",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "DPN Books",
+        "publisher_id": 68339742256,
+        "url": "https://www.mangaupdates.com/publisher/ve7puls/dpn-books",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Comic Nanitozo",
+        "publisher_name": "DPN Books",
+        "publisher_id": 68339742256
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [],
+    "rank": {
+      "position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "old_position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": 3,
+        "wish": 3,
+        "complete": null,
+        "unfinished": null,
+        "custom": 3
+      }
+    },
+    "last_updated": {
+      "timestamp": 1782933707,
+      "as_rfc3339": "2026-07-01T12:21:47-07:00",
+      "as_string": "July 1st, 2026 12:21pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

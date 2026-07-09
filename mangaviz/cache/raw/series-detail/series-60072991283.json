@@ -1,0 +1,115 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/60072991283",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:14.796Z",
+  "responseData": {
+    "series_id": 60072991283,
+    "title": "(Jishou) Shinshina Yakuza wa Wakeari Ojou-sama o Amayakashitai",
+    "url": "https://www.mangaupdates.com/series/rlhwoqb/jishou-shinshina-yakuza-wa-wakeari-ojou-sama-o-amayakashitai",
+    "associated": [
+      {
+        "title": "A Would-Be Gentle Yakuza Wants to Spoil the Young Lady With a Special Circumstance"
+      },
+      {
+        "title": "（自称）紳士なヤクザはワケありお嬢様を甘やかしたい"
+      }
+    ],
+    "description": null,
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i531478.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i531478.jpg"
+      },
+      "height": 400,
+      "width": 283
+    },
+    "type": "Manga",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Romance"
+      }
+    ],
+    "categories": [],
+    "latest_chapter": 0,
+    "forum_id": 49664569846,
+    "status": null,
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "NATSUME Moe",
+        "author_id": null,
+        "url": null,
+        "type": "Author"
+      },
+      {
+        "name": "SHIRATAMA Niji",
+        "author_id": null,
+        "url": null,
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Digikata Henshuubu",
+        "publisher_id": 73300343159,
+        "url": "https://www.mangaupdates.com/publisher/xo94qrb/digikata-henshuubu",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "fondue",
+        "publisher_name": "Digikata Henshuubu",
+        "publisher_id": 73300343159
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [],
+    "rank": {
+      "position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "old_position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": null,
+        "wish": null,
+        "complete": null,
+        "unfinished": null,
+        "custom": 1
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783412710,
+      "as_rfc3339": "2026-07-07T01:25:10-07:00",
+      "as_string": "July 7th, 2026 1:25am PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

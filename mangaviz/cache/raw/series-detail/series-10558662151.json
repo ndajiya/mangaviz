@@ -1,0 +1,1162 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/10558662151",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:21.279Z",
+  "responseData": {
+    "series_id": 10558662151,
+    "title": "A Villain Consumed by Desire",
+    "url": "https://www.mangaupdates.com/series/4umcruv/a-villain-consumed-by-desire",
+    "associated": [
+      {
+        "title": "The Final Villain Was Defeated by the Adulterous Devil"
+      },
+      {
+        "title": "The Final Villain Was Possessed by a L*stful Demon"
+      },
+      {
+        "title": "The Final Villain Was Possessed by a Lustful Demon"
+      },
+      {
+        "title": "最後の悪役がイン魔にやられてしまった"
+      },
+      {
+        "title": "최종 악역이 음란마귀에게 당해버렸다"
+      }
+    ],
+    "description": "When the reader wakes up as Levi, a sickly extra from a family of knights in a discontinued R-rated novel, she knows her days are numbered. To avoid being killed by the villainous Prince Damian during his future rebellion, Levi plans to avoid fighting him and live in the shadows. But fate takes a carnal turn when a lust demon attacks Damian. \n\nAlthough Levi successfully purifies the demonic energy inside him, it's only after their unplanned night of passion. Now, the ruthless prince who only desired the throne is dangerously obsessed with a woman he was never supposed to touch.\n\n**Official Translations:**    \n[English](https://www.tappytoon.com/en/book/a-villain-consumed-by-desire), [Japanese](https://mechacomic.jp/books/266026) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i525451.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i525451.jpg"
+      },
+      "height": 400,
+      "width": 275
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 6.6,
+    "rating_votes": 8,
+    "genres": [
+      {
+        "genre": "Fantasy"
+      },
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Romance"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 10558662151,
+        "category": "Academy",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Amnesia",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Animal/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Auction House",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Auction/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Bat/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Beautiful Female Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Beautiful Female Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Bet/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Black Market",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Black-Haired Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Blindfold",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Blonde-Haired Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Blonde-Haired Female Lead",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 39773680098
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Blue-Eyed Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Blushing Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Body Marking/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Bodyguard/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Book World",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Brown-Haired Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Comedic Misunderstanding/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Competition/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Contract/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Contractual Relationship",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Count/Countess",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Crown Prince/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Dark/Tan Skin Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Dark/Tan Skin Male Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Dead Mother",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Demon/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Determined Female Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Divine/Holy Powers",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Dormitory/ies",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Dress/es",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Elaborate Art Style",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Empire/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "European Ambience",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Fantasy World",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Festival",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Fight for the Throne",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Fight/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "First-Time Intercourse",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Forest",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "French Kissing",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Full Color",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 4411760110
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Green-Eyed Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Half-Brothers",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Half-Sibling/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Handsome Male Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Handsome Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Horny Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Hunting",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Inheritance",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Inherited Power",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Injury/ies",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Isekai",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 4411760110
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Kiss/es",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Knight/s",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 4411760110
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Letter/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Library",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Lion/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "long strip",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 39505547571
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Magic",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Mana",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Medieval European Ambience",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Memory Loss",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Merchant/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Misunderstanding/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Monster/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Muscular Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Muscular Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Newspaper",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Nobility/Aristocracy",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 4411760110
+      },
+      {
+        "series_id": 10558662151,
+        "category": "One-Night Stand",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Orange-Eyed Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Orphan Female Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Overwork",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Party/ies",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Past Life/ves",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Pink-Eyed Female Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Priest/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Prince Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Promiscuous Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Reincarnated as a Side/Extra/Mob Character",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 4411760110
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Reincarnated in a Book World",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 4411760110
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Royal-Noble Relationship",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Royalty/Imperial",
+        "votes": 1,
+        "votes_plus": 1,
+        "votes_minus": 0,
+        "added_by": 4411760110
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Scar/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Scarred Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Scenario Deviation",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Second Life",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Secret/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Servant/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Shopping",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Sickly Female Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Slavery",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Slime",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Snake/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Special Lineage/Bloodline",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Strong Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Strong-Willed Female Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Sword/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Swordsman",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Swordswoman",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Tattoo/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Tattooed Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Tea",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Tentacles",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Time Skip",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Time Skip in First Chapter/Prologue",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Transmigrated as a Side/Extra/Mob Character",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Transmigrated into a Book World",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Transmigrated Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Uncle-Niece Relationship",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Uncle/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Virgin Female Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "Virgin Male Lead",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      },
+      {
+        "series_id": 10558662151,
+        "category": "White/Silver-Haired Character/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 66778626127
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 62166671379,
+    "status": "22 Chapters (Ongoing)",
+    "licensed": true,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Bamblanc",
+        "author_id": 16637575846,
+        "url": "https://www.mangaupdates.com/author/7n5kzom/bamblanc",
+        "type": "Author"
+      },
+      {
+        "name": "GAL",
+        "author_id": 22679834449,
+        "url": "https://www.mangaupdates.com/author/af2zk9d/gal",
+        "type": "Author"
+      },
+      {
+        "name": "YounDal",
+        "author_id": 25364230742,
+        "url": "https://www.mangaupdates.com/author/bnh7hp2/youndal",
+        "type": "Author"
+      },
+      {
+        "name": "EMIL",
+        "author_id": 7534212814,
+        "url": "https://www.mangaupdates.com/author/3globta/emil",
+        "type": "Artist"
+      },
+      {
+        "name": "LEJONG",
+        "author_id": 55351888620,
+        "url": "https://www.mangaupdates.com/author/pff32lo/lejong",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "studio ALIVE",
+        "publisher_id": 51151003846,
+        "url": "https://www.mangaupdates.com/publisher/nhxzj5y/studio-alive",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Tappytoon",
+        "publisher_id": 44201966230,
+        "url": "https://www.mangaupdates.com/publisher/kb0pjfa/tappytoon",
+        "type": "English",
+        "notes": null
+      }
+    ],
+    "publications": [],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "Suterare Ouji ga Saizensen de Tekikoku no Heishi o Chiryou Shitara Jitsu wa Dainana Oujo datta Ken (Novel)",
+        "series_url": "https://www.mangaupdates.com/series/7efuzt2/suterare-ouji-ga-saizensen-de-tekikoku-no-heishi-o-chiryou-shitara-jitsu-wa-dainana-oujo-datta-ken-novel",
+        "series_id": 16110643142,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i510604.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i510604.jpg"
+          },
+          "height": 400,
+          "width": 281
+        },
+        "weight": 67823
+      },
+      {
+        "series_name": "What if I Married My Enemy?",
+        "series_url": "https://www.mangaupdates.com/series/ggxzfgm/what-if-i-married-my-enemy",
+        "series_id": 35853056518,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i527428.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i527428.png"
+          },
+          "height": 400,
+          "width": 275
+        },
+        "weight": 67823
+      },
+      {
+        "series_name": "Destined to Be an Outcast",
+        "series_url": "https://www.mangaupdates.com/series/a5q01jm/destined-to-be-an-outcast",
+        "series_id": 22113826258,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i518968.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i518968.png"
+          },
+          "height": 400,
+          "width": 266
+        },
+        "weight": 66332
+      },
+      {
+        "series_name": "I Thought I Tamed the Villain",
+        "series_url": "https://www.mangaupdates.com/series/67jla4b/i-thought-i-tamed-the-villain",
+        "series_id": 13516862843,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i526961.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i526961.png"
+          },
+          "height": 400,
+          "width": 275
+        },
+        "weight": 64031
+      },
+      {
+        "series_name": "Incubus Banishment ~I Was Banished From the Capital. But the More I Get Along With the Girls, the Stronger I Get~ (Novel)",
+        "series_url": "https://www.mangaupdates.com/series/zt1oyci/incubus-banishment-i-was-banished-from-the-capital-but-the-more-i-get-along-with-the-girls-the-stronger-i-get-novel",
+        "series_id": 77943744738,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i512854.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i512854.jpg"
+          },
+          "height": 400,
+          "width": 280
+        },
+        "weight": 64031
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 493,
+        "month": 936,
+        "three_months": 1258,
+        "six_months": 3337,
+        "year": 4903
+      },
+      "old_position": {
+        "week": 755,
+        "month": 721,
+        "three_months": 2599,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": 56,
+        "wish": 36,
+        "complete": 3,
+        "unfinished": 4,
+        "custom": 33
+      }
+    },
+    "last_updated": {
+      "timestamp": 1782616585,
+      "as_rfc3339": "2026-06-27T20:16:25-07:00",
+      "as_string": "June 27th, 2026 8:16pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

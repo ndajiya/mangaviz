@@ -1,0 +1,146 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/6300895646",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:22.785Z",
+  "responseData": {
+    "series_id": 6300895646,
+    "title": "A Wrongful Romance",
+    "url": "https://www.mangaupdates.com/series/2w7e272/a-wrongful-romance",
+    "associated": [
+      {
+        "title": "A Hopeless Love"
+      },
+      {
+        "title": "Mối Tình Hư Hỏng"
+      },
+      {
+        "title": "Ruined Pure Love"
+      },
+      {
+        "title": "Tình Cảm Thuần Khiết Mục Nát"
+      },
+      {
+        "title": "Wrong Pure Love"
+      },
+      {
+        "title": "글러먹은 순정"
+      }
+    ],
+    "description": "**Original Webtoon:**    \n[Naver Series](https://series.naver.com/comic/detail.series?productNo=13890637), [Ridibooks](https://ridibooks.com/books/1561017549), [Lezhin](https://www.lezhin.com/ko/comic/doomed_first_love), [MrBlue](https://www.mrblue.com/webtoon/wt_000078993), [BookCube](https://www.bookcube.com/toon/detail.asp?webtoon_num=260444) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i520116.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i520116.jpg"
+      },
+      "height": 400,
+      "width": 279
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 6.3,
+    "rating_votes": 1,
+    "genres": [
+      {
+        "genre": "Adult"
+      },
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "Smut"
+      }
+    ],
+    "categories": [],
+    "latest_chapter": 0,
+    "forum_id": 48811413285,
+    "status": "23 Chapters (Complete) ",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Ileunkkoch",
+        "author_id": 34493822056,
+        "url": "https://www.mangaupdates.com/author/fugqbfs/ileunkkoch",
+        "type": "Author"
+      },
+      {
+        "name": "Jang Yeon",
+        "author_id": 34913173890,
+        "url": "https://www.mangaupdates.com/author/g1eehdu/jang-yeon",
+        "type": "Author"
+      },
+      {
+        "name": "Sseulalin",
+        "author_id": 36960213523,
+        "url": "https://www.mangaupdates.com/author/gz95n9v/sseulalin",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Bluepic",
+        "publisher_id": 54256456720,
+        "url": "https://www.mangaupdates.com/publisher/oxaw5xs/bluepic",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162,
+        "url": "https://www.mangaupdates.com/publisher/9vh24ju/naver",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "Naver Series",
+        "publisher_name": "Naver",
+        "publisher_id": 21494145162
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [],
+    "rank": {
+      "position": {
+        "week": 799,
+        "month": 1847,
+        "three_months": 2822,
+        "six_months": 3938,
+        "year": 5553
+      },
+      "old_position": {
+        "week": 807,
+        "month": 1904,
+        "three_months": 2800,
+        "six_months": 5701,
+        "year": 8852
+      },
+      "lists": {
+        "reading": 11,
+        "wish": 16,
+        "complete": 2,
+        "unfinished": null,
+        "custom": 15
+      }
+    },
+    "last_updated": {
+      "timestamp": 1782333084,
+      "as_rfc3339": "2026-06-24T13:31:24-07:00",
+      "as_string": "June 24th, 2026 1:31pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

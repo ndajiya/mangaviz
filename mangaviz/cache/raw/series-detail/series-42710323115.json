@@ -1,0 +1,134 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/42710323115",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:21.642Z",
+  "responseData": {
+    "series_id": 42710323115,
+    "title": "About Having a Lover Who Is XX",
+    "url": "https://www.mangaupdates.com/series/jmcmg8b/about-having-a-lover-who-is-xx",
+    "associated": [
+      {
+        "title": "[Colorful Night Anthology] About Having a Lover Who Is XX"
+      },
+      {
+        "title": "[색야 단편선] 애인이 xx인 것에 대하여"
+      },
+      {
+        "title": "애인이 xx인 것에 대하여"
+      }
+    ],
+    "description": "**Original Webtoon:**   \n[Ridibooks](https://ridibooks.com/books/3587013801), [MrBlue](https://www.mrblue.com/webtoon/wt_000079419) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i526418.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i526418.jpg"
+      },
+      "height": 400,
+      "width": 281
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "Adult"
+      },
+      {
+        "genre": "Romance"
+      },
+      {
+        "genre": "Smut"
+      },
+      {
+        "genre": "Yaoi"
+      }
+    ],
+    "categories": [],
+    "latest_chapter": 0,
+    "forum_id": 12005847125,
+    "status": null,
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [
+      {
+        "relation_id": 105284,
+        "relation_type": "Full Anthology",
+        "related_series_id": 7006125676,
+        "related_series_name": "[Colorful Night Anthology] Collection",
+        "related_series_url": "https://www.mangaupdates.com/series/37v9l64/colorful-night-anthology-collection",
+        "triggered_by_relation_id": 0
+      }
+    ],
+    "authors": [
+      {
+        "name": "Bolicha",
+        "author_id": 44377159192,
+        "url": "https://www.mangaupdates.com/author/kdx0j6g/bolicha",
+        "type": "Author"
+      },
+      {
+        "name": "Bold",
+        "author_id": 708763137,
+        "url": "https://www.mangaupdates.com/author/0bpz94x/bold",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Haewadal Studio",
+        "publisher_id": 7015363042,
+        "url": "https://www.mangaupdates.com/publisher/380rkrm/haewadal-studio",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Oreum Media",
+        "publisher_id": 43450986751,
+        "url": "https://www.mangaupdates.com/publisher/jyllfy7/oreum-media",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [],
+    "recommendations": [],
+    "category_recommendations": [],
+    "rank": {
+      "position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "old_position": {
+        "week": null,
+        "month": null,
+        "three_months": null,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": 6,
+        "wish": 4,
+        "complete": null,
+        "unfinished": null,
+        "custom": 2
+      }
+    },
+    "last_updated": {
+      "timestamp": 1782570698,
+      "as_rfc3339": "2026-06-27T07:31:38-07:00",
+      "as_string": "June 27th, 2026 7:31am PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

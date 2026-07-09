@@ -1,9 +1,10 @@
 {
   "version": "1.0.0",
-  "buildDate": "2026-07-08T19:02:43.604Z",
-  "seriesCount": 16,
-  "totalNodes": 127,
-  "totalEdges": 253,
+  "buildDate": "2026-07-08T20:14:58.925Z",
+  "strategy": "latest_published",
+  "seriesCount": 40,
+  "totalNodes": 531,
+  "totalEdges": 793,
   "shards": {
     "nodes": [
       "nodes.artist.json",
@@ -20,6 +21,7 @@
       "edges.illustrated_by.json",
       "edges.published_by.json",
       "edges.recommended_with.json",
+      "edges.related_to.json",
       "edges.serialized_in.json",
       "edges.written_by.json"
     ],

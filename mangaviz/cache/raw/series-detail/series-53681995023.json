@@ -1,0 +1,123 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/53681995023",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:15.463Z",
+  "responseData": {
+    "series_id": 53681995023,
+    "title": "5-fun no Ace",
+    "url": "https://www.mangaupdates.com/series/onsvggf/5-fun-no-ace",
+    "associated": [
+      {
+        "title": "5分のエース"
+      },
+      {
+        "title": "Five-Minute Ace"
+      }
+    ],
+    "description": "Yuma, a first-year student, shows up for a trial session at his high school's struggling volleyball club. Surprisingly, his preferred position is the bench! Due to a heart condition, he can only exert himself at full power for exactly five minutes. Why did he join the club with such a heavy restriction? In front of the confused members, he unleashes extraordinary, top-tier plays during his brief window. It turns out Yuma was actually a legendary player during his middle school days! A boy who shines brighter than anyone else for a limited time shatters the common sense of sports\n\n**Official Japanese**\n\n[Manga Zegra](https://manga-zegra.com/series/27c5ff3df24ab?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnl_SjEqS75ps463ns6xSNzY-XxYTqNcVdYlPSB_Q_wzA6bYNfYombpGgfgT4_aem_y7DuCCZyeXTyOq8U7t4u9Q)\n\n",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i531465.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i531465.jpg"
+      },
+      "height": 400,
+      "width": 300
+    },
+    "type": "Manga",
+    "year": "2026",
+    "bayesian_rating": 0,
+    "rating_votes": 0,
+    "genres": [
+      {
+        "genre": "School Life"
+      },
+      {
+        "genre": "Shounen"
+      },
+      {
+        "genre": "Sports"
+      }
+    ],
+    "categories": [],
+    "latest_chapter": 0,
+    "forum_id": 28258911501,
+    "status": "0 Volumes (Ongoing)",
+    "licensed": false,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Gin (ぎん)",
+        "author_id": 69865713796,
+        "url": "https://www.mangaupdates.com/author/w3g8ps4/gin",
+        "type": "Author"
+      },
+      {
+        "name": "Gin (ぎん)",
+        "author_id": 69865713796,
+        "url": "https://www.mangaupdates.com/author/w3g8ps4/gin",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Starts Shuppan",
+        "publisher_id": 72699941330,
+        "url": "https://www.mangaupdates.com/publisher/xebo1qq/starts-shuppan",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [
+      {
+        "publication_name": "comic Zeraise",
+        "publisher_name": "Starts Shuppan",
+        "publisher_id": 72699941330
+      },
+      {
+        "publication_name": "Manga Zegura",
+        "publisher_name": "Starts Shuppan",
+        "publisher_id": 72699941330
+      }
+    ],
+    "recommendations": [],
+    "category_recommendations": [],
+    "rank": {
+      "position": {
+        "week": 792,
+        "month": 1838,
+        "three_months": 2993,
+        "six_months": 5007,
+        "year": 6629
+      },
+      "old_position": {
+        "week": 787,
+        "month": 1838,
+        "three_months": 3665,
+        "six_months": null,
+        "year": null
+      },
+      "lists": {
+        "reading": 2,
+        "wish": 2,
+        "complete": null,
+        "unfinished": null,
+        "custom": 1
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783397015,
+      "as_rfc3339": "2026-07-06T21:03:35-07:00",
+      "as_string": "July 6th, 2026 9:03pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}

@@ -1,0 +1,249 @@
+{
+  "source": "api.mangaupdates.com",
+  "endpoint": "/series/66646875988",
+  "requestBody": null,
+  "fetchedAt": "2026-07-08T20:14:18.706Z",
+  "responseData": {
+    "series_id": 66646875988,
+    "title": "A Night of Deception",
+    "url": "https://www.mangaupdates.com/series/um7tums/a-night-of-deception",
+    "associated": [
+      {
+        "title": "A Night of Lies"
+      },
+      {
+        "title": "Đêm Ta Lừa Dối Em"
+      },
+      {
+        "title": "너를 속이는 밤"
+      }
+    ],
+    "description": "Yooju is forced to steal her twin sister's identity and enter a marriage of convenience. But Seunghan Do, the chaebol heir she's meant to deceive, sees through her charade from the very beginning. Instead of exposing her, he finds himself enthralled by her dangerous game.\n\n**Original Novel**:   \n[R15](https://ridibooks.com/books/297043956?_rdt_sid=linked_contents&_rdt_idx=0)   \n**R19**: [Chapters](https://ridibooks.com/books/297043954?_rdt_sid=linked_contents&_rdt_idx=1), [Volumes](https://ridibooks.com/books/297045677?_rdt_sid=linked_contents&_rdt_idx=2) \n\n[Original Webtoon](https://ridibooks.com/books/6032000069) \n\n**Official Translations:**   \n[English](https://manta.net/en/series/a-night-of-deception?seriesId=4203) ",
+    "image": {
+      "url": {
+        "original": "https://cdn.mangaupdates.com/image/i524135.jpg",
+        "thumb": "https://cdn.mangaupdates.com/image/thumb/i524135.jpg"
+      },
+      "height": 400,
+      "width": 275
+    },
+    "type": "Manhwa",
+    "year": "2026",
+    "bayesian_rating": 6.3,
+    "rating_votes": 1,
+    "genres": [
+      {
+        "genre": "Drama"
+      },
+      {
+        "genre": "Josei"
+      },
+      {
+        "genre": "Romance"
+      }
+    ],
+    "categories": [
+      {
+        "series_id": 66646875988,
+        "category": "Based on a Novel",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55051757646
+      },
+      {
+        "series_id": 66646875988,
+        "category": "Full Color",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55051757646
+      },
+      {
+        "series_id": 66646875988,
+        "category": "Identity Theft",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55051757646
+      },
+      {
+        "series_id": 66646875988,
+        "category": "Impersonating Someone",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55051757646
+      },
+      {
+        "series_id": 66646875988,
+        "category": "Twin/s",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55051757646
+      },
+      {
+        "series_id": 66646875988,
+        "category": "Webtoon/Webcomic",
+        "votes": 0,
+        "votes_plus": 0,
+        "votes_minus": 0,
+        "added_by": 55051757646
+      }
+    ],
+    "latest_chapter": 0,
+    "forum_id": 46967501034,
+    "status": "26 Chapters (Hiatus) since 05.2026\n\n**S1**: 26 Chapters (01-26)   \n**S2**: TBA",
+    "licensed": true,
+    "completed": false,
+    "anime": {
+      "start": null,
+      "end": null
+    },
+    "related_series": [],
+    "authors": [
+      {
+        "name": "Jeong Eun-Dong",
+        "author_id": 15660504191,
+        "url": "https://www.mangaupdates.com/author/76zuydb/jeong-eun-dong",
+        "type": "Author"
+      },
+      {
+        "name": "Surreuk Comics",
+        "author_id": 29045012153,
+        "url": "https://www.mangaupdates.com/author/dccnet5/surreuk-comics",
+        "type": "Artist"
+      }
+    ],
+    "publishers": [
+      {
+        "publisher_name": "Manta",
+        "publisher_id": 32657438941,
+        "url": "https://www.mangaupdates.com/publisher/f03e95p/manta",
+        "type": "English",
+        "notes": null
+      },
+      {
+        "publisher_name": "Ridibooks",
+        "publisher_id": 26086657674,
+        "url": "https://www.mangaupdates.com/publisher/bzfblvu/ridibooks",
+        "type": "Original",
+        "notes": null
+      },
+      {
+        "publisher_name": "Surreuk Comics",
+        "publisher_id": 34202060938,
+        "url": "https://www.mangaupdates.com/publisher/fpn0v4a/surreuk-comics",
+        "type": "Original",
+        "notes": null
+      }
+    ],
+    "publications": [],
+    "recommendations": [],
+    "category_recommendations": [
+      {
+        "series_name": "Bed Scene",
+        "series_url": "https://www.mangaupdates.com/series/w9b3nlk/bed-scene",
+        "series_id": 70219876664,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i496691.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i496691.jpg"
+          },
+          "height": 400,
+          "width": 291
+        },
+        "weight": 22361
+      },
+      {
+        "series_name": "Night of the Soulless Heathens",
+        "series_url": "https://www.mangaupdates.com/series/tqbaeng/night-of-the-soulless-heathens",
+        "series_id": 64717769644,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i473414.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i473414.jpg"
+          },
+          "height": 400,
+          "width": 296
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "Arrogant Regret",
+        "series_url": "https://www.mangaupdates.com/series/xy89e0x/arrogant-regret",
+        "series_id": 73903542081,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i523944.png",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i523944.png"
+          },
+          "height": 400,
+          "width": 275
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "Falling Into the Deep End",
+        "series_url": "https://www.mangaupdates.com/series/z96hjhn/falling-into-the-deep-end",
+        "series_id": 76742473451,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i510258.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i510258.jpg"
+          },
+          "height": 400,
+          "width": 276
+        },
+        "weight": 20000
+      },
+      {
+        "series_name": "Solar Eclipse",
+        "series_url": "https://www.mangaupdates.com/series/wmlg7xc/solar-eclipse",
+        "series_id": 71023319328,
+        "series_image": {
+          "url": {
+            "original": "https://cdn.mangaupdates.com/image/i457562.jpg",
+            "thumb": "https://cdn.mangaupdates.com/image/thumb/i457562.jpg"
+          },
+          "height": 222,
+          "width": 160
+        },
+        "weight": 17349
+      }
+    ],
+    "rank": {
+      "position": {
+        "week": 929,
+        "month": 1958,
+        "three_months": 2869,
+        "six_months": 3391,
+        "year": 4852
+      },
+      "old_position": {
+        "week": 935,
+        "month": 2065,
+        "three_months": 3022,
+        "six_months": 4876,
+        "year": 7949
+      },
+      "lists": {
+        "reading": 13,
+        "wish": 31,
+        "complete": 1,
+        "unfinished": 1,
+        "custom": 24
+      }
+    },
+    "last_updated": {
+      "timestamp": 1783042314,
+      "as_rfc3339": "2026-07-02T18:31:54-07:00",
+      "as_string": "July 2nd, 2026 6:31pm PDT"
+    },
+    "admin": {
+      "approved": true
+    }
+  },
+  "apiVersion": "v1"
+}
