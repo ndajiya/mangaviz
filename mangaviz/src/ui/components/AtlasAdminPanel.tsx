@@ -173,11 +173,17 @@ const AtlasAdminPanel: React.FC = () => {
 
   return (
     <div className={`atlas-admin ${open ? "is-open" : ""}`}>
-      <button type="button" className="atlas-admin-launcher" onClick={() => setOpen((value) => !value)}>
+      <button
+        type="button"
+        className="atlas-admin-launcher"
+        aria-expanded={open}
+        aria-controls="atlas-admin-panel"
+        onClick={() => setOpen((value) => !value)}
+      >
         Atlas Refresh
       </button>
       {open && (
-        <div className="atlas-admin-panel">
+        <div id="atlas-admin-panel" className="atlas-admin-panel" role="dialog" aria-modal="false" aria-label="Atlas refresh controls">
           <div className="atlas-admin-header">
             <div>
               <h3>Atlas Refresh</h3>
