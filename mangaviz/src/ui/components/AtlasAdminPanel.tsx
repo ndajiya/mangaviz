@@ -13,6 +13,7 @@ const AtlasAdminPanel: React.FC = () => {
   const [password, setPassword] = useState("");
   const [mode, setMode] = useState<AtlasRefreshMode>("pr");
   const [strategy, setStrategy] = useState<AtlasRefreshStrategy>("mixed_seed_queries");
+  const [seed, setSeed] = useState("");
   const [ref, setRef] = useState("main");
   const [maxSeries, setMaxSeries] = useState("500");
   const [requestDelay, setRequestDelay] = useState("800");
@@ -41,6 +42,11 @@ const AtlasAdminPanel: React.FC = () => {
         return "Combines multiple seeded searches for broader, more diverse Atlas expansion.";
     }
   }, [strategy]);
+
+  const seedHelpText = useMemo(
+    () => "Optional: enter a MangaUpdates series ID or manga title to anchor the Atlas around one specific series.",
+    [],
+  );
 
   useEffect(() => {
     if (!open) return;
@@ -156,6 +162,7 @@ const AtlasAdminPanel: React.FC = () => {
       const response = await atlasAdmin.triggerRefresh({
         mode,
         strategy,
+        seed: seed.trim(),
         ref: ref.trim() || "main",
         maxSeries: clamp(Number.parseInt(maxSeries, 10), 500, 25, 5000),
         requestDelay: clamp(Number.parseInt(requestDelay, 10), 800, 200, 5000),
@@ -224,6 +231,16 @@ const AtlasAdminPanel: React.FC = () => {
                   </select>
                 </label>
                 <p className="atlas-admin-hint">{strategyHelpText}</p>
+                <label className="atlas-admin-field">
+                  <span>Seed manga</span>
+                  <input
+                    type="text"
+                    value={seed}
+                    onChange={(event) => setSeed(event.target.value)}
+                    placeholder="Berserk or 12345"
+                  />
+                </label>
+                <p className="atlas-admin-hint">{seedHelpText}</p>
                 <label className="atlas-admin-field">
                   <span>Branch</span>
                   <input type="text" value={ref} onChange={(event) => setRef(event.target.value)} placeholder="main" />

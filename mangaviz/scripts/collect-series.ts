@@ -16,6 +16,7 @@ const MIN_DETAIL_SERIES = parseInt(
 );
 const SEARCH_PAGE_SIZE = 100;
 const RELEASE_PAGE_SIZE = 100;
+const ADMIN_SEED = process.env.ATLAS_SEED?.trim() || '';
 const MIXED_SEEDS = (process.env.ATLAS_MIXED_SEEDS || 'isekai,villainess,romance,fantasy,action,school,dungeon,hunter,revenge,hero,queen,king,murim,regression,time travel,academy')
   .split(',')
   .map((seed) => seed.trim())
@@ -211,6 +212,23 @@ async function searchSeries(body: Record<string, unknown>) {
   return response.results || [];
 }
 
+function getDetailPayload(detail: Record<string, unknown>) {
+  return detail.responseData && typeof detail.responseData === 'object'
+    ? (detail.responseData as Record<string, unknown>)
+    : detail;
+}
+
+function readDetailResponseId(detail: Record<string, unknown>) {
+  const payload = getDetailPayload(detail);
+  const id = payload.series_id ?? payload.id;
+  return typeof id === 'number' && Number.isFinite(id) ? id : null;
+}
+
+function readDetailResponseTitle(detail: Record<string, unknown>) {
+  const payload = getDetailPayload(detail);
+  return typeof payload.title === 'string' ? payload.title.trim() : '';
+}
+
 async function collectSearchPages(options: {
   candidates: Map<number, Candidate>;
   pageLimit: number;
@@ -284,6 +302,65 @@ async function resolveReleaseTitleToSeries(releaseTitle: string) {
     id: ranked[0].id,
     title: searchRecordTitle(ranked[0].hit),
   };
+}
+
+async function resolveAdminSeedToSeries(seedInput: string) {
+  const trimmedSeed = seedInput.trim();
+  if (!trimmedSeed) return null;
+
+  try {
+    if (/^\d+$/.test(trimmedSeed)) {
+      const id = Number.parseInt(trimmedSeed, 10);
+      const detail = await requestJson<Record<string, unknown>>(`/series/${id}`, { method: 'GET' });
+      const resolvedId = readDetailResponseId(detail) || id;
+      const title = readDetailResponseTitle(detail) || `Series ${resolvedId}`;
+      saveCache('series-detail', `series-${resolvedId}.json`, detail, `/series/${resolvedId}`);
+      return { id: resolvedId, title };
+    }
+
+    const body = {
+      page: 1,
+      perpage: 10,
+      orderby: 'rating',
+      direction: 'desc' as const,
+      search: trimmedSeed,
+    };
+    const results = await searchSeries(body);
+    saveCache('series-search', `seed-${normalizeTitle(trimmedSeed).replace(/\s+/g, '-').slice(0, 80) || 'title'}.json`, { results }, '/series/search', body);
+    const ranked = results
+      .map((hit) => {
+        const id = searchRecordId(hit);
+        return id ? { hit, id, score: scoreResolvedSearchHit(hit, trimmedSeed) } : null;
+      })
+      .filter((entry): entry is { hit: SearchHit; id: number; score: number } => Boolean(entry))
+      .sort((left, right) => right.score - left.score);
+    if (ranked.length === 0) return null;
+    return {
+      id: ranked[0].id,
+      title: searchRecordTitle(ranked[0].hit),
+    };
+  } catch (error) {
+    void debugReport('C', 'collect-series.ts:resolveAdminSeedToSeries', 'Admin seed resolution failed and will be ignored for this run.', {
+      seed: trimmedSeed,
+      error: error instanceof Error ? error.message : String(error),
+    });
+    return null;
+  }
+}
+
+async function collectAdminSeedCandidates(candidates: Map<number, Candidate>) {
+  if (!ADMIN_SEED) return;
+  const resolved = await resolveAdminSeedToSeries(ADMIN_SEED);
+  if (!resolved) {
+    // #region debug-point C:admin-seed-miss
+    void debugReport('C', 'collect-series.ts:collectAdminSeedCandidates', 'Admin seed could not be resolved to a series.', { seed: ADMIN_SEED });
+    // #endregion
+    return;
+  }
+  recordCandidate(candidates, resolved.id, resolved.title, 1_000_000_000_000, 'admin_seed');
+  // #region debug-point C:admin-seed-hit
+  void debugReport('C', 'collect-series.ts:collectAdminSeedCandidates', 'Admin seed resolved to a series and was pinned into the Atlas candidate pool.', { seed: ADMIN_SEED, resolvedSeriesId: resolved.id, resolvedTitle: resolved.title });
+  // #endregion
 }
 
 async function collectLatestUpdatedCandidates(candidates: Map<number, Candidate>) {
@@ -409,6 +486,7 @@ function pruneSeriesDetailCache(selectedIds: Set<number>) {
 
 async function buildCandidates() {
   const candidates = new Map<number, Candidate>();
+  await collectAdminSeedCandidates(candidates);
   switch (STRATEGY) {
     case 'latest_updated':
       await collectLatestUpdatedCandidates(candidates);
@@ -434,6 +512,7 @@ async function main() {
   // #region debug-point A:collector-start
   await debugReport('A', 'collect-series.ts:main:start', 'Collector started with current Atlas refresh inputs.', {
     strategy: STRATEGY,
+    adminSeed: ADMIN_SEED || null,
     maxSeries: MAX_SERIES,
     requestDelay: REQUEST_DELAY,
     candidateTarget: CANDIDATE_TARGET,
@@ -443,11 +522,15 @@ async function main() {
   // #endregion
 
   console.log(`Collecting up to ${MAX_SERIES} series using strategy "${STRATEGY}"...`);
+  if (ADMIN_SEED) {
+    console.log(`Admin seed: "${ADMIN_SEED}"`);
+  }
   const candidates = await buildCandidates();
   const selectedIds = getSelectedIds(candidates);
   // #region debug-point B:candidate-pool
   await debugReport('B', 'collect-series.ts:main:candidates', 'Collector built Atlas candidate pool.', {
     strategy: STRATEGY,
+    adminSeed: ADMIN_SEED || null,
     candidateCount: candidates.size,
     selectedCount: selectedIds.length,
     topSelectedIds: selectedIds.slice(0, 12),
@@ -496,6 +579,7 @@ async function main() {
 
   writeCollectorSummary({
     strategy: STRATEGY,
+    adminSeed: ADMIN_SEED || null,
     maxSeries: MAX_SERIES,
     minDetailSeries: MIN_DETAIL_SERIES,
     candidateCount: candidates.size,

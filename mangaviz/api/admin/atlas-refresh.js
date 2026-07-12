@@ -15,6 +15,13 @@ const VALID_STRATEGIES = new Set([
   'mixed_seed_queries',
 ]);
 
+const sanitizeSeed = (value) => {
+  if (typeof value !== 'string') return '';
+  const seed = value.trim();
+  if (!seed) return '';
+  return seed.slice(0, 200);
+};
+
 const isValidRef = (value) =>
   typeof value === 'string'
   && value.length > 0
@@ -64,6 +71,7 @@ export async function POST(request) {
 
   const mode = payload?.mode === 'pr' ? 'pr' : 'direct';
   const strategy = VALID_STRATEGIES.has(payload?.strategy) ? payload.strategy : 'mixed_seed_queries';
+  const seed = sanitizeSeed(payload?.seed);
   const maxSeries = clampInteger(payload?.maxSeries, 500, 25, 5000);
   const requestDelay = clampInteger(payload?.requestDelay, 800, 200, 5000);
   const requestedRef = typeof payload?.ref === 'string' && payload.ref.trim() ? payload.ref.trim() : defaultRef;
@@ -88,6 +96,7 @@ export async function POST(request) {
       client_payload: {
         mode,
         strategy,
+        seed,
         max_series: String(maxSeries),
         request_delay: String(requestDelay),
         ref,
@@ -114,6 +123,7 @@ export async function POST(request) {
     eventType: 'atlas_refresh_requested',
     mode,
     strategy,
+    seed,
     ref,
     maxSeries,
     requestDelay,

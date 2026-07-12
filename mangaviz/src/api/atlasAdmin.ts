@@ -4,6 +4,7 @@ export type AtlasRefreshStrategy = "latest_updated" | "latest_published" | "rece
 export type AtlasRefreshRequest = {
   mode: AtlasRefreshMode;
   strategy: AtlasRefreshStrategy;
+  seed: string;
   ref: string;
   maxSeries: number;
   requestDelay: number;
@@ -16,6 +17,7 @@ export type AtlasRefreshResponse = {
   eventType: string;
   mode: AtlasRefreshMode;
   strategy: AtlasRefreshStrategy;
+  seed: string;
   ref: string;
   maxSeries: number;
   requestDelay: number;
@@ -74,6 +76,7 @@ const atlasAdmin = {
       body: JSON.stringify({
         mode: input.mode,
         strategy: input.strategy,
+        seed: input.seed,
         ref: input.ref,
         maxSeries: input.maxSeries,
         requestDelay: input.requestDelay,
