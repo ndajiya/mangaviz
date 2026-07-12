@@ -72,6 +72,7 @@ body{min-width:320px}
 .atlas-zoom-btn,.atlas-zoom-reset{border:none;border-radius:6px;background:var(--bg3);color:var(--txt);padding:4px 8px;cursor:pointer;font-size:12px}
 .atlas-zoom-btn:hover,.atlas-zoom-reset:hover{background:var(--accent);color:#fff}
 .atlas-zoom-slider{width:110px;accent-color:var(--accent)}
+.atlas-spread-slider{width:92px;accent-color:var(--accent)}
 .graph-info{position:absolute;bottom:12px;left:12px;padding:4px 10px;background:rgba(15,15,35,.8);border:1px solid var(--border);border-radius:var(--rs);font-size:11px;color:var(--txt3);pointer-events:none}
 .welcome-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--bg);z-index:10}
 .welcome-content{max-width:500px;text-align:center;padding:40px}
@@ -200,6 +201,7 @@ body{min-width:320px}
   .atlas-zoom-label,.graph-info{font-size:12px}
   .atlas-zoom-btn,.atlas-zoom-reset{padding:6px 10px;font-size:13px}
   .atlas-zoom-slider{width:140px}
+  .atlas-spread-slider{width:112px}
   .live-error{top:16px;max-width:680px;padding:14px 22px;font-size:13px}
   .live-error-title{font-size:12px}
   .welcome-content{max-width:760px;padding:48px}
@@ -229,6 +231,7 @@ body{min-width:320px}
   .atlas-zoom-bar{top:18px;right:18px;padding:12px 14px}
   .atlas-zoom-btn,.atlas-zoom-reset{font-size:14px}
   .atlas-zoom-slider{width:168px}
+  .atlas-spread-slider{width:132px}
   .graph-info{bottom:16px;left:16px;padding:6px 12px}
   .live-error{top:18px;max-width:760px}
   .welcome-content{max-width:860px;padding:56px}
@@ -278,6 +281,7 @@ body{min-width:320px}
   .live-error{left:12px;right:12px;transform:none;max-width:none}
   .atlas-zoom-bar{left:12px;right:12px;top:12px;justify-content:space-between;flex-wrap:wrap}
   .atlas-zoom-slider{flex:1 1 120px;min-width:90px;width:auto}
+  .atlas-spread-slider{flex:1 1 100px;min-width:80px;width:auto}
   .graph-info{bottom:10px;left:10px;right:10px;text-align:center}
   .atlas-admin{right:12px;bottom:12px}
 }
@@ -327,6 +331,7 @@ body{min-width:320px}
   .atlas-zoom-bar{gap:6px;padding:8px}
   .atlas-zoom-btn,.atlas-zoom-reset{padding:4px 6px}
   .atlas-zoom-label{width:100%}
+  .atlas-spread-slider{width:100%}
   .node-detail-panel,.stats-content{padding:12px}
   .stat-grid{grid-template-columns:1fr}
   .detail-image{max-width:96px}
