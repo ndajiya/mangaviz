@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import type { GraphNode, GraphData, AppMode, SearchIndexEntry } from "../graph/graphTypes";
 import { loadAtlasData, loadSearchIndex } from "../graph/layoutLoader";
-import { buildGraphFromSeriesDetails } from "../graph/buildGraph";
+import { buildGraphFromSeriesDetails, requireSeriesMetadata } from "../graph/buildGraph";
 import api from "../api/mangaupdates";
 import { cacheSet, cacheGet } from "../cache/indexedDbCache";
 import GC from "./components/GraphCanvas";
@@ -63,16 +63,17 @@ const App: React.FC = () => {
   const [etF, setEtF] = useState<Record<string, boolean>>({
     has_genre: true,
     has_category: true,
-    written_by: true,
-    illustrated_by: true,
-    published_by: true,
-    serialized_in: true,
+    written_by: false,
+    illustrated_by: false,
+    published_by: false,
+    serialized_in: false,
     related_to: true,
     recommended_with: true,
   });
   const [clusterF, setClusterF] = useState<number | null>(null);
   const [selNode, setSelNode] = useState<GraphNode | null>(null);
   const [selId, setSelId] = useState<string | null>(null);
+  const [focusNodeId, setFocusNodeId] = useState<string | null>(null);
   const [focusToken, setFocusToken] = useState(0);
   const [showStats, setShowStats] = useState(false);
   const tClusters = active?.nodes.reduce((m, n) => (n.cluster !== undefined ? Math.max(m, n.cluster) : m), -1) ?? 0;
@@ -109,7 +110,6 @@ const App: React.FC = () => {
   const hNC = useCallback((n: GraphNode | null) => {
     setSelNode(n);
     setSelId(n?.id ?? null);
-    setFocusToken((v) => v + 1);
     if (n && isMobileViewport) setMobilePanel("details");
   }, [isMobileViewport]);
   const hDC = useCallback(
@@ -118,6 +118,7 @@ const App: React.FC = () => {
       if (n) {
         setSelNode(n);
         setSelId(id);
+        setFocusNodeId(id);
         setFocusToken((v) => v + 1);
         if (isMobileViewport) setMobilePanel("details");
       }
@@ -128,7 +129,11 @@ const App: React.FC = () => {
     (t: string) => {
       const l = t.toLowerCase();
       const m = active?.nodes.find((n) => n.label.toLowerCase().includes(l) || n.id.includes(l));
-      if (m) hNC(m);
+      if (m) {
+        hNC(m);
+        setFocusNodeId(m.id);
+        setFocusToken((value) => value + 1);
+      }
     },
     [active, hNC],
   );
@@ -144,6 +149,10 @@ const App: React.FC = () => {
     setLiveLoading(true);
     setLiveNotice(null);
     setLiveData(null);
+    setSelNode(null);
+    setSelId(null);
+    setFocusNodeId(null);
+    let searchedSeriesId: number | null = null;
     try {
       const searchResults = await api.searchSeries({ search: term, perPage: 5 });
       if (!searchResults.results?.length) {
@@ -158,7 +167,9 @@ const App: React.FC = () => {
         if (!id) continue;
         await new Promise((resolve) => setTimeout(resolve, 700));
         try {
-          details.push(await api.getSeriesDetail(id));
+          const detail = await api.getSeriesDetail(id);
+          details.push(detail);
+          if (searchedSeriesId === null) searchedSeriesId = detail.series_id ?? detail.id ?? id;
         } catch (err) {
           console.warn("Live detail fetch failed for", id, err);
         }
@@ -172,13 +183,31 @@ const App: React.FC = () => {
       }
       await cacheSet(liveCacheKey, freshGraph, LIVE_GRAPH_CACHE_TTL_MS);
       setLiveData(freshGraph);
+      const searchedNode = freshGraph.nodes.find((node) => node.id === `series:${searchedSeriesId}`)
+        || freshGraph.nodes.find((node) => node.type === "series");
+      if (searchedNode) {
+        setSelNode(searchedNode);
+        setSelId(searchedNode.id);
+        setFocusNodeId(searchedNode.id);
+        setFocusToken((value) => value + 1);
+      }
     } catch (e) {
       const cachedGraph = await cacheGet<GraphData>(liveCacheKey, LIVE_GRAPH_CACHE_TTL_MS);
       if (cachedGraph) {
-        setLiveData(cachedGraph);
+        const completeCachedGraph = requireSeriesMetadata(cachedGraph);
+        setLiveData(completeCachedGraph);
+        const normalizedTerm = term.toLowerCase();
+        const searchedNode = completeCachedGraph.nodes.find((node) => node.type === "series" && node.label.toLowerCase().includes(normalizedTerm))
+          || completeCachedGraph.nodes.find((node) => node.type === "series");
+        if (searchedNode) {
+          setSelNode(searchedNode);
+          setSelId(searchedNode.id);
+          setFocusNodeId(searchedNode.id);
+          setFocusToken((value) => value + 1);
+        }
         const notice = { kind: "cache_fallback" as const, message: "Live refresh failed after trying all MangaUpdates routes; showing the cached knowledge graph." };
         setLiveNotice(notice);
-        traceLiveNotice(notice.kind, { term, liveCacheKey, error: e instanceof Error ? e.message : "Unknown error", nodeCount: cachedGraph.nodes.length, edgeCount: cachedGraph.edges.length, cacheUsed: true });
+        traceLiveNotice(notice.kind, { term, liveCacheKey, error: e instanceof Error ? e.message : "Unknown error", nodeCount: completeCachedGraph.nodes.length, edgeCount: completeCachedGraph.edges.length, cacheUsed: true });
       } else {
         const notice = { kind: "hard_failure" as const, message: "Live search failed: " + (e instanceof Error ? e.message : "Unknown error") };
         setLiveNotice(notice);
@@ -192,6 +221,7 @@ const App: React.FC = () => {
     setMode(m);
     setSelNode(null);
     setSelId(null);
+    setFocusNodeId(null);
     setLiveNotice(null);
     setMobilePanel(null);
   }, []);
@@ -261,7 +291,7 @@ const App: React.FC = () => {
             nodeTypeFilters={ntF}
             edgeTypeFilters={etF}
             clusterFilter={clusterF}
-            selectedNodeId={selId}
+            focusNodeId={focusNodeId}
             focusToken={focusToken}
             onNodeClick={hNC}
             isLoading={atlasLoading || liveLoading}

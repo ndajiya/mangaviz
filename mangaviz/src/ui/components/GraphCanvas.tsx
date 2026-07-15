@@ -11,7 +11,7 @@ interface Props {
   nodeTypeFilters: Record<string, boolean>;
   edgeTypeFilters: Record<string, boolean>;
   clusterFilter: number | null;
-  selectedNodeId: string | null;
+  focusNodeId: string | null;
   focusToken?: number;
   onNodeClick: (n: GraphNode | null) => void;
   isLoading?: boolean;
@@ -61,7 +61,7 @@ const GC: React.FC<Props> = ({
   nodeTypeFilters,
   edgeTypeFilters,
   clusterFilter,
-  selectedNodeId,
+  focusNodeId,
   focusToken = 0,
   onNodeClick,
   isLoading,
@@ -205,41 +205,43 @@ const GC: React.FC<Props> = ({
         zoomRef.current = minReadableZoom;
         updateZoomControl(minReadableZoom);
         cy.zoom(minReadableZoom);
-        cy.center();
+        if (!focusNodeId) cy.center();
       }
     }, 900);
     return () => window.clearTimeout(settleTimer);
-  }, [layoutData, graphData, updateZoomControl]);
+  }, [layoutData, graphData, focusNodeId, updateZoomControl]);
 
   useEffect(() => {
     setAtlasSpread(ATLAS_SPREAD_DEFAULT);
   }, [isAtlasMode]);
 
   useEffect(() => {
-    if (!cyR.current || !selectedNodeId) return;
-    const centerSelectedNode = () => {
+    if (!cyR.current || !focusNodeId) return;
+    const centerFocusedNode = () => {
       const cy = cyR.current;
       if (!cy) return;
-      const n = cy.getElementById(selectedNodeId);
+      const n = cy.getElementById(focusNodeId);
       if (n.length === 0) return;
-      const renderedPos = n.renderedPosition();
       const targetZoom = Math.min(2.4, Math.max(1.2, cy.zoom()));
       cy.stop();
       cy.animate({
-        center: { x: renderedPos.x, y: renderedPos.y },
+        center: { eles: n },
         zoom: targetZoom,
         duration: 450,
         easing: "ease-out-cubic",
       });
+      cy.$(':selected').unselect();
       n.select();
     };
-    const timerId = window.setTimeout(centerSelectedNode, 0);
-    const retryId = window.setTimeout(centerSelectedNode, 220);
+    const timerId = window.setTimeout(centerFocusedNode, isAtlasMode ? 80 : 0);
+    const settleRetryId = isAtlasMode ? null : window.setTimeout(centerFocusedNode, 650);
+    const finalRetryId = isAtlasMode ? null : window.setTimeout(centerFocusedNode, 1100);
     return () => {
       window.clearTimeout(timerId);
-      window.clearTimeout(retryId);
+      if (settleRetryId !== null) window.clearTimeout(settleRetryId);
+      if (finalRetryId !== null) window.clearTimeout(finalRetryId);
     };
-  }, [selectedNodeId, focusToken]);
+  }, [focusNodeId, focusToken, graphKey, isAtlasMode]);
 
   if (isLoading) {
     return (

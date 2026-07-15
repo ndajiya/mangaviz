@@ -3,29 +3,51 @@ import path from 'path';
 
 const CACHE_DIR = path.resolve(process.cwd(), 'cache', 'raw');
 const OUTPUT_DIR = path.resolve(process.cwd(), 'public', 'data');
-const MAX_ATLAS_NODES = Math.max(1, parseInt(process.env.MAX_ATLAS_NODES || '1000', 10) || 1000);
+const MAX_ATLAS_NODES = Math.max(1, parseInt(process.env.MAX_ATLAS_NODES || '500', 10) || 500);
 
 interface RC { responseData: Record<string,any>; }
 
 function limitGraph(nodes: any[], edges: any[]) {
-  if (nodes.length <= MAX_ATLAS_NODES) return { nodes, edges };
+  const completeNodes = nodes.filter((node) => node.type !== 'series' || node.seriesMetadata);
+  const completeNodeIds = new Set(completeNodes.map((node) => node.id));
+  const completeEdges = edges.filter((edge) => completeNodeIds.has(edge.source) && completeNodeIds.has(edge.target));
+  if (completeNodes.length <= MAX_ATLAS_NODES) return { nodes: completeNodes, edges: completeEdges };
 
   const degree = new Map<string, number>();
-  for (const edge of edges) {
+  const preferredDegree = new Map<string, number>();
+  const preferredEdgeTypes = new Set(['has_genre', 'has_category', 'recommended_with', 'related_to']);
+  for (const edge of completeEdges) {
     degree.set(edge.source, (degree.get(edge.source) || 0) + 1);
     degree.set(edge.target, (degree.get(edge.target) || 0) + 1);
+    if (preferredEdgeTypes.has(edge.type)) {
+      preferredDegree.set(edge.source, (preferredDegree.get(edge.source) || 0) + 1);
+      preferredDegree.set(edge.target, (preferredDegree.get(edge.target) || 0) + 1);
+    }
   }
-  const rankedNodes = [...nodes].sort((left, right) => {
-    const leftPriority = left.seriesMetadata ? 3 : left.type === 'series' ? 1 : 2;
-    const rightPriority = right.seriesMetadata ? 3 : right.type === 'series' ? 1 : 2;
-    return rightPriority - leftPriority
+  const rankNodes = (left: any, right: any) =>
+    (preferredDegree.get(right.id) || 0) - (preferredDegree.get(left.id) || 0)
       || (degree.get(right.id) || 0) - (degree.get(left.id) || 0)
       || (right.weight || 0) - (left.weight || 0)
       || left.id.localeCompare(right.id);
-  });
-  const limitedNodes = rankedNodes.slice(0, MAX_ATLAS_NODES);
+
+  const detailedSeries = completeNodes.filter((node) => node.seriesMetadata).sort(rankNodes);
+  const seriesLimit = Math.min(detailedSeries.length, Math.ceil(MAX_ATLAS_NODES * 0.6));
+  const selectedSeries = detailedSeries.slice(0, seriesLimit);
+  const selectedIds = new Set(selectedSeries.map((node) => node.id));
+  const connectedToSelected = new Map<string, number>();
+  for (const edge of completeEdges) {
+    if (selectedIds.has(edge.source)) connectedToSelected.set(edge.target, (connectedToSelected.get(edge.target) || 0) + 1);
+    if (selectedIds.has(edge.target)) connectedToSelected.set(edge.source, (connectedToSelected.get(edge.source) || 0) + 1);
+  }
+  const remainingNodes = completeNodes
+    .filter((node) => !selectedIds.has(node.id))
+    .sort((left, right) =>
+      (connectedToSelected.get(right.id) || 0) - (connectedToSelected.get(left.id) || 0)
+      || rankNodes(left, right),
+    );
+  const limitedNodes = [...selectedSeries, ...remainingNodes.slice(0, MAX_ATLAS_NODES - selectedSeries.length)];
   const retainedIds = new Set(limitedNodes.map((node) => node.id));
-  const limitedEdges = edges.filter((edge) => retainedIds.has(edge.source) && retainedIds.has(edge.target));
+  const limitedEdges = completeEdges.filter((edge) => retainedIds.has(edge.source) && retainedIds.has(edge.target));
   return { nodes: limitedNodes, edges: limitedEdges };
 }
 
@@ -115,8 +137,8 @@ function main() {
     if (series.artists) for (const a of series.artists) { if (!a.name) continue; const aid = `artist:${a.id||a.author_id||slugify(a.name)}`; addNode(aid, a.name, 'artist'); addEdge(sid, aid, 'illustrated_by'); }
     if (series.publishers) for (const p of series.publishers) { const publisherName = p.name||p.publisher_name; if (!publisherName) continue; const pid = `publisher:${p.id||p.publisher_id||slugify(publisherName)}`; addNode(pid, publisherName, 'publisher'); addEdge(sid, pid, 'published_by'); }
     if (series.publications) for (const p of series.publications) { const publicationName = p.name||p.publication_name; if (!publicationName) continue; const pid = `publication:${p.id||slugify(publicationName)}`; addNode(pid, publicationName, 'publication'); addEdge(sid, pid, 'serialized_in'); }
-    if (series.recommendations) for (const r of series.recommendations) { const recId = r.series_id; const recTitle = r.title||r.series_name; if (recId && recId !== series.id && recTitle) { const tw = r.count||r.weight||1; addNode(`series:${recId}`, recTitle, 'series', tw); addEdge(sid, `series:${recId}`, 'recommended_with', tw); } }
-    if (series.relatedSeries) for (const r of series.relatedSeries) { const relatedId = r.series_id||r.related_series_id; const relatedTitle = r.title||r.related_series_name; if (relatedId && relatedId !== series.id && relatedTitle) { addNode(`series:${relatedId}`, relatedTitle, 'series'); addEdge(sid, `series:${relatedId}`, 'related_to'); } }
+    if (series.recommendations) for (const r of series.recommendations) { const recId = r.series_id; const recTitle = r.title||r.series_name; if (recId && recId !== series.id && recTitle && seriesMap.has(recId)) { const tw = r.count||r.weight||1; addNode(`series:${recId}`, recTitle, 'series', tw); addEdge(sid, `series:${recId}`, 'recommended_with', tw); } }
+    if (series.relatedSeries) for (const r of series.relatedSeries) { const relatedId = r.series_id||r.related_series_id; const relatedTitle = r.title||r.related_series_name; if (relatedId && relatedId !== series.id && relatedTitle && seriesMap.has(relatedId)) { addNode(`series:${relatedId}`, relatedTitle, 'series'); addEdge(sid, `series:${relatedId}`, 'related_to'); } }
   }
 
   const limitedGraph = limitGraph(Array.from(nodeMap.values()), edges);

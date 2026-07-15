@@ -1,29 +1,51 @@
 import type { GraphData, LayoutData, GraphNode, GraphEdge } from './graphTypes';
 const BASE = import.meta.env.BASE_URL || '/';
-const MAX_ATLAS_NODES = 1000;
+const MAX_ATLAS_NODES = 500;
 async function load<T>(p:string): Promise<T> { const r=await fetch(BASE+'data/'+p); if(!r.ok)throw new Error('Failed '+p); return r.json() as Promise<T>; }
 export async function loadManifest() { return load<{version:string;buildDate:string;seriesCount:number;totalNodes:number;totalEdges:number;shards:Record<string,string[]>;searchIndex:string}>('manifest.json'); }
 
 function limitAtlasGraph(nodes: GraphNode[], edges: GraphEdge[]) {
-  if (nodes.length <= MAX_ATLAS_NODES) return { nodes, edges };
+  const completeNodes = nodes.filter((node) => node.type !== 'series' || node.seriesMetadata);
+  const completeNodeIds = new Set(completeNodes.map((node) => node.id));
+  const completeEdges = edges.filter((edge) => completeNodeIds.has(edge.source) && completeNodeIds.has(edge.target));
+  if (completeNodes.length <= MAX_ATLAS_NODES) return { nodes: completeNodes, edges: completeEdges };
   const degree = new Map<string, number>();
-  for (const edge of edges) {
+  const preferredDegree = new Map<string, number>();
+  const preferredEdgeTypes = new Set(['has_genre', 'has_category', 'recommended_with', 'related_to']);
+  for (const edge of completeEdges) {
     degree.set(edge.source, (degree.get(edge.source) || 0) + 1);
     degree.set(edge.target, (degree.get(edge.target) || 0) + 1);
+    if (preferredEdgeTypes.has(edge.type)) {
+      preferredDegree.set(edge.source, (preferredDegree.get(edge.source) || 0) + 1);
+      preferredDegree.set(edge.target, (preferredDegree.get(edge.target) || 0) + 1);
+    }
   }
-  const rankedNodes = [...nodes].sort((left, right) => {
-    const leftPriority = left.seriesMetadata ? 3 : left.type === 'series' ? 1 : 2;
-    const rightPriority = right.seriesMetadata ? 3 : right.type === 'series' ? 1 : 2;
-    return rightPriority - leftPriority
+  const rankNodes = (left: GraphNode, right: GraphNode) =>
+    (preferredDegree.get(right.id) || 0) - (preferredDegree.get(left.id) || 0)
       || (degree.get(right.id) || 0) - (degree.get(left.id) || 0)
       || right.weight - left.weight
       || left.id.localeCompare(right.id);
-  });
-  const limitedNodes = rankedNodes.slice(0, MAX_ATLAS_NODES);
+
+  const detailedSeries = completeNodes.filter((node) => node.seriesMetadata).sort(rankNodes);
+  const seriesLimit = Math.min(detailedSeries.length, Math.ceil(MAX_ATLAS_NODES * 0.6));
+  const selectedSeries = detailedSeries.slice(0, seriesLimit);
+  const selectedIds = new Set(selectedSeries.map((node) => node.id));
+  const connectedToSelected = new Map<string, number>();
+  for (const edge of completeEdges) {
+    if (selectedIds.has(edge.source)) connectedToSelected.set(edge.target, (connectedToSelected.get(edge.target) || 0) + 1);
+    if (selectedIds.has(edge.target)) connectedToSelected.set(edge.source, (connectedToSelected.get(edge.source) || 0) + 1);
+  }
+  const remainingNodes = completeNodes
+    .filter((node) => !selectedIds.has(node.id))
+    .sort((left, right) =>
+      (connectedToSelected.get(right.id) || 0) - (connectedToSelected.get(left.id) || 0)
+      || rankNodes(left, right),
+    );
+  const limitedNodes = [...selectedSeries, ...remainingNodes.slice(0, MAX_ATLAS_NODES - selectedSeries.length)];
   const retainedIds = new Set(limitedNodes.map((node) => node.id));
   return {
     nodes: limitedNodes,
-    edges: edges.filter((edge) => retainedIds.has(edge.source) && retainedIds.has(edge.target)),
+    edges: completeEdges.filter((edge) => retainedIds.has(edge.source) && retainedIds.has(edge.target)),
   };
 }
 

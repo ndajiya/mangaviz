@@ -61,7 +61,7 @@ jobs:
       ATLAS_STRATEGY: ${{ github.event.inputs.strategy || github.event.client_payload.strategy || 'mixed_seed_queries' }}
       ATLAS_SEED: ${{ github.event.inputs.seed || github.event.client_payload.seed || '' }}
       MAX_SERIES: ${{ github.event.inputs.max_series || github.event.client_payload.max_series || '500' }}
-      MAX_ATLAS_NODES: "1000"
+      MAX_ATLAS_NODES: "500"
       REQUEST_DELAY: ${{ github.event.inputs.request_delay || github.event.client_payload.request_delay || '800' }}
       PR_BRANCH: atlas-refresh/${{ github.run_id }}
 

@@ -59,10 +59,22 @@ function buildGraphStats(nodes: GraphNode[], edges: GraphData['edges']): GraphSt
   };
 }
 
+export function requireSeriesMetadata(graph: GraphData): GraphData {
+  const nodes = graph.nodes.filter((node) => node.type !== 'series' || node.seriesMetadata);
+  const nodeIds = new Set(nodes.map((node) => node.id));
+  const edges = graph.edges.filter((edge) => nodeIds.has(edge.source) && nodeIds.has(edge.target));
+  return { nodes, edges, stats: buildGraphStats(nodes, edges) };
+}
+
 export function buildGraphFromSeriesDetails(details: SDR[]): GraphData {
   const nodesById = new Map<string, GraphNode>();
   const edgeSet = new Set<string>();
   const edges: GraphData['edges'] = [];
+  const detailedSeriesIds = new Set(
+    details
+      .map((detail) => detail.series_id ?? detail.id)
+      .filter((id): id is number => typeof id === 'number' && Number.isFinite(id)),
+  );
 
   for (const detail of details) {
     const seriesId = detail.series_id ?? detail.id;
@@ -149,7 +161,7 @@ export function buildGraphFromSeriesDetails(details: SDR[]): GraphData {
     for (const recommendation of detail.recommendations || []) {
       const targetId = recommendation.series_id;
       const label = recommendation.title || recommendation.series_name || '';
-      if (!targetId || !label || targetId === seriesId) continue;
+      if (!targetId || !label || targetId === seriesId || !detailedSeriesIds.has(targetId)) continue;
       const rid = `series:${targetId}`;
       const recWeight = recommendation.weight || recommendation.count || 1;
       createNode(nodesById, rid, label, 'series', recWeight);
@@ -159,7 +171,7 @@ export function buildGraphFromSeriesDetails(details: SDR[]): GraphData {
     for (const relation of detail.related || detail.related_series || []) {
       const targetId = relation.related_series_id || relation.series_id;
       const label = relation.related_series_name || relation.title || '';
-      if (!targetId || !label || targetId === seriesId) continue;
+      if (!targetId || !label || targetId === seriesId || !detailedSeriesIds.has(targetId)) continue;
       const rid = `series:${targetId}`;
       createNode(nodesById, rid, label, 'series');
       createEdge(edges, edgeSet, sid, rid, 'related_to');
@@ -167,7 +179,7 @@ export function buildGraphFromSeriesDetails(details: SDR[]): GraphData {
   }
 
   const nodes = Array.from(nodesById.values());
-  return { nodes, edges, stats: buildGraphStats(nodes, edges) };
+  return requireSeriesMetadata({ nodes, edges });
 }
 
 export function mergeGraphData(base: GraphData | null | undefined, incoming: GraphData): GraphData {
@@ -200,5 +212,5 @@ export function mergeGraphData(base: GraphData | null | undefined, incoming: Gra
   }
 
   const nodes = Array.from(nodesById.values());
-  return { nodes, edges, stats: buildGraphStats(nodes, edges) };
+  return requireSeriesMetadata({ nodes, edges });
 }
