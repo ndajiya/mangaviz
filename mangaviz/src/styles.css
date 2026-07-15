@@ -71,6 +71,8 @@ body{min-width:320px}
 .atlas-zoom-label{font-size:11px;color:var(--txt3);text-transform:uppercase;letter-spacing:.5px}
 .atlas-zoom-btn,.atlas-zoom-reset{border:none;border-radius:6px;background:var(--bg3);color:var(--txt);padding:4px 8px;cursor:pointer;font-size:12px}
 .atlas-zoom-btn:hover,.atlas-zoom-reset:hover{background:var(--accent);color:#fff}
+.atlas-zoom-select{border:1px solid var(--border);border-radius:6px;background:var(--bg3);color:var(--txt);padding:4px 8px;font-size:12px;cursor:pointer;outline:none}
+.atlas-zoom-select:focus{border-color:var(--accent)}
 .atlas-zoom-slider{width:110px;accent-color:var(--accent)}
 .atlas-spread-slider{width:92px;accent-color:var(--accent)}
 .graph-info{position:absolute;bottom:12px;left:12px;padding:4px 10px;background:rgba(15,15,35,.8);border:1px solid var(--border);border-radius:var(--rs);font-size:11px;color:var(--txt3);pointer-events:none}

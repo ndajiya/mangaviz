@@ -21,6 +21,22 @@ interface Props {
 const ATLAS_SPREAD_MIN = 1;
 const ATLAS_SPREAD_MAX = 10;
 const ATLAS_SPREAD_DEFAULT = 7;
+const ATLAS_ZOOM_LEVELS = [5, 10, 15, 20, 30, 40, 50] as const;
+const ATLAS_ZOOM_DEFAULT = 20;
+const ATLAS_ZOOM_MIN = ATLAS_ZOOM_LEVELS[0];
+const ATLAS_ZOOM_MAX = ATLAS_ZOOM_LEVELS[ATLAS_ZOOM_LEVELS.length - 1];
+
+const scaleToAtlasZoom = (scale: number) => Math.round(scale * 100);
+
+const clampAtlasZoomLevel = (value: number) => {
+  const fallback = ATLAS_ZOOM_DEFAULT;
+  if (!Number.isFinite(value)) return fallback;
+  return ATLAS_ZOOM_LEVELS.reduce((closest, level) => {
+    const currentDelta = Math.abs(level - value);
+    const closestDelta = Math.abs(closest - value);
+    return currentDelta < closestDelta ? level : closest;
+  }, fallback);
+};
 
 const LIVE_LAYOUT: cytoscape.LayoutOptions = {
   name: "cose",
@@ -71,7 +87,9 @@ const GC: React.FC<Props> = ({
   const cyR = useRef<Core | null>(null);
   const zoomRef = useRef(1);
   const zoomInputRef = useRef<HTMLInputElement | null>(null);
+  const zoomSelectRef = useRef<HTMLSelectElement | null>(null);
   const [atlasSpread, setAtlasSpread] = useState(ATLAS_SPREAD_DEFAULT);
+  const [atlasZoomLevel, setAtlasZoomLevel] = useState(ATLAS_ZOOM_DEFAULT);
 
   const fltrd = useMemo(() => {
     if (!graphData) return { nodes: [], edges: [] };
@@ -147,10 +165,18 @@ const GC: React.FC<Props> = ({
   );
 
   const updateZoomControl = useCallback((value: number) => {
+    if (isAtlasMode) {
+      const nextLevel = clampAtlasZoomLevel(scaleToAtlasZoom(value));
+      setAtlasZoomLevel(nextLevel);
+      if (zoomSelectRef.current) {
+        zoomSelectRef.current.value = String(nextLevel);
+      }
+      return;
+    }
     if (zoomInputRef.current) {
       zoomInputRef.current.value = Number(value.toFixed(2)).toString();
     }
-  }, []);
+  }, [isAtlasMode]);
 
   const handleZoomChange = useCallback(
     (value: number) => {
@@ -163,6 +189,23 @@ const GC: React.FC<Props> = ({
       cy.center();
     },
     [updateZoomControl],
+  );
+
+  const handleAtlasZoomChange = useCallback(
+    (level: number) => {
+      const cy = cyR.current;
+      if (!cy) return;
+      const nextLevel = clampAtlasZoomLevel(level);
+      const next = nextLevel / 100;
+      zoomRef.current = next;
+      setAtlasZoomLevel(nextLevel);
+      if (zoomSelectRef.current) {
+        zoomSelectRef.current.value = String(nextLevel);
+      }
+      cy.zoom(next);
+      cy.center();
+    },
+    [],
   );
 
   const handleAtlasSpreadChange = useCallback((value: number) => {
@@ -214,6 +257,14 @@ const GC: React.FC<Props> = ({
   useEffect(() => {
     setAtlasSpread(isAtlasMode ? ATLAS_SPREAD_DEFAULT : ATLAS_SPREAD_MIN);
   }, [isAtlasMode]);
+
+  useEffect(() => {
+    if (!isAtlasMode) return;
+    const cy = cyR.current;
+    if (!cy) return;
+    const nextLevel = clampAtlasZoomLevel(scaleToAtlasZoom(cy.zoom()));
+    setAtlasZoomLevel(nextLevel);
+  }, [isAtlasMode, layoutData]);
 
   useEffect(() => {
     if (!cyR.current || !selectedNodeId) return;
@@ -269,28 +320,64 @@ const GC: React.FC<Props> = ({
         cy={init}
         zoomingEnabled={true}
         panningEnabled={true}
-        minZoom={0.1}
+        minZoom={0.05}
         maxZoom={10}
         wheelSensitivity={0.3}
       />
       <div className="atlas-zoom-bar">
-        <span className="atlas-zoom-label">Zoom</span>
-        <button className="atlas-zoom-btn" onClick={() => handleZoomChange(Math.max(0.1, zoomRef.current - 0.2))} aria-label="Zoom out">
-          -
-        </button>
-        <input
-          ref={zoomInputRef}
-          className="atlas-zoom-slider"
-          type="range"
-          min="0.1"
-          max="10"
-          step="0.1"
-          defaultValue={1}
-          onChange={(e) => handleZoomChange(Number(e.target.value))}
-        />
-        <button className="atlas-zoom-btn" onClick={() => handleZoomChange(Math.min(10, zoomRef.current + 0.2))} aria-label="Zoom in">
-          +
-        </button>
+        <span className="atlas-zoom-label">{isAtlasMode ? "Atlas Zoom" : "Zoom"}</span>
+        {isAtlasMode ? (
+          <>
+            <button
+              className="atlas-zoom-btn"
+              onClick={() => handleAtlasZoomChange(ATLAS_ZOOM_LEVELS[Math.max(0, ATLAS_ZOOM_LEVELS.indexOf(atlasZoomLevel) - 1)])}
+              aria-label="Zoom out"
+              disabled={atlasZoomLevel === ATLAS_ZOOM_MIN}
+            >
+              -
+            </button>
+            <select
+              ref={zoomSelectRef}
+              className="atlas-zoom-select"
+              value={atlasZoomLevel}
+              onChange={(e) => handleAtlasZoomChange(Number(e.target.value))}
+              aria-label="Atlas zoom level"
+            >
+              {ATLAS_ZOOM_LEVELS.map((level) => (
+                <option key={level} value={level}>
+                  {level}%
+                </option>
+              ))}
+            </select>
+            <button
+              className="atlas-zoom-btn"
+              onClick={() => handleAtlasZoomChange(ATLAS_ZOOM_LEVELS[Math.min(ATLAS_ZOOM_LEVELS.length - 1, ATLAS_ZOOM_LEVELS.indexOf(atlasZoomLevel) + 1)])}
+              aria-label="Zoom in"
+              disabled={atlasZoomLevel === ATLAS_ZOOM_MAX}
+            >
+              +
+            </button>
+          </>
+        ) : (
+          <>
+            <button className="atlas-zoom-btn" onClick={() => handleZoomChange(Math.max(0.1, zoomRef.current - 0.2))} aria-label="Zoom out">
+              -
+            </button>
+            <input
+              ref={zoomInputRef}
+              className="atlas-zoom-slider"
+              type="range"
+              min="0.1"
+              max="10"
+              step="0.1"
+              defaultValue={1}
+              onChange={(e) => handleZoomChange(Number(e.target.value))}
+            />
+            <button className="atlas-zoom-btn" onClick={() => handleZoomChange(Math.min(10, zoomRef.current + 0.2))} aria-label="Zoom in">
+              +
+            </button>
+          </>
+        )}
         {isAtlasMode && (
           <>
             <span className="atlas-zoom-label">Spread {atlasSpread}x</span>
@@ -313,7 +400,10 @@ const GC: React.FC<Props> = ({
             </button>
           </>
         )}
-        <button className="atlas-zoom-reset" onClick={() => handleZoomChange(1)}>
+        <button
+          className="atlas-zoom-reset"
+          onClick={() => (isAtlasMode ? handleAtlasZoomChange(ATLAS_ZOOM_DEFAULT) : handleZoomChange(1))}
+        >
           Reset
         </button>
       </div>
