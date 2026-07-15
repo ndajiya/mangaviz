@@ -61,6 +61,7 @@ jobs:
       ATLAS_STRATEGY: ${{ github.event.inputs.strategy || github.event.client_payload.strategy || 'mixed_seed_queries' }}
       ATLAS_SEED: ${{ github.event.inputs.seed || github.event.client_payload.seed || '' }}
       MAX_SERIES: ${{ github.event.inputs.max_series || github.event.client_payload.max_series || '500' }}
+      MAX_ATLAS_NODES: "1000"
       REQUEST_DELAY: ${{ github.event.inputs.request_delay || github.event.client_payload.request_delay || '800' }}
       PR_BRANCH: atlas-refresh/${{ github.run_id }}
 
@@ -86,7 +87,7 @@ jobs:
 
       - name: Summarize atlas build
         run: |
-          node -e "const fs=require('fs'); const manifest=JSON.parse(fs.readFileSync('public/data/manifest.json','utf8')); const lines=['## Atlas refresh complete', '', '- mode: ' + process.env.REFRESH_MODE, '- strategy: ' + process.env.ATLAS_STRATEGY, '- seed: ' + (process.env.ATLAS_SEED || '(none)'), '- targetRef: ' + process.env.TARGET_REF, '- buildDate: ' + manifest.buildDate, '- seriesCount: ' + manifest.seriesCount, '- totalNodes: ' + manifest.totalNodes, '- totalEdges: ' + manifest.totalEdges, '- maxSeries input: ' + process.env.MAX_SERIES, '- requestDelay input: ' + process.env.REQUEST_DELAY]; fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n');"
+          node -e "const fs=require('fs'); const manifest=JSON.parse(fs.readFileSync('public/data/manifest.json','utf8')); const lines=['## Atlas refresh complete', '', '- mode: ' + process.env.REFRESH_MODE, '- strategy: ' + process.env.ATLAS_STRATEGY, '- seed: ' + (process.env.ATLAS_SEED || '(none)'), '- targetRef: ' + process.env.TARGET_REF, '- buildDate: ' + manifest.buildDate, '- seriesCount: ' + manifest.seriesCount, '- totalNodes: ' + manifest.totalNodes, '- totalEdges: ' + manifest.totalEdges, '- maxNodes: ' + process.env.MAX_ATLAS_NODES, '- maxSeries input: ' + process.env.MAX_SERIES, '- requestDelay input: ' + process.env.REQUEST_DELAY]; fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n');"
 
       - name: Commit refreshed atlas data
         if: env.REFRESH_MODE != 'pr'
@@ -116,6 +117,7 @@ jobs:
             - seed: `${{ env.ATLAS_SEED || '(none)' }}`
             - target ref: `${{ env.TARGET_REF }}`
             - max series: `${{ env.MAX_SERIES }}`
+            - max Atlas nodes: `${{ env.MAX_ATLAS_NODES }}`
             - request delay: `${{ env.REQUEST_DELAY }}`
 
             This PR was created automatically by the Atlas refresh workflow.

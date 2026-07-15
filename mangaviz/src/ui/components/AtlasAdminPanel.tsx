@@ -255,6 +255,7 @@ const AtlasAdminPanel: React.FC = () => {
                     <input type="number" min={200} max={5000} step={50} value={requestDelay} onChange={(event) => setRequestDelay(event.target.value)} />
                   </label>
                 </div>
+                <p className="atlas-admin-hint">Each refresh archives the prior snapshot and publishes at most 1,000 total Atlas nodes.</p>
                 <button type="submit" className="atlas-admin-submit" disabled={isSubmitting}>
                   {isSubmitting ? "Dispatching..." : mode === "pr" ? "Create Atlas PR" : "Run Direct Refresh"}
                 </button>

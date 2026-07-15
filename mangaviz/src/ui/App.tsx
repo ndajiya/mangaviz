@@ -86,7 +86,7 @@ const App: React.FC = () => {
         setAtlasLayout(d.layout);
         setAtlasManifest(d.manifest);
         try {
-          setSearchIndex(await loadSearchIndex());
+          setSearchIndex(await loadSearchIndex(new Set(d.graph.nodes.map((node) => node.id))));
         } catch {}
       } catch (e) {
         console.warn("Atlas unavailable:", e);

@@ -3,8 +3,40 @@ import path from 'path';
 
 const CACHE_DIR = path.resolve(process.cwd(), 'cache', 'raw');
 const OUTPUT_DIR = path.resolve(process.cwd(), 'public', 'data');
+const MAX_ATLAS_NODES = Math.max(1, parseInt(process.env.MAX_ATLAS_NODES || '1000', 10) || 1000);
 
 interface RC { responseData: Record<string,any>; }
+
+function limitGraph(nodes: any[], edges: any[]) {
+  if (nodes.length <= MAX_ATLAS_NODES) return { nodes, edges };
+
+  const degree = new Map<string, number>();
+  for (const edge of edges) {
+    degree.set(edge.source, (degree.get(edge.source) || 0) + 1);
+    degree.set(edge.target, (degree.get(edge.target) || 0) + 1);
+  }
+  const rankedNodes = [...nodes].sort((left, right) => {
+    const leftPriority = left.seriesMetadata ? 3 : left.type === 'series' ? 1 : 2;
+    const rightPriority = right.seriesMetadata ? 3 : right.type === 'series' ? 1 : 2;
+    return rightPriority - leftPriority
+      || (degree.get(right.id) || 0) - (degree.get(left.id) || 0)
+      || (right.weight || 0) - (left.weight || 0)
+      || left.id.localeCompare(right.id);
+  });
+  const limitedNodes = rankedNodes.slice(0, MAX_ATLAS_NODES);
+  const retainedIds = new Set(limitedNodes.map((node) => node.id));
+  const limitedEdges = edges.filter((edge) => retainedIds.has(edge.source) && retainedIds.has(edge.target));
+  return { nodes: limitedNodes, edges: limitedEdges };
+}
+
+function removeStaleGraphShards() {
+  if (!fs.existsSync(OUTPUT_DIR)) return;
+  for (const file of fs.readdirSync(OUTPUT_DIR)) {
+    if (/^(nodes|edges)\..+\.json(?:\.gz)?$/.test(file)) {
+      fs.rmSync(path.join(OUTPUT_DIR, file), { force: true });
+    }
+  }
+}
 
 function slugify(t: string) { return t.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
 
@@ -50,6 +82,7 @@ function loadSeriesDetails(): Map<number, any> {
 
 function main() {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+  removeStaleGraphShards();
   const seriesMap = loadSeriesDetails();
   console.log(`Loaded ${seriesMap.size} series`);
   // #region debug-point E:build-start
@@ -86,27 +119,31 @@ function main() {
     if (series.relatedSeries) for (const r of series.relatedSeries) { const relatedId = r.series_id||r.related_series_id; const relatedTitle = r.title||r.related_series_name; if (relatedId && relatedId !== series.id && relatedTitle) { addNode(`series:${relatedId}`, relatedTitle, 'series'); addEdge(sid, `series:${relatedId}`, 'related_to'); } }
   }
 
+  const limitedGraph = limitGraph(Array.from(nodeMap.values()), edges);
   const byType: Record<string,any[]> = {};
-  for (const n of nodeMap.values()) { if (!byType[n.type]) byType[n.type]=[]; byType[n.type].push(n); }
+  for (const n of limitedGraph.nodes) { if (!byType[n.type]) byType[n.type]=[]; byType[n.type].push(n); }
   const byEdgeType: Record<string,any[]> = {};
-  for (const e of edges) { if (!byEdgeType[e.type]) byEdgeType[e.type]=[]; byEdgeType[e.type].push(e); }
+  for (const e of limitedGraph.edges) { if (!byEdgeType[e.type]) byEdgeType[e.type]=[]; byEdgeType[e.type].push(e); }
 
   for (const [t,ns] of Object.entries(byType)) fs.writeFileSync(path.join(OUTPUT_DIR, `nodes.${t}.json`), JSON.stringify(ns));
   for (const [t,es] of Object.entries(byEdgeType)) fs.writeFileSync(path.join(OUTPUT_DIR, `edges.${t}.json`), JSON.stringify(es));
 
   const si = (byType.series||[]).map((n:any)=>({id:n.id,label:n.label,type:'series',seriesId:n.seriesMetadata?.seriesId}));
   fs.writeFileSync(path.join(OUTPUT_DIR,'search-index.json'), JSON.stringify(si));
-  const manifest = { version:'1.0.0', buildDate: new Date().toISOString(), seriesCount: seriesMap.size, totalNodes: nodeMap.size, totalEdges: edges.length, shards: { nodes: Object.keys(byType).map(t=>`nodes.${t}.json`), edges: Object.keys(byEdgeType).map(t=>`edges.${t}.json`), positions: ['positions.json'], clusters: ['clusters.json'] }, searchIndex: 'search-index.json' };
+  const retainedDetailSeries = (byType.series || []).filter((node: any) => node.seriesMetadata).length;
+  const manifest = { version:'1.0.0', buildDate: new Date().toISOString(), seriesCount: retainedDetailSeries, totalNodes: limitedGraph.nodes.length, totalEdges: limitedGraph.edges.length, maxNodes: MAX_ATLAS_NODES, shards: { nodes: Object.keys(byType).map(t=>`nodes.${t}.json`), edges: Object.keys(byEdgeType).map(t=>`edges.${t}.json`), positions: ['positions.json'], clusters: ['clusters.json'] }, searchIndex: 'search-index.json' };
   fs.writeFileSync(path.join(OUTPUT_DIR,'manifest.json'), JSON.stringify(manifest,null,2));
   // #region debug-point E:build-finish
   void debugReport('E', 'build-graph.ts:main:finish', 'Graph build finished and manifest was written.', {
     detailSeriesCount: seriesMap.size,
     seriesNodeCount: byType.series?.length||0,
-    totalNodeCount: nodeMap.size,
-    totalEdgeCount: edges.length,
+    totalNodeCount: limitedGraph.nodes.length,
+    totalEdgeCount: limitedGraph.edges.length,
+    uncappedNodeCount: nodeMap.size,
+    maxAtlasNodes: MAX_ATLAS_NODES,
   });
   // #endregion
-  console.log(`Graph built: ${nodeMap.size} nodes, ${edges.length} edges`);
+  console.log(`Graph built: ${limitedGraph.nodes.length} nodes, ${limitedGraph.edges.length} edges (cap: ${MAX_ATLAS_NODES})`);
 }
 
 main();

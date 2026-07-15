@@ -17,9 +17,10 @@
     "layout": "tsx scripts/precompute-layout.ts",
     "data:compress": "tsx scripts/compress-json.ts",
     "data:manifest": "tsx scripts/generate-manifest.ts",
+    "atlas:archive": "tsx scripts/archive-atlas.ts",
     "data:demo": "tsx scripts/generate-demo-data.ts",
     "atlas:lite": "npm run data:demo && npm run layout && npm run data:manifest",
-    "atlas:full": "npm run collect && npm run build:graph && npm run layout && npm run data:compress && npm run data:manifest"
+    "atlas:full": "npm run atlas:archive && npm run collect && npm run build:graph && npm run layout && npm run data:compress && npm run data:manifest"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.110.1",
