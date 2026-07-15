@@ -1,10 +1,10 @@
 {
   "version": "1.0.0",
-  "buildDate": "2026-07-08T20:14:58.925Z",
-  "strategy": "latest_published",
-  "seriesCount": 40,
-  "totalNodes": 531,
-  "totalEdges": 793,
+  "buildDate": "2026-07-12T21:31:42.207Z",
+  "strategy": "mixed_seed_queries",
+  "seriesCount": 942,
+  "totalNodes": 7742,
+  "totalEdges": 33518,
   "shards": {
     "nodes": [
       "nodes.artist.json",
